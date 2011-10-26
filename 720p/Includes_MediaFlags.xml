@@ -56,7 +56,7 @@
 				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::audioCodec)) + IsEmpty(Listitem.Property(mediaTag::audioChannels))">Conditional</animation>
 				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::videoResolution))">Conditional</animation>
 				<control type="image">
-					<posy>545</posy>
+					<posy>585</posy>
 					<width>90</width>
 					<height>60</height>
 					<colordiffuse>FlagDiffuse</colordiffuse>
