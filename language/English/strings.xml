@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+	
+	<string id="31000">GENRES</string>
+	<string id="31001">YEARS</string>
+	<string id="31002">ACTORS</string>
+	<string id="31003">FILES</string>
+	<string id="31005">VIDEO SETTINGS</string>
+	<string id="31004">NOW PLAYING</string>
+	<string id="31006">MUSIC VIDEOS</string>
+	<string id="31007">PLUGINS</string>
+	<string id="31008">FAVOURITES</string>
+	<string id="31009">PROGRAMS</string>
+	<string id="31010">Music</string>
+	<string id="31011">GAMES</string>
+	<string id="31012">Pictures</string>
+	<string id="31013">MOVIES</string>
+	<string id="31014">TV SHOWS</string>
+	<string id="31015">Videos</string>
+	<string id="31016">SETTINGS</string>
+	<string id="31017">WEATHER</string>
+	<string id="31018">PLAY DISC</string>
+	<string id="31019">Shutdown</string>
+	<string id="31020">SCRIPTS</string>
+	<string id="31021">RESTART</string>
+	<string id="31022">SIGN OUT</string>
+	<string id="31023">Plex online</string>
+	<string id="31025">MOST PLAYED</string>
+	<string id="31026">ARTISTS</string>
+	<string id="31027">ALBUMS</string>
+	<string id="31028">PLAYLISTS</string>
+	<string id="31029">MUSIC SETTINGS</string>
+	<string id="31030">NEW MOVIES</string>
+	<string id="31031">STUDIOS</string>
+	<string id="31032">NEW EPISODES</string>
+	<string id="31033">PICTURE SETTINGS</string>
+	<string id="31034">WEATHER SETTINGS</string>
+	<string id="31035">Sleep</string>
+	<string id="31036">Quit Plex</string>
+	<string id="31037">My media</string>
+
+
+	<!-- other strings -->
+	<string id="31500">FILEMANAGER</string>
+	<string id="31501">VIEWTYPE</string>
+	<string id="31502">ORDER</string>
+	<string id="31503">LAYOUT</string>
+	<string id="31504">SORT ORDER</string>
+	<string id="31505">WATCHED</string>
+	<string id="31506">SHOWN</string>
+	<string id="31507">HIDDEN</string>
+	<string id="31508">TITLE</string>
+	<!-- weather -->
+	<string id="31509">Current</string>
+	<string id="31510">Location</string>
+	<string id="31511">Last Updated</string>
+	<!-- settings -->
+	<string id="31512">Menu</string>
+	<string id="31513">Customise</string>
+	<!-- video info -->
+	<string id="31514">DIRECTED BY</string>
+	<string id="31515">WRITTEN BY</string>
+	<string id="31516">STARRING</string>
+	<string id="31517">VIEW</string>
+	<string id="31518">INFORMATION</string>
+	<string id="31519">GET</string>
+	<string id="31520">THUMB</string>
+	<string id="31521">FANART</string>
+	<!-- header -->
+	<string id="31522">ITEMS</string>
+	<!-- login -->
+	<string id="31523">LOG IN</string>
+	<!-- video OSD -->
+	<string id="31524">END TIME</string> <!-- movies -->
+	<string id="31525">END TIME</string> <!-- TV shows -->
+	<string id="31526">TIME REMAINING</string>
+
+	<!-- Settings -->
+	
+	<string id="31900">Adjust how Plex handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options</string>
+	<string id="31901">Allowing individual users to save their own configurations. rss feeds, view settings and media libraries can be separately stored</string>
+	<string id="31902">Control core hardware and software functions. Includes autorun options, audio and video hardware setup, and parental master lock functions</string>
+	<string id="31903">Adjust how Plex handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup</string>
+	<string id="31904">Set up region information for Plex' optional Weather displays</string>
+	<string id="31905">Adjust the look and feel of Plex. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings</string>
+	<string id="31906">Adjust how Plex displays personal image collections. Includes screenshot grabbing, special effects and advanced display options</string>
+	<string id="31907">Set up Plex' network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration</string>
+	<string id="31908">Choose from a variety of advanced settings and customisation options to make the PlexAlaska UI your own</string>
+	<string id="31910">General</string>
+	<string id="31911">Home</string>
+	<string id="31912">Views</string>
+	<string id="31913">Backdrops</string>
+	<string id="31914">Now Playing</string>
+	<string id="31915">Theme</string>
+	<string id="31916">Misc.</string>
+	<string id="31920">Scroll Plot</string>
+	<string id="31921">Media Flags</string>
+	<string id="31922">Swap IMDB for Studio Flags</string>
+	<string id="31924">Larger RSS</string>
+	<string id="31925">Only show RSS on home screen</string>
+	<string id="31926">Display more detailed time information in video OSD</string>
+	<string id="31927">Switch positions of current time and end time</string>
+	<string id="31930">Home 1</string>
+	<string id="31951">Home 2 (Blur style)</string>
+	<string id="31952">Stack my media</string>
+	<string id="31933">Hide item "Plex online"</string>
+	<string id="31934">Hide item "Videos"</string>
+	<string id="31935">Hide item "Pictures"</string>
+	<string id="31937">Hide item "Quit Plex"</string>
+	<string id="31950">Hide item "Music"</string>
+	<string id="31938">Conditional Weather</string>
+	<string id="31939">Display OSX overlays</string>
+	<string id="31940">Use fanart for "Movies"</string>
+	<string id="31941">Set Home Music Artwork Picture</string>
+	<string id="31942">Reset Home Music Artwork Picture</string>
+	<string id="31943">Set Home Quit Artwork Picture</string>
+	<string id="31944">Reset Home Quit Artwork Picture</string>
+	<string id="31945">Set Home Settings Artwork Picture</string>
+	<string id="31946">Reset Home Settings Artwork Picture</string>
+	<string id="31947">Set Home Pictures Artwork Picture</string>
+	<string id="31948">Reset Home Pictures Artwork Picture</string>
+	<string id="31949">Change default from "Quit" to "Sleep"</string>
+	<string id="31955">Disable lines to highlight focused item</string>
+	<string id="31957">Hide label of current picture/path in "Pictures"</string>
+	<string id="31958">Enable "watched"-overlay</string>
+	<string id="31959">Enable "unwatched"-overlay</string>
+	<string id="31956">Enable "partly watched"-overlay</string>
+	<string id="31820">Disable fading of unfocused items</string>
+	<string id="31801">Disable viewtype "POSTER FIXED"</string>
+	<string id="31802">Disable viewtype "POSTER WRAP"</string>
+	<string id="31803">Disable viewtype "POSTER2 FIXED"</string>
+	<string id="31804">Disable viewtype "POSTER2 WRAP"</string>
+	<string id="31805">Disable viewtype "FANART"</string>
+	<string id="31806">Disable viewtype "FANART2"</string>
+	<string id="31807">Disable viewtype "PANEL"</string>
+	<string id="31808">Disable viewtype "PANEL WIDE"</string>
+	<string id="31809">Disable viewtype "LANDSCAPE FIXED"</string>
+	<string id="31810">Disable viewtype "LANDSCAPE WRAP"</string>
+	<string id="31811">Disable viewtype "BANNER"</string>
+	<string id="31812">Disable viewtype "EPISODES"</string>
+	<string id="31813">Disable viewtype "WALL"</string>
+	<string id="31960">Increase backdrop visibility</string>
+	<string id="31961">20% visibility</string>
+	<string id="31962">30% visibility</string>
+	<string id="31963">40% visibility</string>
+	<string id="31964">50% visibility</string>
+	<string id="31965">Disable backdrops for movies</string>
+	<string id="31966">Disable backdrops for TV shows</string>
+	<string id="31967">Disable backdrops for pictures</string>
+	<string id="31968">Disable backdrops for music</string>
+	<string id="31969">Disable backdrops for videos</string>
+	<string id="31970">Disable backdrops for programs</string>
+	<string id="31973">Set path to artist backdrops</string>
+	<string id="31974">Reset path to artist backdrops</string>
+	<string id="31975">Disable filter image in "Now Playing"</string>
+	<string id="31976">Disable progressbar</string>
+	<string id="31977">Use alternative "Now Playing"-screen</string>
+	<string id="31980">Enable automatic theme change</string>
+	<string id="31984">Enable kiosk mode</string>
+	<string id="31985">Debug mode</string>
+	<string id="31986">Debug grid</string>
+	<string id="31990">Only used if option "Fanart for Movies" is disabled</string>
+	<string id="31991">Only used if option "OSX overlays" is disabled</string>
+	<string id="31992">Switches theme colors automatically. From 9am to 8pm "default.xml" is used, from 8pm to 9am "dark.xml"</string>
+	<string id="31993">Show Posters in Fanart View</string>
+
+</strings>

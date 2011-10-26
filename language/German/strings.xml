@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+	
+	<string id="31000">GENRES</string>
+	<string id="31001">JAHRE</string>
+	<string id="31002">DARSTELLER</string>
+	<string id="31003">DATEIEN</string>
+	<string id="31005">VIDEO-EINSTELLUNGEN</string>
+	<string id="31004">AKTUELL GESPIELT</string>
+	<string id="31006">MUSIK-VIDEOS</string>
+	<string id="31007">PLUGINS</string>
+	<string id="31008">FAVORITEN</string>
+	<string id="31009">PROGRAMME</string>
+	<string id="31010">Musik</string>
+	<string id="31011">SPIELE</string>
+	<string id="31012">Bilder</string>
+	<string id="31013">FILME</string>
+	<string id="31014">SERIEN</string>
+	<string id="31015">Videos</string>
+	<string id="31016">EINSTELLUNGEN</string>
+	<string id="31017">WETTER</string>
+	<string id="31018">SPIELE DISK</string>
+	<string id="31019">Ausschalten</string>
+	<string id="31020">SKRIPTE</string>
+	<string id="31021">NEUSTART</string>
+	<string id="31022">AUSLOGGEN</string>
+	<string id="31023">Plex online</string>
+	<string id="31025">MEISTGESPIELT</string>
+	<string id="31026">INTERPRETEN</string>
+	<string id="31027">ALBEN</string>
+	<string id="31028">PLAYLISTEN</string>
+	<string id="31029">MUSIK-EINSTELLUNGEN</string>
+	<string id="31030">NEUE FILME</string>
+	<string id="31031">STUDIOS</string>
+	<string id="31032">NEUE EPISODEN</string>
+	<string id="31033">BILDER-EINSTELL.</string>
+	<string id="31034">WETTER-EINSTELL.</string>
+	<string id="31035">Sleep</string>
+	<string id="31036">Plex beenden</string>
+	<string id="31037">Meine Medien</string>
+
+
+	<!-- other strings -->
+	<string id="31500">DATEIMANAGER</string>
+	<string id="31501">ANSICHT</string>
+	<string id="31502">SORTIEREN</string>
+	<string id="31503">LAYOUT</string>
+	<string id="31504">REIHENFOLGE</string>
+	<string id="31505">GESEHENE</string>
+	<string id="31506">ANZEIGEN</string>
+	<string id="31507">VERSTECKEN</string>
+	<string id="31508">TITEL</string>
+	<!-- weather -->
+	<string id="31509">Aktuell</string>
+	<string id="31510">Ort</string>
+	<string id="31511">Letzte Aktualisierung</string>
+	<!-- settings -->
+	<string id="31512">Menü</string>
+	<string id="31513">Individualisieren</string>
+	<!-- video info -->
+	<string id="31514">REGIE</string>
+	<string id="31515">AUTOR</string>
+	<string id="31516">DARSTELLER</string>
+	<string id="31517">ZEIGE</string>
+	<string id="31518">INFORMATIONEN</string>
+	<string id="31519">WÄHLE</string>
+	<string id="31520">COVER</string>
+	<string id="31521">FANART</string>
+	<!-- header -->
+	<string id="31522">TITEL</string>
+	<!-- login -->
+	<string id="31523">ANMELDEN</string>
+	<!-- video OSD -->
+	<string id="31524">ENDE DES FILMS</string>
+	<string id="31525">ENDE DER EPISODE</string>
+	<string id="31526">RESTLAUFZEIT</string>
+
+
+	<!-- Settings -->
+	
+	<string id="31900">Passen Sie an, wie Plex mit Videoinhalten umgeht. Inklusive Stapel-Funktion für Videos bestehend aus mehreren Dateien, Datenbankoptionen sowie Rendering- und Wiedergabe-Optionen</string>
+	<string id="31901">Ermöglicht mehreren Personen unterschiedliche Konfigurationen. RSS-Feeds, Ansichts-Einstellungen und Mediendatenbanken können separat gespeichert werden</string>
+	<string id="31902">Legen Sie Hard- und Softwarefunktionen fest. Inklusive Autostart-Optionen, Einstellungen der Audio- und Video-Hardware sowie Jugendschutzfunktionen</string>
+	<string id="31903">Passen Sie an, wie Plex mit Musikinhalten umgeht. Inklusive Browsing-Optionen für Datei- und Datenbankmodus</string>
+	<string id="31904">Legen Sie die Orte für Plex' Wetter-Anzeige fest</string>
+	<string id="31905">Passen Sie das Aussehen von Plex an. Inklusive Skin-, Themen-, Sound- und Schriftauswahl, RSS-Feed-Steuerung und Lokalisierungseinstellungen</string>
+	<string id="31906">Passen Sie die Darstellung Ihrer Bildersammlung an. Inklusive Screenshot-Erstellung, Spezialeffekten und erweiterten Darstellungsoptionen</string>
+	<string id="31907">Legen Sie Plex' Netzwerkeinstellungen fest. IP-Zuweisung, WWW- und FTP-Server-Einstellungen, SMB Client Setup, und UPnP Konfiguration</string>
+	<string id="31908">Wählen Sie aus einer Vielzahl von Möglichkeiten aus, um die Benutzeroberfleche von PlexAlaska nach Ihren Vorstellungen zu gestalten</string>
+	<string id="31910">Allgemein</string>
+	<string id="31911">Hauptmenü</string>
+	<string id="31912">Ansichten</string>
+	<string id="31913">Hintergründe</string>
+	<string id="31914">Now Playing</string>
+	<string id="31915">Themen</string>
+	<string id="31916">Sonstiges</string>
+	<string id="31920">Scrollfunktion für Handlung aktivieren</string>
+	<string id="31921">Mediaflags aktivieren</string>
+	<string id="31922">IMDB-Rating statt der Studio-Flags anzeigen</string>
+	<string id="31923">Globale Temperatur-Anzeige</string>
+	<string id="31924">RSS Feed vergrößern</string>
+	<string id="31925">RSS Feed nur im Hauptmenü anzeigen</string>
+	<string id="31926">Detailliertere Zeitangaben im Video-OSD anzeigen</string>
+	<string id="31927">Positionen der aktuellen Uhrzeit und End-Zeit tauschen</string>
+	<string id="31930">Hauptmenü 1</string>
+	<string id="31931">Hauptmenü 2</string>
+	<string id="31932">Hauptmenü 3</string>
+	<string id="31951">Hauptmenü 4 (Blur-Stil)</string>
+	<string id="31952">Meine Medien stapeln</string>
+	<string id="31933">"Plex Online" ausblenden</string>
+	<string id="31934">"Videos" ausblenden</string>
+	<string id="31935">"Bilder" ausblenden</string>
+	<string id="31936">"Wetter" ausblenden</string>
+	<string id="31937">"Plex beenden" ausblenden</string>
+	<string id="31950">"Musik" ausblenden</string>
+	<string id="31938">Wetterabhängige Bilder</string>
+	<string id="31939">OSX-Overlays anzeigen</string>
+	<string id="31940">Fanart für "Filme"-Menü verwenden</string>
+	<string id="31941">Bild für "Musik"-Menü setzen</string>
+	<string id="31942">Bild für "Musik"-Menü zurücksetzen</string>
+	<string id="31943">Bild für "Beenden"-Menü setzen</string>
+	<string id="31944">Bild für "Beenden"-Menü zurücksetzen</string>
+	<string id="31945">Bild für "Einstellungen"-Menü setzen</string>
+	<string id="31946">Bild für "Einstellungen"-Menü zurücksetzen</string>
+	<string id="31947">Bild für "Bilder"-Menü setzen</string>
+	<string id="31948">Bild für "Bilder"-Menü zurücksetzen</string>
+	<string id="31949">"Sleep" als Standard statt "Plex beenden"</string>
+	<string id="31955">Linien zur Hervorhebung des gewählten Eintrags deaktivieren</string>
+	<string id="31957">Anzeige des aktuellen Bildes/Pfades in "Bilder" deaktivieren</string>
+	<string id="31958">"Gesehen"-Overlay aktivieren</string>
+	<string id="31959">"Ungesehen"-Overlay aktivieren</string>
+	<string id="31956">"Teilweise gesehen"-Overlay aktivieren</string>
+	<string id="31820">Verfärben von nicht-markierten Grafiken deaktivieren</string>
+	<string id="31801">Ansicht "POSTER FIXED" deaktivieren</string>
+	<string id="31802">Ansicht "POSTER WRAP" deaktivieren</string>
+	<string id="31803">Ansicht "POSTER2 FIXED" deaktivieren</string>
+	<string id="31804">Ansicht "POSTER2 WRAP" deaktivieren</string>
+	<string id="31805">Ansicht "FANART" deaktivieren</string>
+	<string id="31806">Ansicht "FANART2" deaktivieren</string>
+	<string id="31807">Ansicht "PANEL" deaktivieren</string>
+	<string id="31808">Ansicht "PANEL WIDE" deaktivieren</string>
+	<string id="31809">Ansicht "LANDSCAPE FIXED" deaktivieren</string>
+	<string id="31810">Ansicht "LANDSCAPE WRAP" deaktivieren</string>
+	<string id="31811">Ansicht "BANNER" deaktivieren</string>
+	<string id="31812">Ansicht "EPISODES" deaktivieren</string>
+	<string id="31813">Ansicht "WALL" deaktivieren</string>
+	<string id="31960">Sichtbarkeit der Hintergrundbilder erhöhen</string>
+	<string id="31961">20% Sichtbarkeit</string>
+	<string id="31962">30% Sichtbarkeit</string>
+	<string id="31963">40% Sichtbarkeit</string>
+	<string id="31964">50% Sichtbarkeit</string>
+	<string id="31965">Hintergrundbilder für Filme deaktivieren</string>
+	<string id="31966">Hintergrundbilder für Serien deaktivieren</string>
+	<string id="31967">Hintergrundbilder für Bilder deaktivieren</string>
+	<string id="31968">Hintergrundbilder für Musik deaktivieren</string>
+	<string id="31969">Hintergrundbilder für Videos deaktivieren</string>
+	<string id="31970">Hintergrundbilder für Programme deaktivieren</string>
+	<string id="31973">Pfad zu Künstler-Bildern setzen</string>
+	<string id="31974">Pfad zu Künstler-Bildern zurücksetzen</string>
+	<string id="31975">Filter-Grafik in "Now Playing" deaktivieren</string>
+	<string id="31976">Fortschrittsbalken ausblenden</string>
+	<string id="31977">Alternative "Now Playing"-Anzeige verwenden</string>
+	<string id="31980">Automatischen Themen-Wechsel aktivieren</string>
+	<string id="31984">Kiosk-Modus aktivieren</string>
+	<string id="31985">Debug-Modus</string>
+	<string id="31986">Debug-Gitter</string>
+	<string id="31990">Wird nur verwendet, wenn die Option "Fanart für Filme-Menü" deaktiv ist</string>
+	<string id="31991">Wird nur verwendet, wenn die "OSX overlays" deaktiv sind</string>
+	<string id="31992">Wechselt automatisch zwischen Tag- und Nachtansicht. Von 09:00 bis 20:00 Uhr wird "default.xml" verwendet, von 20:00 bis 09:00 Uhr "dark.xml"</string>
+
+</strings>

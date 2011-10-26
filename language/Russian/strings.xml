@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+	
+	<string id="31000">ЖАНРЫ</string>
+	<string id="31001">ГОДЫ</string>
+	<string id="31002">АКТЕРЫ</string>
+	<string id="31003">ФАЙЛЫ</string>
+	<string id="31005">НАСТРОЙКИ ВИДЕО</string>
+	<string id="31004">СЕЙЧАС ИГРАЕТ</string>
+	<string id="31006">ВИДЕОКЛИПЫ</string>
+	<string id="31007">ПЛАГИНЫ</string>
+	<string id="31008">ИЗБРАННОЕ</string>
+	<string id="31009">ПРОГРАММЫ</string>
+	<string id="31010">МУЗЫКА</string>
+	<string id="31011">ИГРЫ</string>
+	<string id="31012">ИЗОБРАЖЕНИЯ</string>
+	<string id="31013">ФИЛЬМЫ</string>
+	<string id="31014">ТЕЛЕШОУ</string>
+	<string id="31015">ВИДЕО</string>
+	<string id="31016">НАСТРОЙКИ</string>
+	<string id="31017">ПОГОДА</string>
+	<string id="31018">ДИСК</string>
+	<string id="31019">ВЫКЛЮЧИТЬ MAC</string>
+	<string id="31020">СКРИПТЫ</string>
+	<string id="31021">ПЕРЕЗАГРУЗИТЬ</string>
+	<string id="31022">ВЫХОД</string>
+	<string id="31023">ПРИЛОЖЕНИЯ</string>
+	<string id="31025">ЧАСТО ИГРАЕМЫЕ</string>
+	<string id="31026">ИСПОЛНИТЕЛИ</string>
+	<string id="31027">АЛЬБОМЫ</string>
+	<string id="31028">ПЛЕЙЛИСТЫ</string>
+	<string id="31029">НАСТРОЙКИ МУЗЫКИ</string>
+	<string id="31030">НОВЫЕ ФИЛЬМЫ</string>
+	<string id="31031">СТУДИИ</string>
+	<string id="31032">НОВЫЕ ЭПИЗОДЫ</string>
+	<string id="31033">НАСТРОЙКИ ИЗОБРАЖЕНИЙ</string>
+	<string id="31034">НАСТРОЙКИ ПОГОДЫ</string>
+	<string id="31035">УСЫПИТЬ MAC</string>
+	<string id="31036">ВЫЙТИ ИЗ PLEX</string>
+	<string id="31037">My media</string>
+
+
+	<!-- other strings -->
+	<string id="31500">ФАЙЛЫ</string>
+	<string id="31501">ВИД</string>
+	<string id="31502">ПОРЯДОК</string>
+	<string id="31503">РАСПОЛОЖЕНИЕ</string>
+	<string id="31504">СОРТИРОВАТЬ</string>
+	<string id="31505">ПРОСМОТРЕННЫЕ</string>
+	<string id="31506">ПОКАЗЫВАТЬ</string>
+	<string id="31507">СКРЫТЬ</string>
+	<string id="31508">ВКЛЮЧИТЬ</string>
+	
+	<!-- weather -->
+	<string id="31509">Сейчас</string>
+	<string id="31510">Регион</string>
+	<string id="31511">Обновлено</string>
+	
+	<!-- settings -->
+	<string id="31512">МЕНЮ НАСТРОЕК</string>
+	<string id="31513">НАСТРОЙКИ СКИНА</string>
+
+	<!-- video info -->
+	<string id="31514">РЕЖИССЕР</string>
+	<string id="31515">СЦЕНАРИЙ</string>
+	<string id="31516">В РОЛЯХ</string>
+	<string id="31517">Показывать</string>
+	<string id="31518">Инфо</string>
+	<string id="31519">Получить</string>
+	<string id="31520">ОБЛОЖКУ</string>
+	<string id="31521">ФАНАРТ</string>
+
+	<!-- header -->
+	<string id="31522">ОБЪЕКТ(А,ОВ)</string>
+	<!-- login -->
+	<string id="31523">ВХОД</string>
+	<!-- video OSD -->
+	<string id="31524">ВРЕМЯ ОКОНЧАНИЯ</string> <!-- movies -->
+	<string id="31525">ВРЕМЯ ОКОНЧАНИЯ</string> <!-- TV shows -->
+	<string id="31526">ОСТАЛОСЬ</string>
+
+
+	<!-- Settings -->
+	
+	<string id="31900">Настройте параметры воспроизведения видеоконтента. Содержит массу настроек для составных видеофайлов, работы с медиатекой, методов обработки видео и опций проигрывателя</string>
+	<string id="31901">Настройте Plex для работы с несколькими пользователями для использования индивидуальных параметров Plex, ленты RSS, настроек просмотра и медиатеки</string>
+	<string id="31902">Центр управления оборудованием и функциями Plex. Содержит настройки автозапуска, аудио и видеооборудования и родительского контроля</string>
+	<string id="31903">Настройте параметры воспроизведения аудиоконтента. Содержит настройки для аудиофайлов, медиатеки и аудиооборудования</string>
+	<string id="31904">Настройте параметры регионов, которые будут отображаться в меню ПОГОДА</string>
+	<string id="31905">Настройте параметры вида Plex. Содержит выбор скина, темы, звукового оформления, шрифтов, ленты RSS и локализации</string>
+	<string id="31906">Настройте Plex для работы с вашей коллекцией изображений. Содержит опции захвата скриншотов, настройки спецэффектов и расширенные настройки экрана</string>
+	<string id="31907">Настройте сетевой интерфейс Plex. Контролируйте настройки IP, серверов WWW и FTP, клиента SMB и конфигурации UPnP</string>
+	<string id="31908">Выбирайте из многообразия вариантов настроек скина PlexAlaska и настраивайте графический интерфейс под свои предпочтения</string>
+	<string id="31910">Основные</string>
+	<string id="31911">Главное меню</string>
+	<string id="31912">Вид</string>
+	<string id="31913">Фон</string>
+	<string id="31914">Играет сейчас</string>
+	<string id="31915">Тема</string>
+	<string id="31916">Разное</string>
+	<string id="31920">Прокручивать описания фильмов и телешоу</string>
+	<string id="31921">Показывать флаги медиа-файлов</string>
+	<string id="31922">Заменять рейтинг IMDB на флаги студий</string>
+	<string id="31923">Отображать температуру рядом с часами</string>
+	<string id="31924">Большой шрифт RSS</string>
+	<string id="31925">Показывать RSS только в главном меню</string>
+	<string id="31926">Показывать более подробную информацию о времени в экране OSD</string>
+	<string id="31927">Изменить позицию отображения информации о времени</string>
+	<string id="31930">Главное меню 1</string>
+	<string id="31931">Главное меню 2</string>
+	<string id="31932">Главное меню 3</string>
+	<string id="31951">Главное меню 4 (Blur style)</string>
+	<string id="31952">Stack my media</string>
+	<string id="31933">Скрыть пункт ПРИЛОЖЕНИЯ</string>
+	<string id="31934">Скрыть пункт ВИДЕО</string>
+	<string id="31935">Скрыть пункт ИЗОБРАЖЕНИЯ</string>
+	<string id="31936">Скрыть пункт ПОГОДА</string>
+	<string id="31937">Скрыть пункт ВЫХОД ИЗ PLEX</string>
+	<string id="31950">Скрыть пункт МУЗЫКА</string>
+	<string id="31938">Показывать в главном меню миниатюру текущей погоды</string>
+	<string id="31939">Включить наложение иконок OS X</string>
+	<string id="31940">Использовать фанарты в меню ФИЛЬМЫ</string>
+	<string id="31941">Set Home Music Artwork Picture</string>
+	<string id="31942">Reset Home Music Artwork Picture</string>
+	<string id="31943">Set Home Quit Artwork Picture</string>
+	<string id="31944">Reset Home Quit Artwork Picture</string>
+	<string id="31945">Set Home Settings Artwork Picture</string>
+	<string id="31946">Reset Home Settings Artwork Picture</string>
+	<string id="31947">Set Home Pictures Artwork Picture</string>
+	<string id="31948">Reset Home Pictures Artwork Picture</string>
+	<string id="31949">Усыпить MAC вместо выхода из PLEX</string>
+	<string id="31955">Скрыть строку выделения выбранного объекта в списках</string>
+	<string id="31957">Скрывать название текущей картинки/папки в меню ИЗОБРАЖЕНИЯ</string>
+	<string id="31958">Enable "watched"-overlay</string>
+	<string id="31959">Enable "unwatched"-overlay</string>
+	<string id="31956">Enable "partly watched"-overlay</string>
+	<string id="31820">Отключить затемнение неактивных объектов</string>
+	<string id="31801">Отключить вид POSTER FIXED</string>
+	<string id="31802">Отключить вид POSTER WRAP</string>
+	<string id="31803">Отключить вид POSTER2 FIXED</string>
+	<string id="31804">Отключить вид POSTER2 WRAP</string>
+	<string id="31805">Отключить вид FANART</string>
+	<string id="31806">Отключить вид FANART2</string>
+	<string id="31807">Отключить вид PANEL</string>
+	<string id="31808">Отключить вид PANEL WIDE</string>
+	<string id="31809">Отключить вид LANDSCAPE FIXED</string>
+	<string id="31810">Отключить вид LANDSCAPE WRAP</string>
+	<string id="31811">Отключить вид BANNER</string>
+	<string id="31812">Отключить вид EPISODES</string>
+	<string id="31813">Отключить вид WALL</string>
+	<string id="31960">Прозрачность фона</string>
+	<string id="31961">20%</string>
+	<string id="31962">30%</string>
+	<string id="31963">40%</string>
+	<string id="31964">50%</string>
+	<string id="31965">Не использовать фон в меню ФИЛЬМЫ</string>
+	<string id="31966">Не использовать фон в меню ТЕЛЕШОУ</string>
+	<string id="31967">Не использовать фон в меню ИЗОБРАЖЕНИЯ</string>
+	<string id="31968">Не использовать фон в меню МУЗЫКА</string>
+	<string id="31969">Не использовать фон в меню ВИДЕО</string>
+	<string id="31970">Не использовать фон в меню ПРИЛОЖЕНИЯ</string>
+	<string id="31973">Задайте путь к фонам исполнителей</string>
+	<string id="31974">Сбросить настройки пути к фонам исполнителей</string>
+	<string id="31975">Убрать фильтр изображения в экране "Играет сейчас"</string>
+	<string id="31976">Убрать прогресс-бар из экрана "Играет сейчас"</string>
+	<string id="31977">Использовать альтернативный экран "Играет сейчас"</string>
+	<string id="31980">Разрешить автоматическую смену тем</string>
+	<string id="31984">Включить режим киоска</string>
+	<string id="31985">Режим разработчика</string>
+	<string id="31986">Сетка разработчика</string>
+	<string id="31990">Использовать, только при выключенной опции "Использовать фанарты в меню ФИЛЬМЫ"</string>
+	<string id="31991">Использовать, только при выключенной опции "Включить наложение иконок OS X"</string>
+	<string id="31992">Менять цвета темы автоматически. С 9 до 20 используется "default.xml", с 20 до 9 используется "dark.xml"</string>
+
+	<!--	Перевод SHUFFLE		shuffledj@gmail.com	18/04/2010-->	
+
+</strings>
