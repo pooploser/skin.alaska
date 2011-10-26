@@ -1,0 +1,12 @@
+<!--Empty-->
+
+<window id="129">
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>DialogID</include>
+			<label>SmartPlaylistRule.xml</label>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

@@ -1,0 +1,72 @@
+<!--Alaska-->
+
+<includes>
+	<include name="PosterMediaFlagsVars">
+		<posy>530</posy>
+		<width>80</width>
+		<height>80</height>
+		<colordiffuse>FlagDiffuse</colordiffuse>
+		<aspectratio>keep</aspectratio>
+	</include>
+	<include name="PosterMediaFlagsAudiochannelsVars">
+		<posy>530</posy>
+		<width>80</width>
+		<height>80</height>
+		<colordiffuse>FlagDiffuseAudiochannels</colordiffuse>
+		<aspectratio>keep</aspectratio>
+	</include>
+	<include name="PosterMediaFlags">
+		<control type="group">
+			<include>Animation_SlideUpFadeOut</include>
+			<include>Animation_HiddenByInfo</include>
+			<posx>58</posx>
+			<animation effect="slide" start="0,0" end="0,20" condition="Control.IsVisible(50)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,20" condition="Control.IsVisible(51)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,40" condition="Control.IsVisible(59)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,20" condition="Control.IsVisible(52) | Control.IsVisible(552)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,35" condition="Control.IsVisible(50)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-340,20" condition="Control.IsVisible(56)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-340,20" condition="Control.IsVisible(56)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-340,30" condition="Control.IsVisible(49)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-837,-190" condition="Control.IsVisible(556) | Control.IsVisible(559)">Conditional</animation>
+			<visible>Skin.HasSetting(mediaflagson)</visible>
+
+			<control type="group">
+				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+				<posx>995</posx>
+				<control type="image">
+					<include>PosterMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::audioCodec)</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::audioCodec)) + IsEmpty(Listitem.Property(mediaTag::audioChannels))">Conditional</animation>
+				<posx>890</posx>
+				<control type="image">
+					<include>PosterMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>785</posx>
+				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::audioCodec)) + IsEmpty(Listitem.Property(mediaTag::audioChannels))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::videoResolution))">Conditional</animation>
+				<control type="image">
+					<posy>545</posy>
+					<width>90</width>
+					<height>60</height>
+					<colordiffuse>FlagDiffuse</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Property(mediaTag::studio)</info>
+					<visible>!IsEmpty(ListItem.Property(mediaTag::studio))</visible>
+					<visible>!Control.IsVisible(49)</visible>
+				</control>
+			</control>
+
+		</control>
+	</include>
+</includes>

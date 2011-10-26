@@ -1,0 +1,179 @@
+<!--Alaska-->
+
+<window id="500">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<include>Viewtype_Files</include>
+
+		<!-- view options -->
+		<include>Global_ContextFilter</include>
+		<control type="grouplist" id="7000">
+			<visible>Window.IsActive(500)</visible>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>WindowMenuVars</include>
+			<posy>330</posy>
+			<!-- View -->
+			<!--control type="button" id="2">
+				<description>View</description>
+				<include>WindowMenuButton</include>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(2)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control--> 
+			<!-- shuffle -->
+			<control type="button" id="20">
+				<description>shuffle</description>
+				<label>$LOCALIZE[191]</label>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- repeat -->
+			<control type="button" id="26">
+				<description>repeat</description>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(26)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- save -->
+			<control type="button" id="21">
+				<description>save</description>
+				<label>$LOCALIZE[190]</label>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(21)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- clear -->
+			<control type="button" id="22">
+				<description>clear</description>
+				<label>$LOCALIZE[192]</label>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<onclick>ReplaceWindow(music)</onclick>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(22)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+		<control type="grouplist">
+			<include>WindowMenuVars</include>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<posy>300</posy>
+			<!-- shuffle -->
+			<control type="button" id="7040">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>PlayList</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- repeat -->
+			<control type="button" id="7042">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>song</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(26)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- save -->
+			<control type="button" id="7041">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>Playlist</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(21)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- clear -->
+			<control type="button" id="7042">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>Playlist</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(22)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+
+		<include>Global_Time</include>
+		<include>Global_Heading</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyMusicPlaylist.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	</controls>
+
+</window>

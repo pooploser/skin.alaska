@@ -1,0 +1,136 @@
+<!--Alaska-->
+
+<includes>
+
+	<include name="Viewtype_List">
+
+<!-- Browser -->
+	
+		<control type="fixedlist" id="53">
+			<posx>350</posx>
+			<posy>90</posy>
+			<height>1034</height>
+			<width>990</width>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>7000</onleft>
+			<onright>7000</onright>
+			<viewtype label="List">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>4</focusposition>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+			<itemlayout width="885" height="49">
+				<control type="label">
+					<posx>73</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>49</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>ListTitleNF</textcolor>
+					<selectedcolor>ListTitleNF</selectedcolor>					
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<!--<control type="label">
+					<posx>111</posx>
+					<posy>26</posy>
+					<width>830</width>
+					<height>17</height>
+					<aligny>center</aligny>
+					<font>Font_ListDetailNF</font>
+					<textcolor>ListTitleNF</textcolor>
+					<selectedcolor>ListTitleNF</selectedcolor>					
+					<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album] - $INFO[ListItem.Duration]</label>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>-->
+			</itemlayout>
+			<focusedlayout width="828" height="103">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>103</width>
+					<height>103</height>
+					<texture>list/listframe.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="52,52" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>					
+				</control>
+				<control type="image">
+					<posx>12</posx>
+					<posy>12</posy>
+					<width>79</width>
+					<height>79</height>
+					<texture diffuse="list/listmatte.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="52,52" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>					
+				</control>			
+				<!--<control type="label">
+					<posx>120</posx>
+					<posy>16</posy>
+					<width>830</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitle</font>
+					<textcolor>ListTitleF</textcolor>
+					<selectedcolor>ListTitleF</selectedcolor>					
+					<label>$INFO[ListItem.TrackNumber]. $INFO[ListItem.Title]</label>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>-->
+				<control type="label">
+					<posx>120</posx>
+					<posy>0</posy>
+					<width>830</width>
+					<height>103</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBig</font>
+					<textcolor>ListTitleF</textcolor>
+					<selectedcolor>ListTitleF</selectedcolor>					
+					<label>$INFO[ListItem.Label]</label>
+<!--					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>					
+				<control type="label">
+					<posx>120</posx>
+					<posy>42</posy>
+					<width>830</width>
+					<height>17</height>
+					<aligny>center</aligny>
+					<font>Font_ListDetail</font>
+					<textcolor>ListTitleF</textcolor>
+					<selectedcolor>ListTitleF</selectedcolor>					
+					<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album] - $INFO[ListItem.Duration]</label>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>62</posy>
+					<width>121</width>
+					<height>22</height>
+					<texture>$INFO[ListItem.StarRating]</texture>-->
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="list/list_mask_1.png">common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="list/list_mask_1.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+		
+	</include>
+
+</includes>

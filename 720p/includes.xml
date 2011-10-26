@@ -1,0 +1,1598 @@
+<!--Alaska-->
+
+<includes>
+	<!-- File includes -->
+	<include file="Defaults.xml" />
+	<include file="Viewtype_Episode.xml" />
+	<include file="Viewtype_Poster.xml" />
+	<include file="Viewtype_Poster2.xml" />
+	<include file="Viewtype_PictureGrid.xml" />
+	<include file="Viewtype_MusicWall.xml" />
+	<include file="Viewtype_List.xml" />
+	<include file="Viewtype_Landscape.xml" />
+	<include file="Viewtype_Fanart.xml" />
+	<include file="Viewtype_Fanart2.xml" />
+	<include file="Viewtype_Files.xml" />
+	<include file="Viewtype_Banner.xml" />
+	<include file="Viewtype_Panel.xml" />
+	<include file="Includes_MediaFlags.xml" />
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_Filemanager.xml" />
+	<include file="Includes_Objects.xml" />
+	<include file="Includes_Home_1.xml" />
+	<include file="Includes_Home_2.xml" />
+	<include file="PlexIncludes.xml" />
+	<!-- Debug objects -->
+	<include name="Object_DebugGrid">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/debuggrid.png</texture>
+			<visible>Skin.HasSetting(debuggrid)</visible>
+		</control>
+	</include>
+	<include name="DialogID">
+		<posx>10</posx>
+		<posy>35</posy>
+		<font>Large</font>
+		<textcolor>Red</textcolor>
+		<align>left</align>
+	</include>
+	<include name="WindowID">
+		<posx>10</posx>
+		<posy>10</posy>
+		<font>Large</font>
+		<textcolor>Red</textcolor>
+		<align>left</align>
+	</include>
+	<!-- Global dimensions -->
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+	</include>
+	<!-- Global objects -->
+	<include name="Global_Background">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>background.jpg</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		</control>
+	</include>
+	<include name="Global_Filter">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+ 			<animation effect="fade" start="100" end="90" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + !Skin.HasSetting(increaseFanartVisibility)]">Conditional</animation>
+			<animation effect="fade" start="100" end="80" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + Skin.HasSetting(increaseFanartVisibility) + Skin.HasSetting(increaseFanartVisibility20)]">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + Skin.HasSetting(increaseFanartVisibility) + Skin.HasSetting(increaseFanartVisibility30)]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + Skin.HasSetting(increaseFanartVisibility) + Skin.HasSetting(increaseFanartVisibility40)]">Conditional</animation>
+			<animation effect="fade" start="100" end="50" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + Skin.HasSetting(increaseFanartVisibility) + Skin.HasSetting(increaseFanartVisibility50)]">Conditional</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>background.jpg</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		</control>
+	</include>
+	<include name="Global_ContextFilter">
+		<control type="group">
+			<visible>ControlGroup(7001).HasFocus | ControlGroup(7000).HasFocus | Window.IsActive(100) | Window.IsActive(103) | Window.IsActive(106) | Window.IsActive(1111) | Window.IsActive(134)</visible>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>common/white.png</texture>
+				<colordiffuse>backgroundColor</colordiffuse>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>backdrops/backgroundcolordiffuse.png</texture>
+				<colordiffuse>BackgroundFilterColor</colordiffuse>
+			</control>
+		</control>
+	</include>
+
+	<include name="Global_Time">
+		<control type="group">
+			<posx>1250</posx>
+			<posy>25</posy>
+			<control type="label">
+				<posx>101</posx>
+				<width>300</width>
+				<font>Font_Time</font>
+				<textcolor>Time</textcolor>
+				<info>System.Time</info>
+				<align>right</align>
+				<animation effect="slide" start="0,0" end="-100,0" time="0" condition="Skin.HasSetting(ShowGlobalTemp)">Conditional</animation>
+				<animation effect="slide" end="400,0" time="400" easing="inout" tween="cubic" condition="[Window.IsVisible(104) + [Window.IsVisible(101) | Window.IsVisible(112) | Window.IsVisible(133)]] | [Window.IsVisible(113) + [Window.IsVisible(101) | Window.IsVisible(112) | Window.IsVisible(133)]] | [Window.IsVisible(112) + [Window.IsVisible(101) | Window.IsVisible(133)]] | [[Window.IsVisible(101) + Window.IsVisible(133)]]">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>40</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<info>System.Date</info>
+				<align>right</align>
+				<animation effect="slide" end="400,0" time="400" easing="inout" tween="cubic" condition="[Window.IsVisible(104) + [Window.IsVisible(101) | Window.IsVisible(112) | Window.IsVisible(133)]] | [Window.IsVisible(113) + [Window.IsVisible(101) | Window.IsVisible(112) | Window.IsVisible(133)]] | [Window.IsVisible(112) + [Window.IsVisible(101) | Window.IsVisible(133)]] | [[Window.IsVisible(101) + Window.IsVisible(133)]]">Conditional</animation>
+			</control>
+		</control>
+	</include>
+
+	<include name="Global_Time_Home">
+		<control type="group">
+			<posx>1250</posx>
+			<posy>25</posy>
+			<control type="label">
+				<posx>3</posx>
+				<width>300</width>
+				<font>Font_Time</font>
+				<textcolor>Time</textcolor>
+				<info>System.Time</info>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posy>40</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<info>System.Date</info>
+				<align>right</align>
+			</control>
+		</control>
+	</include>
+
+	<include name="Global_HeadingSectionVars">
+		<width>960</width>
+		<font>Font_Time</font>
+		<textcolor>Time</textcolor>
+		<align>left</align>
+		<include>Animation_SlideDownFadeOut</include>
+	</include>
+	<include name="Global_HeadingDetailVars">
+		<posy>40</posy>
+		<width>800</width>
+		<font>Font_Date</font>
+		<textcolor>Date</textcolor>
+		<align>left</align>
+		<include>Animation_SlideDownFadeOut</include>
+	</include>
+	<include name="Global_Heading">
+		<control type="group">
+			<visible>!Window.IsActive(101) + !Window.IsActive(133)</visible>
+			<posx>30</posx>
+			<posy>30</posy>
+			<include>Animation_SlideDownFadeOut</include>
+			<control type="label">
+				<description>Appstore</description>
+				<label>$LOCALIZE[31023]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(1) + !Window.IsActive(134) + IsEmpty(Container.PluginName)</visible>
+			</control>
+			<control type="label">
+				<description>Movies</description>
+				<label>$INFO[Container.FirstTitle]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(24) + Container.Content(movies) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Name of Plugin</description>
+				<label>$INFO[Container.FirstTitle]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsVisible(24) + !Window.IsActive(134) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<description>Pictures</description>
+				<label>1</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(2) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Pictures</description>
+				<label>$LOCALIZE[1]: $INFO[ListItem.Label]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>[Window.IsActive(2) + [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]] + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Tv Shows</description>
+				<label>$INFO[Container.FirstTitle]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(24) + Container.Content(tvshows) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Episodes</description>
+				<label>$INFO[Container.ListItem.TVShowTitle]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(24) + Container.Content(episodes) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Seasons</description>
+				<label>$INFO[Container.FirstTitle]: $INFO[Container.SecondTitle]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(24) + Container.Content(seasons) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>2</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>[[Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(songs) + !Container.Content(albums)] + !Window.IsActive(134) + !Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Label]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>[[Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(songs) + !Container.Content(albums)] + !Window.IsActive(134) + Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Artist]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>[Window.IsActive(501) | Window.IsActive(502)] + Container.Content(albums) + !Window.IsActive(134) + !Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>[Window.IsActive(501) | Window.IsActive(502)] + Container.Content(albums) + !Window.IsActive(134) + Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Album]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>[Window.IsActive(501) | Window.IsActive(502)] + Container.Content(songs) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>$LOCALIZE[2]: $LOCALIZE[31028]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(500) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Video</description>
+				<label>3</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Container.Content(plugins) + Window.IsActive(24) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Video</description>
+				<label>$LOCALIZE[3]: $LOCALIZE[31028]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(28) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<description>Login</description>
+				<label>$LOCALIZE[31523]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(29) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Container.NumItems] $LOCALIZE[31522]</label>
+				<include>Global_HeadingDetailVars</include>
+				<visible>![Container.Content(episodes) | Window.IsActive(2)] + !Window.IsActive(134) + !Window.IsActive(29)</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[20373] $INFO[ListItem.Season] - $INFO[Container.NumItems] $LOCALIZE[20360]</label>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Container.Content(episodes) + !Window.IsActive(134)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[ListItem.path][CR]$INFO[Container.NumItems] $LOCALIZE[31522]</label>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(2) + !Window.IsActive(134) + !Skin.HasSetting(nopicturepath)</visible>
+			</control>
+			<control type="label">
+				<description>Scripts</description>
+				<label>$LOCALIZE[31020]</label>
+				<include>Global_HeadingSectionVars</include>
+				<visible>Window.IsActive(20) + !Window.IsActive(134)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="Global_RSS">
+		<control type="rss" id="1">
+			<posx>0</posx>
+			<posy>685</posy>
+			<width>1280</width>
+			<height>40</height>
+			<aligny>bottom</aligny>
+			<font>Font_RSS</font>
+			<textcolor>RSSBody</textcolor>
+			<headlinecolor>RSSHeadline</headlinecolor>
+			<highlightcolor>RSSHighlight</highlightcolor>
+			<titlecolor>RSSTitle</titlecolor>
+			<urlset>1</urlset>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<visible>!Skin.HasSetting(largeRSS) + [Window.IsActive(home) | !Skin.HasSetting(RSS_only_on_home)]</visible>
+		</control>
+		<control type="rss" id="1">
+			<posx>0</posx>
+			<posy>675</posy>
+			<width>1280</width>
+			<height>40</height>
+			<aligny>bottom</aligny>
+			<font>Font_RSS_Big</font>
+			<textcolor>RSSBody</textcolor>
+			<headlinecolor>RSSHeadline</headlinecolor>
+			<highlightcolor>RSSHighlight</highlightcolor>
+			<titlecolor>RSSTitle</titlecolor>
+			<urlset>1</urlset>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<visible>Skin.HasSetting(largeRSS) + [Window.IsActive(home) | !Skin.HasSetting(RSS_only_on_home)]</visible>
+		</control>
+	</include>
+	<!-- OSD -->
+	<include name="OSD_Back">
+		<control type="image">
+			<posx>-5</posx>
+			<posy>0</posy>
+			<width>1290</width>
+			<height>165</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+			<aspectratio aligny="bottom">scale</aspectratio>
+			<animation effect="slide" start="0,0" end="0,82" time="0" condition="Window.IsVisible(115)">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>-5</posx>
+			<posy>0</posy>
+			<width>1290</width>
+			<height>165</height>
+			<texture>backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+			<aspectratio aligny="bottom">scale</aspectratio>
+			<animation effect="slide" start="0,0" end="0,82" time="0" condition="Window.IsVisible(115)">Conditional</animation>
+		</control>
+	</include>
+	<!-- Home -->
+ 	<include name="Home_MenuIcon">
+		<control type="label">
+			<posx>-320</posx>
+			<posy>370</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[Container(300).ListItem.Label]</label>
+			<font>Font_MainMenu</font>
+			<textcolor>MainMenu</textcolor>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
+		<control type="fixedlist" id="300">
+			<posx>-131</posx>
+			<posy>130</posy>
+			<height>500</height>
+			<width>1541</width>
+			<onleft>300</onleft>
+			<onright>300</onright>
+			<onup>5000</onup>
+			<viewtype>list</viewtype>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<scrolltime>200</scrolltime>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<itemlayout width="300" height="341">
+				<control type="image">
+					<width>171</width>
+					<height>171</height>
+					<posx>50</posx>
+					<posy>91</posy>
+					<info>ListItem.thumb</info>
+					<visible>!IsEmpty(ListItem.thumb)</visible>
+				</control>
+				<control type="image">
+					<width>171</width>
+					<height>171</height>
+					<posx>50</posx>
+					<posy>91</posy>
+					<texture>backdrops/moviedefault.png</texture>
+					<visible>IsEmpty(ListItem.thumb)</visible>
+				</control>			
+			</itemlayout>
+			<focusedlayout width="341" height="341">
+				<control type="image">
+					<width>341</width>
+					<height>341</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="171,171" tween="back" easing="out" time="500" start="50" end="100" />
+					</animation>
+					<info>ListItem.thumb</info>
+					<visible>!IsEmpty(ListItem.thumb)</visible>
+				</control>
+				<control type="image">
+					<width>341</width>
+					<height>341</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="171,171" tween="back" easing="out" time="500" start="50" end="100" />
+					</animation>
+					<texture>backdrops/moviedefault.png</texture>
+					<visible>IsEmpty(ListItem.thumb)</visible>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Music</description>
+					<label>2</label>
+					<thumb>backdrops/musicicon.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(nomusic)</visible>
+				</item>
+				<item id="2">
+					<label>$LOCALIZE[31023]</label>
+					<thumb>backdrops/appstoreicon.png</thumb>
+					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(noappstore)</visible>
+				</item>
+				<item id="3">
+					<description>Picture</description>
+					<label>1</label>
+					<thumb>backdrops/picturesicon.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(nopictures)</visible>
+				</item>
+				<!--<item id="4">
+					<description>Movies</description>
+					<label>342</label>
+					<thumb>backdrops/moviesicon.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(nomovies)</visible>
+				</item>
+				<item id="5">
+					<description>Tv Shows</description>
+					<label>20343</label>
+					<thumb>backdrops/tvshowsicon.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(notvshows)</visible>
+				</item>-->
+				<item id="6">
+					<description>Video</description>
+					<label>3</label>
+					<thumb>backdrops/videosicon.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(novideos)</visible>
+				</item>
+				<item id="7">
+					<description>Weather</description>
+					<label>8</label>
+					<!--<include>BackgroundVarsWeather</include>-->
+					<thumb>backdrops/weathericon.png</thumb>
+					<onclick>xbmc.activatewindow(2600)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+					<visible>!Skin.HasSetting(noweather)</visible>
+				</item>
+				<item id="8">
+					<description>Settings</description>
+					<label>5</label>
+					<thumb>backdrops/settingsicon.png</thumb>
+					<onclick>XBMC.ActivateWindow(4)</onclick>
+					<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+					<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+				</item>
+				<item id="9">
+					<description>Shutdown</description>
+					<thumb>backdrops/quiticon.png</thumb>
+					<include condition="!Skin.HasSetting(sleepsystem)">type_quit</include>
+					<include condition="Skin.HasSetting(sleepsystem)">type_sleep</include>
+					<visible>!Skin.HasSetting(nohomequit)</visible>
+				</item>
+			</content>
+		</control>
+		<include condition="Player.HasMedia">submenu_music</include>
+		<!--<include>submenu_movies</include>
+		<include>submenu_tvshows</include>-->
+		<include>submenu_quit</include>
+		<!--<include>submenu_appstore</include>-->
+		<include>submenu_dummybuttons</include>
+	</include>
+	<include name="Home_MenuList">
+		<control type="multiimage">
+			<include>Animation_homebackground</include>
+			<width>1280</width>
+			<height>720</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<timeperimage>20000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>400</fadetime>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
+			<include>Animation_CommonFade</include>
+			<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
+		</control>
+		<control type="largeimage">
+			<include>Animation_homebackground</include>
+			<width>1280</width>
+			<height>720</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Animation_CommonFade</include>
+			<texture>$INFO[Container(300).ListItem.Property(Fanart_Image)]</texture>
+		</control>
+		<control type="fixedlist" id="300">
+			<posx>180</posx>
+			<posy>-20</posy>
+			<height>950</height>
+			<width>900</width>
+			<onup>300</onup>
+			<onleft>7000</onleft>
+			<onright>7000</onright>
+			<viewtype>list</viewtype>
+			<scrolltime>300</scrolltime>
+			<orientation>vertical</orientation>
+			<focusposition>3</focusposition>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<itemlayout width="400" height="110">
+				<control type="label">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>100</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Font_HomeNotSelected</font>
+					<textcolor>Time</textcolor>
+					<selectedcolor>ListTitleNF</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="900" height="110">
+				<control type="label">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>950</width>
+					<height>100</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Font_HomeSelected</font>
+					<textcolor>ListTitleF</textcolor>
+					<selectedcolor>ListTitleF</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="500,0" start="51" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="600" />
+					</animation>
+				</control>
+			</focusedlayout>
+			<include>Home_MenuContent</include>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/mask.png">common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/mask.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		</control>
+	</include>
+	<include name="Home_MenuContent">
+		<content>
+			<item id="1">
+				<description>PROGRAMS</description>
+				<label>$LOCALIZE[31023]</label>
+				<thumb>backdrops/appstore/appstore-1.jpg</thumb>
+				<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+				<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+				<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+				<visible>!Skin.HasSetting(noappstore)</visible>
+			</item>
+			<item id="2">
+				<description>Video</description>
+				<label>3</label>
+				<thumb>backdrops/videos/video-3.jpg</thumb>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
+				<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+				<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+				<visible>!Skin.HasSetting(novideos)</visible>
+			</item>
+			<item id="3">
+				<description>Music</description>
+				<label>2</label>
+				<thumb>backdrops/music/music-2.jpg</thumb>
+				<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+				<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+				<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+				<visible>!Skin.HasSetting(nomusic)</visible>
+			</item>
+			<item id="6">
+				<description>Picture</description>
+				<label>1</label>
+				<thumb>backdrops/pictures/pictures-2.jpg</thumb>
+				<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+				<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+				<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+				<visible>!Skin.HasSetting(nopictures)</visible>
+			</item>
+			<item id="7">
+				<description>Weather</description>
+				<label>8</label>
+				<thumb>backdrops/weather/weather-1.jpg</thumb>
+				<onclick>XBMC.Activatewindow(2600)</onclick>
+				<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+				<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+				<visible>!Skin.HasSetting(noweather)</visible>
+			</item>
+			<item id="8">
+				<description>Settings</description>
+				<label>5</label>
+				<thumb>backdrops/settings/settings-3.jpg</thumb>
+				<onclick>XBMC.ActivateWindow(4)</onclick>
+				<include condition="Skin.HasSetting(autom_themechange)">changethemebytime2</include>
+				<include condition="Skin.HasSetting(autom_themechange)">runThemeScript2</include>
+			</item>
+			<item id="9">
+				<include condition="!Skin.HasSetting(sleepsystem)">type_quit</include>
+				<include condition="Skin.HasSetting(sleepsystem)">type_sleep</include>
+				<description>Quit Plex</description>
+				<thumb>backdrops/quit/quitplex.jpg</thumb>
+				<visible>!Skin.HasSetting(nohomequit)</visible>
+			</item>
+		</content>
+		<control type="label">
+			<posx>-320</posx>
+			<posy>330</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[Container(300).ListItem.Label]</label>
+			<font>Font_MainMenu</font>
+			<textcolor>MainMenu</textcolor>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
+	</include>
+	<include name="Home_MainMenuBacking">
+		<control type="image">
+			<width>10</width>
+			<height>246</height>
+			<posx>351</posx>
+			<posy>47</posy>
+			<texture>mainmenu/homebacking.png</texture>
+		</control>
+	</include>
+	<include name="Home_MainMenuLabelBig">
+		<posx>-610</posx>
+		<posy>200</posy>
+		<height>200</height>
+		<width>1600</width>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_MainMenu</font>
+		<textcolor>MainMenu</textcolor>
+	</include>
+	<!-- Settings -->
+	<include name="Setting_Heading">
+		<control type="group">
+			<visible>!Window.IsActive(101) + !Window.IsActive(133)</visible>
+			<posx>30</posx>
+			<posy>30</posy>
+			<animation type="WindowOpen" reversible="false" condition="Window.Previous(Home)">
+				<effect type="slide" start="0,-100" end="0,0" time="400" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="400" />
+			</animation>
+			<animation type="WindowClose" reversible="false" condition="Window.Next(Home)">
+				<effect type="fade" start="100" end="0" time="400" />
+			</animation>
+			<control type="label">
+				<description>Settings</description>
+				<label>5</label>
+				<include>Global_HeadingSectionVars</include>
+			</control>
+			<control type="label">
+				<description>Settings Menu</description>
+				<label>$LOCALIZE[31512]</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(4)</visible>
+			</control>
+			<control type="label">
+				<description>Video</description>
+				<label>3</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(17)</visible>
+			</control>
+			<control type="label">
+				<description>Picture</description>
+				<label>1</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(12)</visible>
+			</control>
+			<control type="label">
+				<description>Appearance</description>
+				<label>480</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(19)</visible>
+			</control>
+			<control type="label">
+				<description>Network</description>
+				<label>705</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(18)</visible>
+			</control>
+			<control type="label">
+				<description>System</description>
+				<label>13000</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(16)</visible>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<label>2</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(15)</visible>
+			</control>
+			<control type="label">
+				<description>Weather</description>
+				<label>8</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(14)</visible>
+			</control>
+			<control type="label">
+				<description>Programs</description>
+				<label>0</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(13)</visible>
+			</control>
+			<control type="label">
+				<description>Customise</description>
+				<label>$LOCALIZE[31513]</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(56)</visible>
+			</control>
+			<control type="label">
+				<description>Profiles</description>
+				<label>$LOCALIZE[13200]</label>
+				<include>Animation_Setting_Heading</include>
+				<include>Global_HeadingDetailVars</include>
+				<visible>Window.IsActive(34)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="SettingsHeadingVars">
+		<width>300</width>
+		<font>Font_SettingsHeading</font>
+		<textcolor>SettingsHeading</textcolor>
+	</include>
+	<include name="SettingsDetailVars">
+		<width>300</width>
+		<posy>50</posy>
+		<font>Font_SettingsDetail</font>
+		<textcolor>SettingsDetail</textcolor>
+		<wrapmultiline>true</wrapmultiline>
+	</include>
+	<!-- Info dialog objects -->
+	<include name="Object_MovieInfoLines">
+		<control type="image">
+			<posx>0</posx>
+			<posy>161</posy>
+			<width>1280</width>
+			<height>226</height>
+			<texture>movieinfolines.png</texture>
+			<visible>Window.IsActive(2003)</visible>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+	<!-- Window menus -->
+	<include name="WindowMenuVars">
+		<width>1250</width>
+		<height>80</height>
+		<posx>40</posx>
+		<onup>50</onup>
+		<itemgap>0</itemgap>
+		<!--<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>-->
+		<include>Animation_ZoomInMenu</include>
+		<orientation>horizontal</orientation>
+	</include>
+	<include name="WindowMenuButton">
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>200</width>
+		<height>80</height>
+		<align>center</align>
+		<aligny>top</aligny>
+		<font>Font_MenuValue</font>
+		<textcolor>MenuValue</textcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>-</alttexturefocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+	</include>
+	<include name="WindowMenuRadioButton">
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>200</width>
+		<height>30</height>
+		<align>center</align>
+		<radioposx>45</radioposx>
+		<radioposy>30</radioposy>
+		<radioheight>7</radioheight>
+		<radiowidth>100</radiowidth>
+		<font>Font_MenuValue</font>
+		<textcolor>MenuValue</textcolor>
+		<textureradioon>common/radioUnderline.png</textureradioon>
+		<textureradiooff>-</textureradiooff>
+		<colordiffuse>FlagDiffuse</colordiffuse>
+	</include>
+	<include name="WindowMenuLabel">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>200</width>
+		<height>30</height>
+		<align>center</align>
+		<font>Font_MenuLabel</font>
+		<textcolor>MenuValue</textcolor>
+		<aligny>bottom</aligny>
+	</include>
+	<!--Keyboard Buttons Caps-->
+	<include name="KeyboardButtonsCaps">
+		<font>Font_Keyboard_Caps</font>
+		<textcolor>PanelListItem</textcolor>
+		<selectedcolor>PanelListItemSelected</selectedcolor>
+		<focusedcolor>PanelListItemFocused</focusedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<!--Keyboard Buttons No Caps-->
+	<include name="KeyboardButtonsNoCaps">
+		<font>Font_Keyboard_NoCaps</font>
+		<textcolor>PanelListItem</textcolor>
+		<selectedcolor>PanelListItemSelected</selectedcolor>
+		<focusedcolor>PanelListItemFocused</focusedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<!--Dialog Header-->
+	<include name="DialogHeader">
+		<aligny>center</aligny>
+		<textcolor>PanelListLabel</textcolor>
+		<font>Font_PanelFocusedItemLabel</font>
+	</include>
+	<!--Dialog Label Large-->
+	<include name="DialogLabelLarge">
+		<aligny>center</aligny>
+		<textcolor>PanelListTitle</textcolor>
+		<font>Font_PanelFocusedItemLabel</font>
+	</include>
+	<!--Dialog Label-->
+	<include name="DialogLabel">
+		<aligny>center</aligny>
+		<textcolor>PanelListTitle</textcolor>
+		<font>Font_PanelItemTitle</font>
+	</include>
+	<!--Dialog Label Heading-->
+	<include name="DialogLabelHeading">
+		<aligny>center</aligny>
+		<textcolor>PanelListTitle</textcolor>
+		<font>Font_PanelItemLabel</font>
+	</include>
+	<!--Dialog Label Focused-->
+	<include name="DialogLabelFO">
+		<aligny>center</aligny>
+		<textcolor>PanelListItemFocused</textcolor>
+		<font>Font_PanelItemLabel</font>
+	</include>
+	<!--Dialog Label Selected-->
+	<include name="DialogLabelNF">
+		<aligny>center</aligny>
+		<textcolor>PanelListItem</textcolor>
+		<selectedcolor>PanelListItemSelected</selectedcolor>
+		<disabledcolor>PanelListItemDisabled</disabledcolor>
+		<focusedcolor>PanelListItemFocused</focusedcolor>
+		<font>Font_PanelItemLabel</font>
+	</include>
+	<!--Dialog Label Focused Large-->
+	<include name="DialogLabelLargeFO">
+		<aligny>center</aligny>
+		<textcolor>PanelListItemFocused</textcolor>
+		<font>Font_PanelItemTitle</font>
+	</include>
+	<!--Dialog Label Selected Large-->
+	<include name="DialogLabelLargeNF">
+		<aligny>center</aligny>
+		<textcolor>PanelListItem</textcolor>
+		<selectedcolor>PanelListItemSelected</selectedcolor>
+		<disabledcolor>PanelListItemDisabled</disabledcolor>
+		<focusedcolor>PanelListItemFocused</focusedcolor>
+		<font>Font_PanelItemTitle</font>
+	</include>
+
+<!-- PlexAlaska -->
+
+	<include name="ResetFanartVisibilityButtons">
+		<onclick>Skin.Reset(increaseFanartVisibility20)</onclick>
+		<onclick>Skin.Reset(increaseFanartVisibility30)</onclick>
+		<onclick>Skin.Reset(increaseFanartVisibility40)</onclick>
+		<onclick>Skin.Reset(increaseFanartVisibility50)</onclick>
+	</include>
+
+	<include name="ResetHomeButtons">
+		<onclick>Skin.Reset(home1)</onclick>
+		<onclick>Skin.Reset(home2)</onclick>
+		<onclick>Skin.Reset(home3)</onclick>
+		<onclick>Skin.Reset(home4)</onclick>
+	</include>
+
+	<include name="FanartVisibilityButtons">
+		<width>740</width>
+		<font>Font_Settings</font>
+		<textcolor>MenuValue</textcolor>
+		<focusedcolor>MenuValueFO</focusedcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>ResetFanartVisibilityButtons</include>
+		<visible>Skin.HasSetting(increaseFanartVisibility)</visible>
+	</include>
+
+	<include name="Filter_MenuItem">
+		<control type="image">
+			<include>Dimensions_MenuItem</include>
+			<texture>backdrops/menuitemcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+			<visible>Skin.HasSetting(osximages)</visible>
+		</control>
+	</include>
+
+	<include name="Dimensions_MenuItem">
+		<posx>10</posx>
+		<posy>5</posy>
+		<width>349</width>
+		<height>260</height>
+	</include>
+
+	<include name="type_quit">
+		<onclick>XBMC.Shutdown(0)</onclick>
+	</include>
+	<include name="type_sleep">
+		<onclick>XBMC.SleepSystem()</onclick>
+	</include>
+
+	<include name="changethemebytime">
+		<include condition="system.time(09:00,20:00) + Skin.HasSetting(autom_themechange)">daytheme</include>
+		<include condition="system.time(20:00,09:00) + Skin.HasSetting(autom_themechange)">nighttheme</include>
+	</include>
+	<include name="daytheme">
+		<onfocus>Skin.SetString(theme,default)</onfocus>
+	</include>
+	<include name="nighttheme">
+		<onfocus>Skin.SetString(theme,dark)</onfocus>
+	</include>
+	<include name="runThemeScript">
+		<onfocus>RunScript(u:/skin/PlexAlaska/extras/PlexAlaska_SwitchTheme/default.py)</onfocus>
+	</include>
+
+	<include name="changethemebytime2">
+		<include condition="system.time(09:00,20:00) + Skin.HasSetting(autom_themechange)">daytheme2</include>
+		<include condition="system.time(20:00,09:00) + Skin.HasSetting(autom_themechange)">nighttheme2</include>
+	</include>
+	<include name="daytheme2">
+		<onclick>Skin.SetString(theme,default)</onclick>
+	</include>
+	<include name="nighttheme2">
+		<onclick>Skin.SetString(theme,dark)</onclick>
+	</include>
+	<include name="runThemeScript2">
+		<onclick>RunScript(u:/skin/PlexAlaska/extras/PlexAlaska_SwitchTheme/default.py)</onclick>
+	</include>
+	
+	<include name="diffuseForUnfocusedItem">
+		<colordiffuse>UnfocusedItemDiffuse</colordiffuse>
+	</include>
+
+	<include name="nomenu">
+		<visible>!Skin.HasSetting(LockViews)</visible>
+	</include>
+	<include name="allowmenu">
+		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+	</include>  
+	<include name="allowmenu2">
+		<visible allowhiddenfocus="true">ControlGroup(7001).HasFocus</visible>
+	</include>  
+    
+	<include name="submenu_dummybuttons">
+		<control type="button" id="351">
+			<onfocus>SetFocus(300)</onfocus>
+			<visible>!Container(300).HasFocus(1) + !Container(300).HasFocus(9)</visible>
+		</control>
+		<control type="button" id="351">
+			<onfocus>SetFocus(944)</onfocus>
+			<visible>Container(300).HasFocus(1) + Player.HasMedia</visible>
+		</control>
+		<control type="button" id="351">
+			<onfocus>SetFocus(300)</onfocus>
+			<visible>Container(300).HasFocus(1) + !Player.HasMedia</visible>
+		</control>
+		<control type="button" id="351">
+			<onfocus>SetFocus(940)</onfocus>
+			<visible>Container(300).HasFocus(9)</visible>
+		</control>
+	</include>
+
+	<include name="submenu_appstore">
+		<control type="group">
+			<posx>320</posx>
+			<posy>520</posy>
+			<visible>ControlGroup(943).HasFocus() + Container(300).HasFocus(2)</visible>
+			<include condition="Skin.HasSetting(home2)">Animation_Submenu_home2</include>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>40</posx>
+				<texture>mainmenu/submenu_left.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>520</width>
+				<height>60</height>
+				<posx>60</posx>
+				<texture>mainmenu/submenu_mid.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>580</posx>
+				<texture>mainmenu/submenu_right.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="943">
+				<posx>62</posx>
+				<posy>13</posy>
+				<width>660</width>
+				<height>33</height>
+				<itemgap>0</itemgap>
+				<onup>300</onup>
+				<orientation>horizontal</orientation>
+				<control type="button" id="40">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31009]</label>
+					<onclick>ActivateWindow(Programs)</onclick>
+				</control>
+				<control type="button" id="41">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31008]</label>
+					<onclick>XBMC.ActivateWindow(Favourites)</onclick>
+				</control>
+				<control type="button" id="42">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31500]</label>
+					<onclick>XBMC.ActivateWindow(3)</onclick>
+				</control>
+				<control type="button" id="43">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31020]</label>
+					<onclick>ActivateWindow(Scripts)</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="submenu_quit">
+		<control type="group">
+			<posx>415</posx>
+			<posy>520</posy>
+			<visible>ControlGroup(940).HasFocus() + Container(300).HasFocus(9)</visible>
+			<include condition="Skin.HasSetting(home2)">Animation_Submenu_home2</include>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>0</posx>
+				<texture>mainmenu/submenu_left.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>420</width>
+				<height>60</height>
+				<posx>20</posx>
+				<texture>mainmenu/submenu_mid.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>440</posx>
+				<texture>mainmenu/submenu_right.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="940">
+				<posx>36</posx>
+				<posy>13</posy>
+				<width>530</width>
+				<height>33</height>
+				<itemgap>0</itemgap>
+				<onup>300</onup>
+				<orientation>horizontal</orientation>
+				<control type="button" id="40">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31036]</label>
+					<onclick>XBMC.Shutdown(0)</onclick>
+				</control>
+				<control type="button" id="41">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31035]</label>
+					<onclick>XBMC.SleepSystem()</onclick>
+				</control>
+				<control type="button" id="43">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31019]</label>
+					<onclick>Plex.ShutDownSystem()</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="submenu_movies">
+		<control type="group">
+			<posx>270</posx>
+			<posy>520</posy>
+			<visible>ControlGroup(941).HasFocus() + Container(300).HasFocus(4)</visible>
+			<include condition="Skin.HasSetting(home2)">Animation_Submenu_home2</include>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>20</posx>
+				<texture>mainmenu/submenu_left.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<width>670</width>
+				<height>60</height>
+				<texture>mainmenu/submenu_mid.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>710</posx>
+				<texture>mainmenu/submenu_right.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="941">
+				<posx>50</posx>
+				<posy>13</posy>
+				<width>730</width>
+				<height>33</height>
+				<itemgap>0</itemgap>
+				<onup>300</onup>
+				<orientation>horizontal</orientation>
+				<control type="button" id="40">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31030]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,recentlyaddedmovies,return)</onclick>
+				</control>
+				<control type="button" id="42">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31000]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,moviegenres,return)</onclick>
+				</control>
+				<control type="button" id="43">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31002]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movieactors,return)</onclick>
+				</control>
+				<control type="button" id="44">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[20339]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,moviedirectors,return)</onclick>
+				</control>
+				<control type="button" id="45">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31001]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movieyears,return)</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="submenu_tvshows">
+		<control type="group">
+			<posx>335</posx>
+			<posy>520</posy>
+			<visible>ControlGroup(942).HasFocus() + Container(300).HasFocus(5)</visible>
+			<include condition="Skin.HasSetting(home2)">Animation_Submenu_home2</include>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>20</posx>
+				<texture>mainmenu/submenu_left.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<width>540</width>
+				<height>60</height>
+				<texture>mainmenu/submenu_mid.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>580</posx>
+				<texture>mainmenu/submenu_right.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="942">
+				<posx>50</posx>
+				<posy>13</posy>
+				<width>600</width>
+				<height>33</height>
+				<itemgap>0</itemgap>
+				<onup>300</onup>
+				<orientation>horizontal</orientation>
+				<control type="button" id="40">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31032]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,recentlyaddedepisodes,return)</onclick>
+				</control>
+				<control type="button" id="42">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31000]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowgenres,return)</onclick>
+				</control>
+				<control type="button" id="43">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31002]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowactors,return)</onclick>
+				</control>
+				<control type="button" id="44">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31001]</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowyears,return)</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="submenu_music">
+		<control type="group">
+			<posx>490</posx>
+			<posy>520</posy>
+			<visible>ControlGroup(944).HasFocus() + Container(300).HasFocus(1)</visible>
+			<include condition="Skin.HasSetting(home2)">Animation_Submenu_home2</include>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>0</posx>
+				<texture>mainmenu/submenu_left.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<width>240</width>
+				<height>60</height>
+				<texture>mainmenu/submenu_mid.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>260</posx>
+				<texture>mainmenu/submenu_right.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="944">
+				<posx>70</posx>
+				<posy>13</posy>
+				<width>600</width>
+				<height>33</height>
+				<itemgap>0</itemgap>
+				<onup>300</onup>
+				<orientation>horizontal</orientation>
+				<control type="button" id="40">
+					<include>submenubutton</include>
+					<label>$LOCALIZE[31004]</label>
+					<onclick>XBMC.ActivateWindow(50)</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="submenubutton">
+		<width>130</width>
+		<height>36</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Small</font>
+		<textcolor>MainMenuLabel</textcolor>
+		<focusedcolor>MainMenuLabel</focusedcolor>
+		<onclick>SetFocus(300)</onclick>
+		<animation type="Focus">
+			<effect delay="0" type="zoom" time="300" center="65,18" start="100" end="130" tween="back" easing="out" />
+		</animation>
+	</include>
+
+	<!-- date/time for video OSD -->
+	<include name="OSD_Time">
+		<control type="group">
+			<visible>Skin.HasSetting(OSD_Time)</visible>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-100" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,-100" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<control type="image">
+				<description>Panel</description>
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>230</width>
+				<height>105</height>
+				<colordiffuse>50000000</colordiffuse>
+				<texture background="true" flipx="true" diffuse="timematte.png">common/black.png</texture>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) | !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>10</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>Font_Time</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>System.Time</info>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>10</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>Font_Time</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>VideoPlayer.TimeRemaining</info>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<info>System.Date</info>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<label>$LOCALIZE[31526]</label>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<align>left</align>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>Skin.HasSetting(OSD_Time)</visible>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-100" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,-100" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<control type="image">
+				<description>Panel</description>
+				<posx>1050</posx>
+				<posy>-20</posy>
+				<width>230</width>
+				<height>105</height>
+				<colordiffuse>50000000</colordiffuse>
+				<texture background="true" diffuse="timematte.png">common/black.png</texture>
+			</control>
+			<control type="label">
+				<posx>1250</posx>
+				<posy>10</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>Font_Time</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>System.Time</info>
+				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>1250</posx>
+				<posy>10</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>Font_Time</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>Player.FinishTime</info>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>1250</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<info>System.Date</info>
+				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>1250</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<label>$LOCALIZE[31524]</label>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !VideoPlayer.Content(episodes)</visible>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>1250</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<label>$LOCALIZE[31525]</label>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + VideoPlayer.Content(episodes)</visible>
+				<align>right</align>
+			</control>
+		</control>
+
+		<control type="group">
+			<visible>Skin.HasSetting(OSD_Time)</visible>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-100" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,-100" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<control type="image">
+				<description>Panel</description>
+				<posx>505</posx>
+				<posy>-20</posy>
+				<width>270</width>
+				<height>105</height>
+				<colordiffuse>50000000</colordiffuse>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) | !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<texture diffuse="timematte2.png">common/black.png</texture>
+			</control>
+			<control type="label">
+				<posx>515</posx>
+				<posy>10</posy>
+				<width>250</width>
+				<height>50</height>
+				<font>Font_Time</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>Player.FinishTime</info>
+				<align>center</align>
+				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
+			</control>
+			<control type="label">
+				<posx>515</posx>
+				<posy>10</posy>
+				<width>250</width>
+				<height>50</height>
+				<font>Font_Time</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>VideoPlayer.TimeRemaining</info>
+				<align>center</align>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+			</control>
+			<control type="label">
+				<posx>515</posx>
+				<posy>50</posy>
+				<width>250</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<label>$LOCALIZE[31524]</label>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + !VideoPlayer.Content(episodes)</visible>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<posx>515</posx>
+				<posy>50</posy>
+				<width>250</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<label>$LOCALIZE[31525]</label>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + VideoPlayer.Content(episodes)</visible>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<posx>515</posx>
+				<posy>50</posy>
+				<width>250</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
+				<label>$LOCALIZE[31526]</label>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<align>center</align>
+			</control>
+		</control>
+	</include>
+
+	<include name="settings_helpbackground">
+		<control type="image">
+			<width>20</width>
+			<height>60</height>
+			<posx>360</posx>
+			<texture>mainmenu/submenu_left.png</texture>
+			<colordiffuse>HomeFrameColor</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>380</posx>
+			<width>690</width>
+			<height>60</height>
+			<texture>mainmenu/submenu_mid.png</texture>
+			<colordiffuse>HomeFrameColor</colordiffuse>
+		</control>
+		<control type="image">
+			<width>20</width>
+			<height>60</height>
+			<posx>1070</posx>
+			<texture>mainmenu/submenu_right.png</texture>
+			<colordiffuse>HomeFrameColor</colordiffuse>
+		</control>
+		<animation effect="slide" start="0,0" end="60,-37" time="600" condition="Player.HasMedia">Conditional</animation>
+	</include>
+
+	<include name="home4defaultcontrol">
+		<defaultcontrol always="true">200</defaultcontrol>
+	</include>
+	<include name="homedefaultcontrol">
+		<defaultcontrol always="true">300</defaultcontrol>
+	</include>
+</includes>

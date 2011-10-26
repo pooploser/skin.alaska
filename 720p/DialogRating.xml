@@ -1,0 +1,57 @@
+<window id="200">
+	<defaultcontrol always="true">10</defaultcontrol>
+    <coordinates>
+    	<system>1</system>
+    	<posx>0</posx>
+    	<posy>0</posy>
+    </coordinates>
+
+
+    <controls>
+ 		<control type="group">
+   			<include>Animation_ZoomOutZoomIn</include>
+	       <control type="image">
+	            <description>Background Overlay</description>
+				<posx>440</posx>
+				<posy>260</posy>
+				<width>400</width>
+				<height>200</height>
+				<texture border="50">common/common_panel_1.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
+	        </control>
+	
+	        <control type="group">
+	            <posx>448</posx>
+	            <posy>250</posy>
+	          
+	            <control type="label" id="1">
+	                <posy>36</posy>
+	                <width>384</width>
+	                <align>center</align>
+	                <font>Font_PanelItemLabel</font>
+					<textcolor>PanelListItem</textcolor>
+	                <label>Set Rating</label>
+	            </control>
+	            
+	            <control type="label" id="2">
+	                <posx>40</posx>
+	                <posy>70</posy>
+	                <width>304</width>
+	                <align>center</align>
+	                <label>Set Rating</label>
+	                <font>Font_ListTitleBigger</font>
+					<textcolor>PanelListLabel</textcolor>
+					<scroll>true</scroll>
+	            </control>
+	            
+	            <control type="image" id="10">
+	                <posx>48</posx>
+	                <posy>108</posy>
+	                <texture>rating0.png</texture>
+	                <colordiffuse>StarRatingDiffuse</colordiffuse>
+	            </control>
+	
+	        </control>
+		</control>
+    </controls>
+</window>

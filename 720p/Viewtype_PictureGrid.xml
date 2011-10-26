@@ -1,0 +1,172 @@
+<!--Alaska-->
+
+<includes>
+
+	<include name="PictureGrid2x4Button">
+		<label>2x4</label>
+		<onclick>Skin.Reset(picturegrid2z4)</onclick>
+		<onclick>Skin.SetBool(picturegrid4x3)</onclick>
+	</include>
+	
+	<include name="PictureGridVars2x4">
+		<posx>893</posx>
+		<posy>136</posy>
+		<width>220</width>
+		<height>440</height>	
+	</include>
+
+
+	<include name="Object_PicturePanel">
+		<control type="image">
+			<posx>-2</posx>
+			<posy>-2</posy>
+			<width>114</width>
+			<height>114</height>
+			<texture>common/thumb_border.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+			<animation type="Focus" reversible="false">
+				<effect type="zoom" center="auto" start="80" end="120" time="400" tween="back" easing="out" />
+				<effect type="fade" start="80" end="100" time="400" />
+			</animation>
+		</control>
+	</include>
+	
+	<include name="Object_PictureIconVars">
+		<posx>5</posx>
+		<posy>5</posy>
+		<width>100</width>
+		<height>100</height>
+		<fadetime>200</fadetime>					
+		<texture background="true">$INFO[ListItem.Icon]</texture>
+		<aspectratio>scale</aspectratio>	
+	</include>
+
+	<include name="Viewtype_PictureGrid">
+
+<!-- Browser -->
+		<control type="panel" id="55">
+			<viewtype label="GRID">list</viewtype>
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<include condition="![Skin.HasSetting(picturegrid4x3) | Skin.HasSetting(picturegrid7x1) | Skin.HasSetting(picturegrid7x2) | Skin.HasSetting(picturegrid7x3) | Skin.HasSetting(picturegrid7x4)]">PictureGridVars2x4</include>
+			<include condition="Skin.HasSetting(picturegrid4x3)">PictureGridVars4x3</include>
+			<include condition="Skin.HasSetting(picturegrid7x1)">PictureGridVars7x1</include>
+			<include condition="Skin.HasSetting(picturegrid7x2)">PictureGridVars7x2</include>			
+			<include condition="Skin.HasSetting(picturegrid7x3)">PictureGridVars7x3</include>
+			<include condition="Skin.HasSetting(picturegrid7x4)">PictureGridVars7x4</include>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<orientation>horizontal</orientation>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_PictureGridFloat</include>
+			<include>Animation_ZoomedByMenu</include>				
+			<include>Animation_HiddenByDialog</include>
+			<onup>55</onup>
+			<ondown>99123</ondown>			
+			<itemlayout width="110" height="110">
+				<include>Object_PicturePanel</include>
+				<control type="image">
+					<include>Object_PictureIconVars</include>
+					<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				</control>
+			</itemlayout>
+			<focusedlayout width="110" height="110">
+				<include>Object_PicturePanel</include>
+				<control type="image">
+					<include>Object_PictureIconVars</include>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="80" end="120" time="400" tween="back" easing="out" />
+						<effect type="fade" start="80" end="100" time="400" />
+					</animation>
+				</control>	
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>856</posx>
+			<posy>344</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture>wall/WallArrow_back.png</texture>
+			<colordiffuse>ButtonIconColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>			
+			<include>Animation_PictureGridFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByDialog</include>
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="slide" start="-550,135" end="-550,135" time="0" condition="Skin.HasSetting(picturegrid7x1)">Conditional</animation>
+			<animation effect="slide" start="-550,80" end="-550,80" time="0" condition="Skin.HasSetting(picturegrid7x2)">Conditional</animation>
+			<animation effect="slide" start="-550,25" end="-550,25" time="0" condition="Skin.HasSetting(picturegrid7x3)">Conditional</animation>
+			<animation effect="slide" start="-550,-30" end="-550,-30" time="0" condition="Skin.HasSetting(picturegrid7x4)">Conditional</animation>
+			<animation effect="slide" start="-220,55" end="-220,55" time="0" condition="Skin.HasSetting(picturegrid4x3)">Conditional</animation>
+			<visible>Control.IsVisible(55)</visible>
+		</control>
+		<control type="image">
+			<posx>856</posx>
+			<posy>344</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture flipx="true">wall/WallArrow.png</texture>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>			
+			<include>Animation_PictureGridFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByDialog</include>
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="slide" start="-550,135" end="-550,135" time="0" condition="Skin.HasSetting(picturegrid7x1)">Conditional</animation>
+			<animation effect="slide" start="-550,80" end="-550,80" time="0" condition="Skin.HasSetting(picturegrid7x2)">Conditional</animation>
+			<animation effect="slide" start="-550,25" end="-550,25" time="0" condition="Skin.HasSetting(picturegrid7x3)">Conditional</animation>
+			<animation effect="slide" start="-550,-30" end="-550,-30" time="0" condition="Skin.HasSetting(picturegrid7x4)">Conditional</animation>
+			<animation effect="slide" start="-220,55" end="-220,55" time="0" condition="Skin.HasSetting(picturegrid4x3)">Conditional</animation>
+			<visible>Control.IsVisible(55)</visible>
+		</control>
+		
+		<control type="image">
+			<posx>1123</posx>
+			<posy>344</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture>wall/WallArrow_back.png</texture>
+			<colordiffuse>ButtonIconColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>			
+			<include>Animation_PictureGridFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByDialog</include>
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="slide" start="0,135" end="0,135" time="0" condition="Skin.HasSetting(picturegrid7x1)">Conditional</animation>
+			<animation effect="slide" start="0,80" end="0,80" time="0" condition="Skin.HasSetting(picturegrid7x2)">Conditional</animation>
+			<animation effect="slide" start="0,25" end="0,25" time="0" condition="Skin.HasSetting(picturegrid7x3)">Conditional</animation>
+			<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Skin.HasSetting(picturegrid7x4)">Conditional</animation>
+			<animation effect="slide" start="0,55" end="0,55" time="0" condition="Skin.HasSetting(picturegrid4x3)">Conditional</animation>
+			<visible>Control.IsVisible(55)</visible>
+		</control>	
+		<control type="image">
+			<posx>160</posx>
+			<posy>130</posy>
+			<width>540</width>
+			<height>470</height>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+			<visible>Control.IsVisible(55)</visible>
+		</control>	
+		<control type="image">
+			<posx>1123</posx>
+			<posy>344</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture>wall/WallArrow.png</texture>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>			
+			<include>Animation_PictureGridFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByDialog</include>
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="slide" start="0,135" end="0,135" time="0" condition="Skin.HasSetting(picturegrid7x1)">Conditional</animation>
+			<animation effect="slide" start="0,80" end="0,80" time="0" condition="Skin.HasSetting(picturegrid7x2)">Conditional</animation>
+			<animation effect="slide" start="0,25" end="0,25" time="0" condition="Skin.HasSetting(picturegrid7x3)">Conditional</animation>
+			<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Skin.HasSetting(picturegrid7x4)">Conditional</animation>
+			<animation effect="slide" start="0,55" end="0,55" time="0" condition="Skin.HasSetting(picturegrid4x3)">Conditional</animation>
+			<visible>Control.IsVisible(55)</visible>
+		</control>		
+		
+	</include>
+
+</includes>

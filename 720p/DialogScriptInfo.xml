@@ -1,0 +1,37 @@
+<!--Empty-->
+
+<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+	<controls>
+
+		<control type="label">
+			<include>DialogID</include>
+			<label>DialogScriptInfo.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="textbox" id="5">
+			<description>Textarea</description>
+			<posx>10</posx>
+			<posy>40</posy>
+			<width>520</width>
+			<height>382</height>
+			<font>Small</font>
+			<textcolor>Black</textcolor>
+			<spinposx>0</spinposx>
+			<spinposy>0</spinposy>
+			<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+
+</window>

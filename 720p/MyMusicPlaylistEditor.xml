@@ -1,0 +1,13 @@
+<!--Empty-->
+
+<window id="503">
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<control type="label">
+			<include>DialogID</include>
+			<label>MyMusicPlaylistEditor.xml</label>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

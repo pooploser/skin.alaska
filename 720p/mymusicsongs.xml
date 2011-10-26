@@ -1,0 +1,98 @@
+<!--Alaska-->
+
+<window id="501">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+ 	<views>556,559,50,55,555,58,558,49,51,52,53,54,56,57,59</views>
+	<controls>
+		<include>Global_Background</include>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<visible>!Skin.HasSetting(nomusicbackdrops)</visible>
+			<include>Animation_CommonFade</include>
+		</control>
+		<include>Global_Filter</include>
+
+		<include>Viewtype_Files</include>
+		<include>Viewtype_Panel</include>
+		<include condition="!Skin.HasSetting(noviewwall)">Viewtype_MusicWall</include>
+
+		<include>Global_ContextFilter</include>
+		
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyMusicSongs.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="grouplist" id="7000">
+			<width>1250</width>
+			<height>40</height>
+			<posx>425</posx>
+			<posy>330</posy>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<width>1250</width>
+			<height>40</height>
+			<posx>425</posx>
+			<posy>300</posy>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31501]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31502]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+		</control>
+		
+		<include>Global_Time</include>
+		<include>Global_Heading</include>		
+		<include>Global_RSS</include>
+		<include>ScrollOffsetLabel</include>
+		<include>Object_DebugGrid</include>
+	
+	</controls>
+</window>

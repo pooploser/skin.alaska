@@ -1,0 +1,35 @@
+<!--Alaska-->
+
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>Animation_ZoomInMenu</include>	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+		<origin x="0" y="150"/>
+	</coordinates>
+	<controls>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogContextMenu.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+		
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>39</height>
+			<width>1280</width>
+			<font>Font_MenuValue</font>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<align>center</align>
+			<aligny>middle</aligny>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+</window>

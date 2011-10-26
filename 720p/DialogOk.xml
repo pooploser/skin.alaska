@@ -1,0 +1,101 @@
+<!--Alaska-->
+
+<window id="2002">
+	<defaultcontrol always="true">11</defaultcontrol>
+
+	<include>Animation_CommonFade</include>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+		<origin x="0" y="0"/>
+	</coordinates>
+
+	<controls>
+
+		<include>Global_Filter</include>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogOk.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="label" id="1">
+			<description>Heading</description>
+			<posx>40</posx>
+			<posy>200</posy>
+			<font>Font_MenuValue</font>
+			<textcolor>MenuValue</textcolor>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<label>-</label>
+			<width>1200</width>
+			<align>center</align>
+			<aligny>middle</aligny>
+			<scroll>true</scroll>
+		</control>
+
+		<control type="label" id="2">
+			<description>Line 1</description>
+			<posx>40</posx>
+			<posy>250</posy>
+			<font>Font_MenuValue</font>
+			<textcolor>MenuValue</textcolor>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<label>-</label>
+			<width>1200</width>
+			<align>center</align>
+			<aligny>middle</aligny>
+			<scroll>true</scroll>
+		</control>
+		<control type="label" id="3">
+			<description>Line 2</description>
+			<posx>40</posx>
+			<posy>300</posy>
+			<font>Font_MenuValue</font>
+			<textcolor>MenuValue</textcolor>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<label>-</label>
+			<width>1200</width>
+			<align>center</align>
+			<aligny>middle</aligny>
+			<scroll>true</scroll>
+		</control>
+		<control type="label" id="4">
+			<description>Line 3</description>
+			<posx>40</posx>
+			<posy>350</posy>
+			<font>Font_MenuValue</font>
+			<textcolor>MenuValue</textcolor>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<label>-</label>
+			<width>1200</width>
+			<align>center</align>
+			<aligny>middle</aligny>
+			<scroll>true</scroll>
+		</control>
+
+		<control type="button" id="11">
+			<description>ok</description>
+			<posx>620</posx>
+			<posy>400</posy>
+			<height>39</height>
+			<width>620</width>
+			<font>Font_MenuValue</font>
+			<textcolor>MenuValue</textcolor>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<label>$LOCALIZE[186]</label>
+			<aligny>center</aligny>
+			<onleft>PreviousMenu</onleft>
+			<onright>PreviousMenu</onright>
+			<onup>PreviousMenu</onup>
+			<ondown>PreviousMenu</ondown>
+			<onclick>PreviousMenu</onclick>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+
+</window>

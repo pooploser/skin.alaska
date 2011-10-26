@@ -1,0 +1,984 @@
+<!--Alaska-->
+
+<window id="56">
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<control type="list" id="9000">
+			<description>List</description>
+			<posx>150</posx>
+			<posy>175</posy>
+			<width>300</width>
+			<height>480</height>
+			<onleft>9010</onleft>
+			<onright>9010</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<itemlayout height="34" width="300">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="34" width="300">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValueFO</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>General</description>
+					<label>$LOCALIZE[31910]</label>
+					<onclick>SetFocus(9001)</onclick>
+				</item>
+				<item id="2">
+					<description>Home</description>
+					<label>$LOCALIZE[31911]</label>
+					<onclick>SetFocus(9002)</onclick>
+				</item>
+				<item id="3">
+					<description>Views</description>
+					<label>$LOCALIZE[31912]</label>
+					<onclick>SetFocus(9003)</onclick>
+				</item>
+				<item id="4">
+					<description>Backdrops</description>
+					<label>$LOCALIZE[31913]</label>
+					<onclick>SetFocus(9004)</onclick>
+				</item>
+				<item id="6">
+					<description>NowPlaying</description>
+					<label>$LOCALIZE[31914]</label>
+					<onclick>SetFocus(9006)</onclick>
+				</item>
+				<item id="7">
+					<description>Theme</description>
+					<label>$LOCALIZE[31915]</label>
+					<onclick>SetFocus(9007)</onclick>
+				</item>
+				<item id="5">
+					<description>Misc.</description>
+					<label>$LOCALIZE[31916]</label>
+					<onclick>SetFocus(9005)</onclick>
+				</item>
+			</content>
+		</control>
+		<control type="group" id="9010">
+			<posy>175</posy>
+			<posx>360</posx>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<control type="grouplist" id="9001">
+				<visible>Container(9000).Hasfocus(1)</visible>
+				<width>740</width>
+				<height>600</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<control type="radiobutton" id="100">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31920]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
+					<selected>Skin.HasSetting(autoscroll)</selected>
+				</control>
+				<control type="radiobutton" id="101">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31921]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(mediaflagson)</onclick>
+					<selected>Skin.HasSetting(mediaflagson)</selected>
+				</control>
+				<!--<control type="radiobutton" id="102">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31922]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(showstudioflags)</onclick>
+					<selected>Skin.HasSetting(showstudioflags)</selected>
+				</control>-->
+				<control type="radiobutton" id="104">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31924]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(largeRSS)</onclick>
+					<selected>Skin.HasSetting(largeRSS)</selected>
+				</control>
+				<control type="radiobutton" id="105">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31925]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(RSS_only_on_home)</onclick>
+					<selected>Skin.HasSetting(RSS_only_on_home)</selected>
+				</control>
+				<control type="radiobutton" id="106">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31926]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(OSD_Time)</onclick>
+					<selected>Skin.HasSetting(OSD_Time)</selected>
+				</control>
+				<control type="radiobutton" id="107">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31927]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>25</textoffsetx>
+					<onclick>Skin.ToggleSetting(OSD_Time_switch_position)</onclick>
+					<selected>Skin.HasSetting(OSD_Time_switch_position)</selected>
+					<visible>Skin.HasSetting(OSD_Time)</visible>
+				</control>
+			</control>
+			<control type="grouplist" id="9002">
+				<visible>Container(9000).Hasfocus(2)</visible>
+				<width>740</width>
+				<height>400</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="radiobutton" id="203">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31930]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<include>ResetHomeButtons</include>
+					<onclick>Skin.ToggleSetting(home1)</onclick>
+					<selected>Skin.HasSetting(home1) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4)]</selected>
+				</control>
+				<control type="radiobutton" id="204">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31951]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<include>ResetHomeButtons</include>
+					<onclick>Skin.ToggleSetting(home4)</onclick>
+					<ondown>SetFocus(219)</ondown>
+					<selected>Skin.HasSetting(home4)</selected>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>730</width>
+					<height>2</height>
+					<texture>common/divider.png</texture>
+					<visible>!Skin.HasSetting(home4)</visible>
+				</control>
+				<control type="radiobutton" id="219">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31952]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(stackmedia)</onclick>
+					<onup>SetFocus(204)</onup>
+					<selected>Skin.HasSetting(stackmedia)</selected>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>
+				<control type="radiobutton" id="207">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31933]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noappstore)</onclick>
+					<selected>Skin.HasSetting(noappstore)</selected>
+					<visible allowhiddenfocus="false">!Skin.HasSetting(home4)</visible>
+				</control>
+				<control type="radiobutton" id="208">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31934]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(novideos)</onclick>
+					<selected>Skin.HasSetting(novideos)</selected>
+					<visible>!Skin.HasSetting(home4)</visible>
+				</control>
+				<control type="radiobutton" id="209">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31935]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nopictures)</onclick>
+					<selected>Skin.HasSetting(nopictures)</selected>
+					<visible>!Skin.HasSetting(home4)</visible>
+				</control>
+				<control type="radiobutton" id="211">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31937]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nohomequit)</onclick>
+					<selected>Skin.HasSetting(nohomequit)</selected>
+					<visible>!Skin.HasSetting(home4)</visible>
+				</control>
+				<control type="radiobutton" id="218">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31950]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nomusic)</onclick>
+					<selected>Skin.HasSetting(nomusic)</selected>
+					<visible>!Skin.HasSetting(home4)</visible>
+				</control>
+				<control type="radiobutton" id="212">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31949]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(sleepsystem)</onclick>
+					<selected>Skin.HasSetting(sleepsystem)</selected>
+					<visible>!Skin.HasSetting(home4)</visible>
+				</control>
+				<!--<control type="radiobutton" id="202">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31938]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(homeweather)</onclick>
+					<selected>Skin.HasSetting(homeweather)</selected>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>-->
+				<control type="radiobutton" id="206">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31939]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(osximages)</onclick>
+					<selected>Skin.HasSetting(osximages)</selected>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>
+				<!--<control type="radiobutton" id="213">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31940]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(fanartformovies)</onclick>
+					<onclick>RunScript(q:/scripts/username.py)</onclick>
+					<onclick>Skin.Reset(fanartpath)</onclick>
+					<onclick>Skin.SetString(fanartpath,/Users/$INFO[Skin.String(osxusername)]/Library/Application Support/Plex/userdata/Thumbnails/Video/Fanart//)</onclick>
+					<selected>Skin.HasSetting(fanartformovies)</selected>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>-->
+				<!--<control type="togglebutton" id="214">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31941]</label>
+					<altlabel>$LOCALIZE[31942]</altlabel>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.SetImage(CustomMusicImage)</onclick>
+					<altclick>Skin.Reset(CustomMusicImage)</altclick>
+					<usealttexture>Skin.String(CustomMusicImage)</usealttexture>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>
+				<control type="togglebutton" id="215">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31943]</label>
+					<altlabel>$LOCALIZE[31944]</altlabel>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.SetPath(CustomQuitImage)</onclick>
+					<altclick>Skin.Reset(CustomQuitImage)</altclick>
+					<usealttexture>Skin.String(CustomQuitImage)</usealttexture>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>
+				<control type="togglebutton" id="216">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31945]</label>
+					<altlabel>$LOCALIZE[31946]</altlabel>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.SetPath(CustomSettingsImage)</onclick>
+					<altclick>Skin.Reset(CustomSettingsImage)</altclick>
+					<usealttexture>Skin.String(CustomSettingsImage)</usealttexture>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>
+				<control type="togglebutton" id="217">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31947]</label>
+					<altlabel>$LOCALIZE[31948]</altlabel>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.SetPath(CustomPicturesImage)</onclick>
+					<altclick>Skin.Reset(CustomPicturesImage)</altclick>
+					<usealttexture>Skin.String(CustomPicturesImage)</usealttexture>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<visible>Skin.HasSetting(home1)</visible>
+				</control>-->
+			</control>
+			<control type="grouplist" id="9003">
+				<visible>Container(9000).Hasfocus(3)</visible>
+				<width>740</width>
+				<height>400</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9003</onup>
+				<ondown>9003</ondown>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="radiobutton" id="300">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31955]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(No_File_View_Focus_Line)</onclick>
+					<selected>Skin.HasSetting(No_File_View_Focus_Line)</selected>
+				</control>
+				<control type="radiobutton" id="305">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31957]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nopicturepath)</onclick>
+					<selected>Skin.HasSetting(nopicturepath)</selected>
+				</control>
+				<control type="radiobutton" id="306">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31958]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.Reset(overlayunwatched)</onclick>
+					<onclick>Skin.ToggleSetting(overlaywatched)</onclick>
+					<selected>Skin.HasSetting(overlaywatched)</selected>
+				</control>
+				<control type="radiobutton" id="307">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31959]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.Reset(overlaywatched)</onclick>
+					<onclick>Skin.ToggleSetting(overlayunwatched)</onclick>
+					<selected>Skin.HasSetting(overlayunwatched)</selected>
+				</control>
+				<control type="radiobutton" id="321">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31956]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(overlaypartlywatched)</onclick>
+					<selected>Skin.HasSetting(overlaypartlywatched)</selected>
+				</control>
+				<control type="radiobutton" id="301">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31820]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noitemfading)</onclick>
+					<selected>Skin.HasSetting(noitemfading)</selected>
+				</control>
+				<control type="radiobutton" id="308">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31801]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewposterfixed)</onclick>
+					<selected>Skin.HasSetting(noviewposterfixed)</selected>
+				</control>
+				<control type="radiobutton" id="309">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31802]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewposterwrap)</onclick>
+					<selected>Skin.HasSetting(noviewposterwrap)</selected>
+				</control>
+				<control type="radiobutton" id="310">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31803]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewposter2fixed)</onclick>
+					<selected>Skin.HasSetting(noviewposter2fixed)</selected>
+				</control>
+				<control type="radiobutton" id="311">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31804]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewposter2wrap)</onclick>
+					<selected>Skin.HasSetting(noviewposter2wrap)</selected>
+				</control>
+				<control type="radiobutton" id="312">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31805]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewfanart)</onclick>
+					<selected>Skin.HasSetting(noviewfanart)</selected>
+				</control>
+				<control type="radiobutton" id="313">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31806]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewfanart2)</onclick>
+					<selected>Skin.HasSetting(noviewfanart2)</selected>
+				</control>
+				<control type="radiobutton" id="314">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31807]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewpanel)</onclick>
+					<selected>Skin.HasSetting(noviewpanel)</selected>
+				</control>
+				<control type="radiobutton" id="315">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31808]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewpanelwide)</onclick>
+					<selected>Skin.HasSetting(noviewpanelwide)</selected>
+				</control>
+				<control type="radiobutton" id="316">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31809]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewlandscapefixed)</onclick>
+					<selected>Skin.HasSetting(noviewlandscapefixed)</selected>
+				</control>
+				<control type="radiobutton" id="317">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31810]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewlandscapewrap)</onclick>
+					<selected>Skin.HasSetting(noviewlandscapewrap)</selected>
+				</control>
+				<control type="radiobutton" id="318">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31811]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewbanner)</onclick>
+					<selected>Skin.HasSetting(noviewbanner)</selected>
+				</control>
+				<control type="radiobutton" id="319">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31812]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewepisodes)</onclick>
+					<selected>Skin.HasSetting(noviewepisodes)</selected>
+				</control>
+				<control type="radiobutton" id="320">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31813]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noviewwall)</onclick>
+					<selected>Skin.HasSetting(noviewwall)</selected>
+				</control>
+			</control>
+			<control type="grouplist" id="9004">
+				<visible>Container(9000).Hasfocus(4)</visible>
+				<width>740</width>
+				<height>600</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="radiobutton" id="401">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31960]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(increaseFanartVisibility)</onclick>
+					<include>ResetFanartVisibilityButtons</include>
+					<onclick>Skin.ToggleSetting(increaseFanartVisibility20)</onclick>
+					<selected>Skin.HasSetting(increaseFanartVisibility)</selected>
+				</control>
+
+				<control type="radiobutton" id="4011">
+					<include>FanartVisibilityButtons</include>
+					<label>+ $LOCALIZE[31961]</label>
+					<onclick>Skin.ToggleSetting(increaseFanartVisibility20)</onclick>
+					<selected>Skin.HasSetting(increaseFanartVisibility20)</selected>
+				</control>
+				<control type="radiobutton" id="4012">
+					<include>FanartVisibilityButtons</include>
+					<label>+ $LOCALIZE[31962]</label>
+					<onclick>Skin.ToggleSetting(increaseFanartVisibility30)</onclick>
+					<selected>Skin.HasSetting(increaseFanartVisibility30)</selected>
+				</control>
+				<control type="radiobutton" id="4013">
+					<include>FanartVisibilityButtons</include>
+					<label>+ $LOCALIZE[31963]</label>
+					<onclick>Skin.ToggleSetting(increaseFanartVisibility40)</onclick>
+					<selected>Skin.HasSetting(increaseFanartVisibility40)</selected>
+				</control>
+				<control type="radiobutton" id="4014">
+					<include>FanartVisibilityButtons</include>
+					<label>+ $LOCALIZE[31964]</label>
+					<onclick>Skin.ToggleSetting(increaseFanartVisibility50)</onclick>
+					<selected>Skin.HasSetting(increaseFanartVisibility50)</selected>
+				</control>
+
+				<control type="radiobutton" id="402">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31965]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nomoviebackdrops)</onclick>
+					<selected>Skin.HasSetting(nomoviebackdrops)</selected>
+				</control>
+				<control type="radiobutton" id="403">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31966]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(notvshowbackdrops)</onclick>
+					<selected>Skin.HasSetting(notvshowbackdrops)</selected>
+				</control>
+				<control type="radiobutton" id="404">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31967]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nopicturebackdrops)</onclick>
+					<selected>Skin.HasSetting(nopicturebackdrops)</selected>
+				</control>
+				<control type="radiobutton" id="405">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31968]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nomusicbackdrops)</onclick>
+					<selected>Skin.HasSetting(nomusicbackdrops)</selected>
+				</control>
+				<control type="radiobutton" id="406">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31969]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(novideobackdrops)</onclick>
+					<selected>Skin.HasSetting(novideobackdrops)</selected>
+				</control>
+				<control type="radiobutton" id="407">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31970]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(noprogrambackdrops)</onclick>
+					<selected>Skin.HasSetting(noprogrambackdrops)</selected>
+				</control>
+
+			</control>
+
+
+			<control type="grouplist" id="9006">
+				<visible>Container(9000).Hasfocus(6)</visible>
+				<width>740</width>
+				<height>600</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9006</onup>
+				<ondown>9006</ondown>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="togglebutton" id="600">
+					<posx>100</posx>
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31973]</label>
+					<altlabel>$LOCALIZE[31974]</altlabel>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.SetPath(artistbackdroppath)</onclick>
+					<altclick>Skin.Reset(artistbackdroppath)</altclick>
+					<usealttexture>Skin.String(artistbackdroppath)</usealttexture>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+				</control>
+				<control type="radiobutton" id="601">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31975]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(disablenowplayingfilter)</onclick>
+					<selected>Skin.HasSetting(disablenowplayingfilter)</selected>
+				</control>
+				<control type="radiobutton" id="602">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31976]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(disableprogressbar)</onclick>
+					<selected>Skin.HasSetting(disableprogressbar)</selected>
+				</control>
+				<control type="radiobutton" id="603">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31977]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(alt_nowplaying)</onclick>
+					<selected>Skin.HasSetting(alt_nowplaying)</selected>
+				</control>
+			</control>
+
+			<control type="grouplist" id="9007">
+				<visible>Container(9000).Hasfocus(7)</visible>
+				<width>740</width>
+				<height>600</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="radiobutton" id="700">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31980]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(autom_themechange)</onclick>
+					<selected>Skin.HasSetting(autom_themechange)</selected>
+				</control>
+			</control>
+
+			<control type="grouplist" id="9005">
+				<visible>Container(9000).Hasfocus(5)</visible>
+				<width>740</width>
+				<height>600</height>
+				<itemgap>6</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9005</onup>
+				<ondown>9005</ondown>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="radiobutton" id="502">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31984]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(LockViews)</onclick>
+					<selected>Skin.HasSetting(LockViews)</selected>
+				</control>
+				<control type="radiobutton" id="500">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31985]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(debugmode)</onclick>
+					<selected>Skin.HasSetting(debugmode)</selected>
+				</control>
+				<control type="radiobutton" id="501">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31986]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(debuggrid)</onclick>
+					<selected>Skin.HasSetting(debuggrid)</selected>
+				</control>
+			</control>
+		</control>
+
+		<!-- arrows for long lists -->
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<control type="image">
+				<width>30</width>
+				<height>15</height>
+				<posx>680</posx>
+				<posy>150</posy>
+				<texture flipy="true">submenu_arrow.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<visible>[Container(9000).HasFocus(2) + Container(9002).HasPrevious] | [Container(9000).HasFocus(3) + Container(9003).HasPrevious]</visible>
+				<include>Animation_CommonFade</include>
+			</control>
+			<control type="image">
+				<width>30</width>
+				<height>15</height>
+				<posx>680</posx>
+				<posy>580</posy>
+				<texture>submenu_arrow.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<visible>[Container(9000).HasFocus(2) + Container(9002).HasNext] | [Container(9000).HasFocus(3) + Container(9003).HasNext]</visible>
+				<include>Animation_CommonFade</include>
+			</control>
+			<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3)</visible>
+		</control>
+
+		<!-- help -->
+		<control type="group">
+			<posy>625</posy>
+			<include>Animation_CommonFade</include>
+			<include>settings_helpbackground</include>
+			<control type="fadelabel">
+				<width>690</width>
+				<posx>380</posx>
+				<posy>10</posy>
+				<font>Font_RSS_Big</font>
+				<textcolor>MainMenuLabel</textcolor>
+				<scroll>true</scroll>
+				<scrollspeed>40</scrollspeed>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>$LOCALIZE[31990]</label>
+			</control>
+			<visible>Control.HasFocus(215)</visible>
+		</control>
+		<control type="group">
+			<posy>625</posy>
+			<include>Animation_CommonFade</include>
+			<include>settings_helpbackground</include>
+			<control type="fadelabel">
+				<width>690</width>
+				<posx>380</posx>
+				<posy>10</posy>
+				<font>Font_RSS_Big</font>
+				<textcolor>MainMenuLabel</textcolor>
+				<scroll>true</scroll>
+				<scrollspeed>40</scrollspeed>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>$LOCALIZE[31991]</label>
+			</control>
+			<visible>Control.HasFocus(217)</visible>
+		</control>
+		<control type="group">
+			<posy>625</posy>
+			<include>Animation_CommonFade</include>
+			<include>settings_helpbackground</include>
+			<control type="fadelabel">
+				<width>690</width>
+				<posx>380</posx>
+				<posy>10</posy>
+				<font>Font_RSS_Big</font>
+				<textcolor>MainMenuLabel</textcolor>
+				<scroll>true</scroll>
+				<scrollspeed>40</scrollspeed>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>$LOCALIZE[31992]</label>
+			</control>
+			<visible>Control.HasFocus(700)</visible>
+		</control>
+
+		<include>Global_ContextFilter</include>
+		<include>Global_Time</include>
+		<include>Setting_Heading</include>
+		<include>Global_RSS</include>
+		<!-- debug -->
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>CustomSettings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+	</controls>
+</window>

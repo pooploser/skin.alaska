@@ -1,0 +1,217 @@
+<!--Alaska-->
+
+<window id="115">
+	<defaultcontrol>901</defaultcontrol>
+	<visible>Window.IsActive(2005) + !Window.IsActive(2901) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	<controls>
+		<include>OSD_Time</include>
+		<control type="group">
+			<posy>560</posy>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,300" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>112</posy>
+				<width>1290</width>
+				<height>165</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>backgroundColor</colordiffuse>
+				<aspectratio aligny="bottom">scale</aspectratio>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>112</posy>
+				<width>1290</width>
+				<height>48</height>
+				<texture>backdrops/backgroundcolordiffuse.png</texture>
+				<colordiffuse>BackgroundFilterColor</colordiffuse>
+				<aspectratio aligny="bottom">scale</aspectratio>
+			</control>
+			<control type="label">
+				<posx>640</posx>
+				<posy>0</posy>
+				<include>DialogID</include>
+				<label>DialogSeekbar.xml</label>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
+			<control type="label">
+				<posx>110</posx>
+				<posy>111</posy>
+				<width>150</width>
+				<height>50</height>
+				<font>Font_OSDTime</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>NowPlayingArtist</textcolor>
+				<label>$INFO[VideoPlayer.Time]</label>
+			</control>
+			<control type="progress" id="23">
+				<texturebg>osd/osd_progress_back.png</texturebg>
+				<lefttexture>osd/osd_progress_left.png</lefttexture>
+				<midtexture>osd/osd_progress_mid.png</midtexture>
+				<righttexture>osd/osd_progress_right.png</righttexture>
+				<colordiffuse>OSDProgress</colordiffuse>
+				<info>Player.Progress</info>
+				<posx>120</posx>
+				<posy>130</posy>
+				<width>1035</width>
+				<height>19</height>
+			</control>
+			<control type="label">
+				<posx>1166</posx>
+				<posy>111</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>Font_OSDTime</font>
+				<aligny>center</aligny>
+				<textcolor>NowPlayingArtist</textcolor>
+				<label>$INFO[VideoPlayer.Duration]</label>
+			</control>
+		</control>
+		<control type="group">
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>290</posy>
+				<width>1280</width>
+				<height>190</height>
+				<texture>common/black.png</texture>
+				<colordiffuse>11FFFFFF</colordiffuse>
+				<visible>Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[112]</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.paused</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>ffx2</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding2x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>ffx4</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding4x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>ffx8</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding8x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>ffx16</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding16x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>ffx32</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding32x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>rwx2</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding2x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>rwx4</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding4x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>rwx8</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding8x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>rwx16</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding16x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>-320</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>rwx32</label>
+				<font>Font_MainMenu</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding32x</visible>
+			</control>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

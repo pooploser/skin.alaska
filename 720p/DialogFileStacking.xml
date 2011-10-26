@@ -1,0 +1,83 @@
+<!--Empty-->
+
+<window id="2008">
+	<defaultcontrol>450</defaultcontrol>
+
+	<controls>
+
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+
+		<control type="image" id="0">
+			<description>Back Panel</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>480</height>
+			<texture>common/white.png</texture>
+		</control>
+
+		<control type="label">
+			<include>DialogID</include>
+			<label>DialogFileStacking.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="list" id="450">
+			<posx>10</posx>
+			<posy>40</posy>
+			<width>520</width>
+			<height>382</height>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<itemlayout height="32">
+				<control type="image">
+					<width>500</width>
+					<height>30</height>
+					<texture>ButtonNF.png</texture>
+				</control>
+				<control type="image">
+					<posy>2</posy>
+					<width>26</width>
+					<height>26</height>
+					<info>ListItem.Icon</info>
+					<texture>ButtonCDNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<width>465</width>
+					<height>30</height>
+					<info>ListItem.Label</info>
+					<scroll>false</scroll>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>500</width>
+					<height>30</height>
+					<texture>ButtonFo.png</texture>
+				</control>
+				<control type="image">
+					<posy>2</posy>
+					<width>26</width>
+					<height>26</height>
+					<info>ListItem.Icon</info>
+					<texture>ButtonCDNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<width>465</width>
+					<height>30</height>
+					<textcolor>Black</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+
+</window>

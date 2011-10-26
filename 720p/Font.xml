@@ -1,0 +1,1332 @@
+<!--Alaska-->
+
+<fonts>
+
+	<fontset id="Default" unicode="true">
+
+		<!-- Default font --> 
+	 	<font>
+			<name>font13</name>
+			<filename>arial.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Font_Favourites</name>
+			<filename>aeon_settings_cy.ttf</filename>
+			<aspect>1.1</aspect>
+            <size>28</size>
+		</font>
+
+		<font>
+			<name>Home4MenuItem</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Home4MenuItemNoFocus</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Font_Channels</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Font_Res</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>26</size>
+		</font>
+		<font>
+			<name>Font_Artist</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>Font_Album</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Songtitle</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Aspect</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_PosterRating</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_HomeSelected</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>80</size>
+		</font>
+
+		<font>
+			<name>Font_HomeNotSelected</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>38</size>
+		</font>	
+
+		<font>
+			<name>Font_Settings</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Large</name>
+			<filename>arial.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Small</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Font_Time</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>38</size>
+		</font>
+
+		<font>
+			<name>Font_MainMenu</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>177</size>
+		</font>
+
+		<font>
+			<name>Font_Date</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>	
+
+		<font>
+			<name>Font_RSS</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>19</size>
+		</font>
+
+		<font>
+			<name>Font_RSS_Big</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>Font_NowPlayingTrack</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Font_PosterTitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.8</aspect>
+			<size>38</size>
+			<linespacing>0.9</linespacing>
+		</font>
+
+		<font>
+			<name>Font_InfoPlot</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_SearchPlot</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_InfoYear</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>41</size>
+		</font>	
+
+		<font>
+			<name>Font_InfoYear2</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Font_InfoDetails</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeTitleNF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeLabelF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeDetailNF</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>17</size>
+		</font>	
+
+		<font>
+			<name>Font_EpisodePlot</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>19</size>
+		</font>	
+
+		<font>
+			<name>Font_EpisodePlot2</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>16</size>
+		</font>	
+
+		<font>
+			<name>Font_TVShow</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>22</size>
+			<linespacing>1</linespacing>
+		</font>
+
+		<font>
+			<name>Font_EpisodeNumber</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>42</size>
+		</font>
+
+		<font>
+			<name>Font_ProgressDialog</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Font_SettingsHeading</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Font_SettingsDetail</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>19</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleBig</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleBigger</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>33</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>21</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleNF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>21</size>
+		</font>
+		<font>
+			<name>Font_Decktitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Font_New</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>35</size>
+		</font>
+		<font>
+			<name>Font_Label2</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_ListTrackNF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_ListDetailNF</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>15</size>
+		</font>
+
+		<font>
+			<name>Font_ListTrack</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>35</size>
+		</font>
+
+		<font>
+			<name>Font_ListDetail</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_MenuValue</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>33</size>
+		</font>
+
+		<font>
+			<name>Font_MenuLabel</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>24</size>
+		</font>	
+
+		<font>
+			<name>Font_MainMenuLabel</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>27</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>46</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesFocusedItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_bigtime</name>
+			<filename>alaska_nowplaying_cy.ttf</filename>
+			<size>85</size>
+		</font>
+
+		<font>
+			<name>Font_TemperatureOverlay</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<size>13</size>
+		</font>
+
+		<font>
+			<name>Font_Panel</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.90</aspect>
+			<size>24</size>
+			<linespacing>0.7</linespacing>
+		</font>
+		<font>
+			<name>Font_PanelLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
+			<name>Font_PanelItemTitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_PanelItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Font_PanelFocusedItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_Caps</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_NoCaps</name>
+			<filename>alaska_black_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_NoCaps_Large</name>
+			<filename>alaska_black_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_NPalt_title</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Font_NPalt_artist</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>Font_NPalt_next</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+		        <name>Font_OSDTime</name>
+		        <filename>alaska_regular_cy.ttf</filename>
+		        <aspect>0.9</aspect>
+		        <size>21</size>
+		</font>
+
+		<font>
+			<name>Font_Movietitle_Big</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<size>40</size>
+		</font>
+
+	</fontset>
+
+
+	<fontset id="Cyrillic" unicode="true">
+	
+	<!-- Cyrillic SHUFFLE edition (shuffledj@gmail.com 12/01/2010) -->
+	 	<font>
+			<name>font13</name>
+			<filename>arial.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Font_Favourites</name>
+			<filename>aeon_settings_cy.ttf</filename>
+			<aspect>1.1</aspect>
+            <size>28</size>
+		</font>
+
+		<font>
+			<name>Home4MenuItem</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Home4MenuItemNoFocus</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Font_Channels</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Font_Res</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>26</size>
+		</font>
+		<font>
+			<name>Font_Artist</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>Font_Album</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Songtitle</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Aspect</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_PosterRating</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_HomeSelected</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>80</size>
+		</font>
+
+		<font>
+			<name>Font_HomeNotSelected</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>38</size>
+		</font>	
+
+		<font>
+			<name>Font_Settings</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Large</name>
+			<filename>arial.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Small</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Font_Time</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>38</size>
+		</font>
+
+		<font>
+			<name>Font_MainMenu</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>177</size>
+		</font>
+
+		<font>
+			<name>Font_Date</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>	
+
+		<font>
+			<name>Font_RSS</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>19</size>
+		</font>
+
+		<font>
+			<name>Font_RSS_Big</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>Font_NowPlayingTrack</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Font_PosterTitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.8</aspect>
+			<size>38</size>
+			<linespacing>0.9</linespacing>
+		</font>
+
+		<font>
+			<name>Font_InfoPlot</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_SearchPlot</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_InfoYear</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>41</size>
+		</font>	
+
+		<font>
+			<name>Font_InfoYear2</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Font_InfoDetails</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeTitleNF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeLabelF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeDetailNF</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>17</size>
+		</font>	
+
+		<font>
+			<name>Font_EpisodePlot</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>19</size>
+		</font>	
+
+		<font>
+			<name>Font_EpisodePlot2</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>16</size>
+		</font>	
+
+		<font>
+			<name>Font_TVShow</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>22</size>
+			<linespacing>1</linespacing>
+		</font>
+
+		<font>
+			<name>Font_EpisodeNumber</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>42</size>
+		</font>
+
+		<font>
+			<name>Font_ProgressDialog</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Font_SettingsHeading</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Font_SettingsDetail</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>19</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleBig</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleBigger</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>33</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>21</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleNF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>21</size>
+		</font>
+		<font>
+			<name>Font_Decktitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Font_New</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>35</size>
+		</font>
+		<font>
+			<name>Font_Label2</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_ListTrackNF</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_ListDetailNF</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>15</size>
+		</font>
+
+		<font>
+			<name>Font_ListTrack</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>35</size>
+		</font>
+
+		<font>
+			<name>Font_ListDetail</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_MenuValue</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>33</size>
+		</font>
+
+		<font>
+			<name>Font_MenuLabel</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>24</size>
+		</font>	
+
+		<font>
+			<name>Font_MainMenuLabel</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>27</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>46</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesFocusedItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_bigtime</name>
+			<filename>alaska_nowplaying_cy.ttf</filename>
+			<size>85</size>
+		</font>
+
+		<font>
+			<name>Font_TemperatureOverlay</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<size>13</size>
+		</font>
+
+		<font>
+			<name>Font_Panel</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<aspect>0.90</aspect>
+			<size>24</size>
+			<linespacing>0.7</linespacing>
+		</font>
+		<font>
+			<name>Font_PanelLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
+			<name>Font_PanelItemTitle</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_PanelItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Font_PanelFocusedItemLabel</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_Caps</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_NoCaps</name>
+			<filename>alaska_black_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_NoCaps_Large</name>
+			<filename>alaska_black_nocaps_cy.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_NPalt_title</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Font_NPalt_artist</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>Font_NPalt_next</name>
+			<filename>alaska_nocaps_cy.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+		        <name>Font_OSDTime</name>
+		        <filename>alaska_regular_cy.ttf</filename>
+		        <aspect>0.9</aspect>
+		        <size>21</size>
+		</font>
+
+		<font>
+			<name>Font_Movietitle_Big</name>
+			<filename>alaska_regular_cy.ttf</filename>
+			<size>40</size>
+		</font>
+
+	</fontset>
+
+	<fontset id="Hebrew" unicode="true">
+
+		<!-- Default XBMC font --> 
+	 	<font>
+			<name>font13</name>
+			<filename>arial.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Home4MenuItem</name>
+			<filename>arial.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Home4MenuItemNoFocus</name>
+			<filename>arial.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Font_Channels</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Font_Res</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_Aspect</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_PosterRating</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_HomeSelected</name>
+			<filename>arial.ttf</filename>
+			<size>80</size>
+		</font>
+
+		<font>
+			<name>Font_HomeNotSelected</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>38</size>
+		</font>	
+
+		<font>
+			<name>Font_Settings</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Large</name>
+			<filename>arial.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Small</name>
+			<filename>arial.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Font_Time</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>38</size>
+		</font>
+
+		<font>
+			<name>Font_MainMenu</name>
+			<filename>arial.ttf</filename>
+			<size>177</size>
+		</font>
+
+		<font>
+			<name>Font_Date</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>	
+
+		<font>
+			<name>Font_RSS</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>19</size>
+		</font>
+
+		<font>
+			<name>Font_RSS_Big</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>Font_NowPlayingTrack</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Font_PosterTitle</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.7</aspect>
+			<size>38</size>
+			<linespacing>0.9</linespacing>
+		</font>
+
+		<font>
+			<name>Font_InfoPlot</name>
+			<filename>arial.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_InfoYear</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>41</size>
+		</font>	
+
+		<font>
+			<name>Font_InfoYear2</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Font_InfoDetails</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeTitleNF</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeLabelF</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Font_EpisodeDetailNF</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>17</size>
+		</font>	
+
+		<font>
+			<name>Font_EpisodePlot</name>
+			<filename>arial.ttf</filename>
+			<size>19</size>
+		</font>	
+
+		<font>
+			<name>Font_EpisodePlot2</name>
+			<filename>arial.ttf</filename>
+			<size>16</size>
+		</font>	
+
+		<font>
+			<name>Font_TVShow</name>
+			<filename>arial.ttf</filename>
+			<size>22</size>
+			<linespacing>1</linespacing>
+		</font>
+
+		<font>
+			<name>Font_EpisodeNumber</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>42</size>
+		</font>
+
+		<font>
+			<name>Font_ProgressDialog</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Font_SettingsHeading</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Font_SettingsDetail</name>
+			<filename>arial.ttf</filename>
+			<size>19</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleBig</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleBigger</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>33</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitle</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>21</size>
+		</font>
+
+		<font>
+			<name>Font_ListTitleNF</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>21</size>
+		</font>
+
+		<font>
+			<name>Font_ListTrackNF</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_ListDetailNF</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>15</size>
+		</font>
+
+		<font>
+			<name>Font_ListTrack</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>35</size>
+		</font>
+
+		<font>
+			<name>Font_ListDetail</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_MenuValue</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>33</size>
+		</font>
+
+		<font>
+			<name>Font_MenuLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>24</size>
+		</font>	
+
+		<font>
+			<name>Font_MainMenuLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.95</aspect>
+			<size>27</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>46</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesItemLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Font_FavouritesFocusedItemLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_bigtime</name>
+			<filename>alaska_nowplaying.ttf</filename>
+			<size>85</size>
+		</font>
+
+		<font>
+			<name>Font_TemperatureOverlay</name>
+			<filename>arial.ttf</filename>
+			<size>13</size>
+		</font>
+
+		<font>
+			<name>Font_Panel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.90</aspect>
+			<size>24</size>
+			<linespacing>0.7</linespacing>
+		</font>
+		<font>
+			<name>Font_PanelLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>46</size>
+		</font>
+		<font>
+			<name>Font_PanelItemTitle</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_PanelItemLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Font_PanelFocusedItemLabel</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_Caps</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_NoCaps</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Keyboard_NoCaps_Large</name>
+			<filename>arial.ttf</filename>
+			<aspect>0.9</aspect>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Font_NPalt_title</name>
+			<filename>arial.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Font_NPalt_artist</name>
+			<filename>arial.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>Font_NPalt_next</name>
+			<filename>arial.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+		        <name>Font_OSDTime</name>
+		        <filename>arial.ttf</filename>
+		        <aspect>0.9</aspect>
+		        <size>17</size>
+		</font>
+
+		<font>
+			<name>Font_Movietitle_Big</name>
+			<filename>arial.ttf</filename>
+			<size>40</size>
+		</font>
+
+	</fontset>
+
+</fonts>

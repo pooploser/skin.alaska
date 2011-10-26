@@ -1,0 +1,283 @@
+<!--Alaska-->
+
+<includes>
+	<include name="Viewtype_MusicWall">
+		<control type="group">
+			<posx>13</posx>
+			<posy>225</posy>
+			<visible>Control.IsVisible(55)</visible>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<control type="fadelabel">
+				<posx>20</posx>
+				<posy>-102</posy>
+				<width>410</width>
+				<height>34</height>
+				<aligny>top</aligny>
+				<font>Font_Panel</font>
+				<textcolor>PosterTitle</textcolor>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+				<pauseatend>1500</pauseatend>
+				<visible>!Window.IsActive(2) + !Container.Content(episodes)</visible>
+			</control>
+			<control type="textbox">
+				<posx>20</posx>
+				<posy>-40</posy>
+				<width>360</width>
+				<height>320</height>
+				<label>$INFO[ListItem.Property(description)]</label>
+				<autoscroll time="3400" delay="6000" repeat="8000">Skin.HasSetting(autoscroll)</autoscroll>
+				<font>Font_EpisodePlot</font>
+				<textcolor>EpisodePlot</textcolor>
+			</control>
+			<control type="image">
+				<posx>1006</posx>
+				<posy>-96</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(9).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1006</posx>
+				<posy>86</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(10).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1006</posx>
+				<posy>266</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(11).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+
+		</control>
+
+		<!-- Browser -->
+
+		<control type="panel" id="55">
+			<viewtype label="Wall">icon</viewtype>
+			<posx>473</posx>
+			<posy>125</posy>
+			<width>540</width>
+			<height>540</height>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<orientation>horizontal</orientation>
+			<onup>55</onup>
+			<ondown>99123</ondown>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+			<itemlayout width="180" height="180">
+				<!--<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>wall/musicwallmatte.png</texture>
+					<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				</control>-->
+				<control type="image">
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>162</width>
+					<height>162</height>
+					<fadetime>200</fadetime>
+					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="2">wall/musicwallframeNF.png</bordertexture>
+					<bordersize>1</bordersize>
+					<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+			</itemlayout>
+			<focusedlayout width="180" height="180">
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>wall/musicwallmatte.png</texture>
+					<colordiffuse>backgroundColor</colordiffuse>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(0)">
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(1)">
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(2)">
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+				</control>	
+
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<fadetime>200</fadetime>
+					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(0)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(1)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(2)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>wall/musicwallframeNF.png</texture>
+					<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(0)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(1)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(2)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>-7</posx>
+					<posy>-7</posy>
+					<width>188</width>
+					<height>188</height>
+					<texture>wall/musicwallframeF.png</texture>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(0)">
+						<effect type="fade" start="0" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(1)">
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(55).Row(2)">
+						<effect type="fade" start="0" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+				</control>
+
+			</focusedlayout>
+
+		</control>
+
+		<!--<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="backdrops/mask_5.png">common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+			<visible>Control.IsVisible(55)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+			<visible>Control.IsVisible(55)</visible>
+		</control>-->
+
+		<control type="image">
+			<posx>445</posx>
+			<posy>381</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Control.IsVisible(55)</visible>
+			<texture flipx="true">wall/WallArrow_back.png</texture>
+			<colordiffuse>ButtonIconColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+		</control>
+		<control type="image">
+			<posx>445</posx>
+			<posy>381</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Control.IsVisible(55)</visible>
+			<texture flipx="true">wall/WallArrow.png</texture>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+		</control>
+
+		<control type="image">
+			<posx>1200</posx>
+			<posy>381</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Control.IsVisible(55)</visible>
+			<texture>wall/WallArrow_back.png</texture>
+			<colordiffuse>ButtonIconColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+		</control>
+
+		<control type="image">
+			<posx>1200</posx>
+			<posy>381</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Control.IsVisible(55)</visible>
+			<texture>wall/WallArrow.png</texture>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>600</posy>
+			<width>700</width>
+			<height>70</height>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Album]</label>
+			<textcolor>ffffffff</textcolor>
+			<font>Font_Time</font>
+			<visible>Container.Content(albums) + Control.IsVisible(55)</visible>
+		</control>
+
+	</include>
+</includes>

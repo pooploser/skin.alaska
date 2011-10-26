@@ -1,0 +1,452 @@
+<!--Alaska-->
+
+<includes>
+	<include name="ScrollOffsetLabel">
+		<control type="group">
+			<posx>1100</posx>
+			<posy>600</posy>
+			<width>250</width>
+			<height>250</height>
+			<visible>Container.Scrolling</visible>
+			<animation effect="slide" end="605,560" time="0" condition="Control.IsVisible(553) | [Control.IsVisible(563) + Container.Content(movies)]">Conditional</animation>
+			<animation effect="slide" end="605,540" time="0" condition="Control.IsVisible(52) | Control.IsVisible(555) |  Control.IsVisible(552)">Conditional</animation>
+			<animation effect="slide" end="605,340" time="0" condition="Control.IsVisible(53)">Conditional</animation>
+			<animation effect="slide" end="300,340" time="0" condition="Control.IsVisible(54)">Conditional</animation>
+			<animation effect="slide" end="605,440" time="0" condition="Control.IsVisible(57)">Conditional</animation>
+			<animation effect="slide" end="400,330" time="0" condition="Control.IsVisible(550)">Conditional</animation>
+			<animation effect="slide" end="560,540" time="0" condition="Control.IsVisible(551)">Conditional</animation>
+			<animation effect="slide" end="605,400" time="0" condition="Control.IsVisible(55)">Conditional</animation>
+			<control type="group">
+				<animation effect="fade" start="100" end="0" time="100" delay="10" condition="!Container().OnNext + !Container().OnPrevious">Conditional</animation>
+				<control type="image">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<height>70</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture>common/scroll_letter_background.png</texture>
+					<colordiffuse>773d3d3d</colordiffuse>
+					<visible>!Skin.HasSetting(noscrollletters) + !Container.Content(episodes) + !Container.Content(Seasons)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<height>70</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.SortLetter]</label>
+					<textcolor>ffffffff</textcolor>
+					<font>Font_MainMenuLabel</font>
+					<visible>!Skin.HasSetting(noscrollletters) + !Container.Content(episodes) + !Container.Content(Seasons)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="menu_objects">
+	<control type="group">
+			<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(Movies) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(picture) | Container.Content(Pictures) | Container.Content(tvshows)</visible>
+			<posy>650</posy>
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>shutdown.png</texture>
+			<colordiffuse>88ADDFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>15</posx>
+			<posy>15</posy>
+			<width>39</width>
+			<height>39</height>
+			<visible>Control.HasFocus(99120)</visible>
+			<texture>setting_frame.png</texture>
+			<colordiffuse>red</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>51</posx>
+			<posy>11</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>settings.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>57</posx>
+			<posy>15</posy>
+			<width>39</width>
+			<height>39</height>
+			<visible>Control.HasFocus(99121)</visible>
+			<texture>setting_frame.png</texture>
+			<colordiffuse>red</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>93</posx>
+			<posy>11</posy>
+			<width>48</width>
+			<height>48</height>
+			<texture>search.png</texture>
+			<colordiffuse>88ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>98</posx>
+			<posy>15</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99122)</visible>
+			<texture>setting_frame.png</texture>
+			<colordiffuse>red</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>140</posx>
+			<posy>14</posy>
+			<width>42</width>
+			<height>42</height>
+			<texture>view.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>139</posx>
+			<posy>13</posy>
+			<width>43</width>
+			<height>43</height>
+			<visible>Control.HasFocus(99123)</visible>
+			<texture>setting_frame.png</texture>
+			<colordiffuse>red</colordiffuse>
+		</control>
+		<control type="button" id="99120">
+			<posx>15</posx>
+			<posy>15</posy>
+			<width>39</width>
+			<height>39</height>
+			<include condition="!Skin.HasSetting(sleepsystem)">type_quit</include>
+			<include condition="Skin.HasSetting(sleepsystem)">type_sleep</include>
+			<onup>50</onup>
+			<onright>99121</onright>
+		</control>
+		<control type="button" id="99121">
+			<posx>57</posx>
+			<posy>15</posy>
+			<width>39</width>
+			<height>39</height>
+			<onclick>ActivateWindow(4)</onclick>
+			<onup>50</onup>
+			<onright>99122</onright>
+			<onleft>99120</onleft>
+		</control>
+		<control type="button" id="99122">
+			<posx>98</posx>
+			<posy>15</posy>
+			<width>41</width>
+			<height>41</height>
+			<onclick>ActivateWindow(10051)</onclick>
+			<onup>50</onup>
+			<onright>99123</onright>
+			<onleft>99121</onleft>
+		</control>
+		<control type="button" id="99123">
+			<posx>98</posx>
+			<posy>15</posy>
+			<width>41</width>
+			<height>41</height>
+			<onclick>Container.NextViewMode</onclick>
+			<onup>50</onup>
+			<onright>50</onright>
+			<onleft>99122</onleft>
+		</control>
+	</control>
+	</include>
+	<include name="menu_objects2">
+	<control type="group">
+			<visible>!Container.Content(episodes) | !Container.Content(episodes) | !Container.Content(seasons) | !Container.Content(Movies) | !Container.Content(Artists) | !Container.Content(Albums) | !Container.Content(Songs) | !Container.Content(tvshows)</visible>
+			<posy>650</posy>
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>shutdown.png</texture>
+			<colordiffuse>88ADDFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>15</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99120)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>51</posx>
+			<posy>11</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>settings.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>56</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99121)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>93</posx>
+			<posy>11</posy>
+			<width>46</width>
+			<height>46</height>
+			<texture>search.png</texture>
+			<colordiffuse>88ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>97</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99122)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>136</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<texture>view.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>137</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99123)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="button" id="99120">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>50</width>
+			<height>50</height>
+			<include condition="!Skin.HasSetting(sleepsystem)">type_quit</include>
+			<include condition="Skin.HasSetting(sleepsystem)">type_sleep</include>
+			<onup>50</onup>
+			<onright>99121</onright>
+		</control>
+		<control type="button" id="99121">
+			<posx>51</posx>
+			<posy>11</posy>
+			<width>50</width>
+			<height>50</height>
+			<onclick>ActivateWindow(4)</onclick>
+			<onup>50</onup>
+			<onright>99122</onright>
+			<onleft>99120</onleft>
+		</control>
+		<control type="button" id="99122">
+			<posx>93</posx>
+			<posy>11</posy>
+			<width>46</width>
+			<height>46</height>
+			<onclick>ActivateWindow(10051)</onclick>
+			<onup>50</onup>
+			<onright>99123</onright>
+			<onleft>99121</onleft>
+		</control>
+		<control type="button" id="99123">
+			<posx>137</posx>
+			<posy>14</posy>
+			<width>42</width>
+			<height>42</height>
+			<onclick>Container.NextViewMode</onclick>
+			<onup>50</onup>
+			<onright>50</onright>
+			<onleft>99122</onleft>
+		</control>
+	</control>
+	</include>
+
+	<!-- Keyboard -->
+	<include name="Objects_KeyOffVars">
+		<textcolor>77FFFFFF</textcolor>
+		<focusedcolor>77FFFFFF</focusedcolor>
+		<selectedcolor>77FFFFFF</selectedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textoffsety>21</textoffsety>
+		<font>Font_KeyboardKeys</font>
+	</include>
+	<include name="Objects_KeyOnVars">
+		<textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<selectedcolor>FFFFFFFF</selectedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textoffsety>21</textoffsety>
+		<include>Animation_KeyboardFade</include>
+		<font>Font_KeyboardKeys</font>
+	</include>
+	<include name="Objects_KeyOffSymbolVars">
+		<textcolor>77FFFFFF</textcolor>
+		<focusedcolor>77FFFFFF</focusedcolor>
+		<selectedcolor>77FFFFFF</selectedcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsety>21</textoffsety>
+		<font>Font_KeyboardShapes</font>
+	</include>
+	<include name="Objects_KeyOnSymbolVars">
+		<textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<selectedcolor>FFFFFFFF</selectedcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsety>21</textoffsety>
+		<include>Animation_KeyboardFade</include>
+		<font>Font_KeyboardShapes</font>
+	</include>
+	<include name="Objects_DoubleKeyOff">
+		<posy>0</posy>
+		<width>110</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_doublenf.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
+		<include>Objects_KeyOffVars</include>
+	</include>
+	<include name="Objects_DoubleKeyOffSymbol">
+		<posy>0</posy>
+		<width>110</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_doublenf.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
+		<include>Objects_KeyOffSymbolVars</include>
+	</include>
+	<include name="Objects_SingleKeyOff">
+		<posy>0</posy>
+		<width>68</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_singlenf.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_singlenf.png</texturenofocus>
+		<include>Objects_KeyOffVars</include>
+	</include>
+	<include name="Objects_TripleKeyOff">
+		<posy>0</posy>
+		<width>152</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_triplenf.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_triplenf.png</texturenofocus>
+		<include>Objects_KeyOffVars</include>
+	</include>
+	<include name="Objects_SpaceBarOff">
+		<posy>0</posy>
+		<width>278</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_spacef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_spacenf.png</texturenofocus>
+		<include>Objects_KeyOffVars</include>
+	</include>
+	<include name="Objects_DoubleKeyOn">
+		<posy>0</posy>
+		<width>110</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_doublef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_doublef.png</texturenofocus>
+		<include>Objects_KeyOnVars</include>
+	</include>
+	<include name="Objects_DoubleKeyOnSymbol">
+		<posy>0</posy>
+		<width>110</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_doublef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_doublef.png</texturenofocus>
+		<include>Objects_KeyOnSymbolVars</include>
+	</include>
+	<include name="Objects_SingleKeyOn">
+		<posy>0</posy>
+		<width>68</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_singlef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_singlef.png</texturenofocus>
+		<include>Objects_KeyOnVars</include>
+	</include>
+	<include name="Objects_TripleKeyOn">
+		<posy>0</posy>
+		<width>152</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_triplef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_triplef.png</texturenofocus>
+		<include>Objects_KeyOnVars</include>
+	</include>
+	<include name="Objects_SpaceBarOn">
+		<posy>0</posy>
+		<width>278</width>
+		<height>68</height>
+		<texturefocus>keyboard/keyboard_spacef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_spacef.png</texturenofocus>
+		<include>Objects_KeyOnVars</include>
+	</include>
+	<!--Movie Info-->
+	<include name="Objects_FSInfoCertificate">
+		<posy>56</posy>
+		<width>249</width>
+		<height>57</height>
+	</include>
+	<include name="Objects_FSInfoYear">
+		<width>109</width>
+		<height>53</height>
+		<aligny>center</aligny>
+		<font>Font_FSInfoYear</font>
+		<label fallback="-">$INFO[ListItem.Year]</label>
+		<include>Colour_Grey</include>
+	</include>
+	<include name="Objects_FSInfoGenre">
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Font_FSInfoGenre</font>
+		<label fallback="31425">[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+		<include>Colour_Grey</include>
+		<height>56</height>
+	</include>
+	<include name="Objects_FSInfoLabel">
+		<posx>3</posx>
+		<width>110</width>
+		<height>29</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Font_FSInfoLabel</font>
+		<include>Colour_Grey</include>
+	</include>
+
+	<include name="Objects_FSInfoValue">
+		<posx>120</posx>
+		<width>500</width>
+		<height>29</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Font_FSInfoData</font>
+		<include>Colour_OffWhite</include>
+	</include>
+	<!--Dialog Labels-->
+	<include name="Objects_DialogLabel">
+		<font>Font_FavouritesLabel</font>
+		<textcolor>CCababab</textcolor>
+		<shadowcolor>CCdadada</shadowcolor>
+	</include>
+	<include name="Objects_DialogLabelDark">
+		<textcolor>CC747474</textcolor>
+		<font>Font_FavouritesLabel</font>
+		<shadowcolor>CCdadada</shadowcolor>
+	</include>
+	<include name="Objects_DialogSettingsLabel">
+		<font>Font_DialogSettingsLabel</font>
+		<textcolor>CC747474</textcolor>	
+	</include>
+
+</includes>

@@ -1,0 +1,117 @@
+<!--Empty-->
+
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<include>Animation_CommonFade</include>
+
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<include>Global_ContextFilter</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>LoginScreen.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="fixedlist" id="52">
+			<posx>460</posx>
+			<posy>90</posy>
+			<height>485</height>
+			<width>780</width>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="Files">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>3</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+			<itemlayout width="1240" height="46">
+				<control type="label">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>Font_ListTitleNF</font>
+					<textcolor>FileTitleNF</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="800" height="120">
+				<control type="label">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>760</width>
+					<height>120</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="group">
+			<visible>!Skin.HasSetting(No_File_View_Focus_Line)</visible>
+			<posx>-200</posx>
+			<posy>230</posy>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1680</width>
+				<height>120</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>FocusLinesBackground</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1680</width>
+				<height>2</height>
+				<texture>common/line_1.png</texture>
+				<colordiffuse>55ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>1680</width>
+				<height>2</height>
+				<texture>common/line_1.png</texture>
+				<colordiffuse>55ffffff</colordiffuse>
+			</control>
+		</control>
+		<control type="image">
+			<posx>30</posx>
+			<posy>110</posy>
+			<width>410</width>
+			<height>360</height>
+			<fadetime>400</fadetime>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
+			<bordertexture border="8">common/thumb_border.png</bordertexture>
+			<bordersize>8</bordersize>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_HiddenByDialog</include>
+		</control>
+
+		<include>Object_DebugGrid</include>
+		<include>Global_Time</include>
+		<include>Global_Heading</include>		
+
+	</controls>
+
+</window>

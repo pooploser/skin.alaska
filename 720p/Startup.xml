@@ -1,0 +1,22 @@
+<!--Empty-->
+
+<window>
+	<defaultcontrol always="true">778</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="button" id="10">
+			<description>Trigger</description>
+			<onfocus>RunScript(U:/skin/PlexAlaska/extras/CopyScripts.py)</onfocus>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		</control>
+
+		<control type="button" id="778">
+			<include condition="Skin.HasSetting(autom_themechange)">changethemebytime</include>
+			<include condition="Skin.HasSetting(autom_themechange)">runThemeScript</include>
+			<onfocus>SetFocus(10)</onfocus>
+		</control>
+
+	</controls>
+</window>

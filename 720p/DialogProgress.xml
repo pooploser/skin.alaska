@@ -1,0 +1,117 @@
+<!--Alaska-->
+
+<window id="101">
+	<defaultcontrol always="true">10</defaultcontrol>
+
+	<!--<include condition="!Window.IsVisible(1) + !Window.IsVisible(24) + !Window.IsVisible(2) + !Window.IsVisible(501)">animation_appstore_fix</include>-->
+
+	<controls>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogProgress.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	
+		<control type="group">
+			<posx>-290</posx>
+			<posy>35</posy>
+			<width>707</width>
+			<height>183</height>
+			<control type="image">
+				<posx>322</posx>
+				<posy>10</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>dialogs/scanprogress_back.png</texture>
+				<colordiffuse>ButtonIconColor</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="progress" id="404">
+				<description>Progressbar</description>
+				<info>System.Progressbar</info>
+				<posx>331</posx>
+				<posy>23</posy>
+				<width>32</width>
+				<height>28</height>
+				<texturebg>dialogs/clear.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>dialogs/grey.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" delay="400" start="0" end="100" time="100" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="10" />
+				</animation>
+				<visible>!Window.IsVisible(1)</visible>
+			</control>
+			<control type="image">
+				<posx>322</posx>
+				<posy>10</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>dialogs/scanprogress.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+			</control>
+			<control type="label" id="1">
+				<description>Heading Label</description>
+				<posx>390</posx>
+				<posy>15</posy>
+				<width>627</width>
+				<height>51</height>
+				<textcolor>Time</textcolor>
+				<align>left</align>
+				<font>Font_ProgressDialog</font>
+			</control>
+			<control type="label" id="2">
+				<posx>390</posx>
+				<posy>35</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>left</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+			<!--control type="label" id="3">
+				<posx>280</posx>
+				<posy>70</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>right</align>
+				<font>Font_ProgressLabelBig</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label" id="4">
+				<posx>310</posx>
+				<posy>35</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control-->
+			</control>
+		<control type="button" id="10">
+			<description>Cancel</description>
+			<posx>-190</posx>
+			<posy>-390</posy>
+			<label>$LOCALIZE[222]</label>
+			<texturefocus border="1">-</texturefocus>
+			<texturenofocus border="1">-</texturenofocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+		
+		<include>Object_DebugGrid</include>
+		
+	</controls>
+</window>

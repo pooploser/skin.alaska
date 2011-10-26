@@ -1,0 +1,156 @@
+<!--Alaska-->
+
+<window id="125">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<controls>
+		<control type="label">
+			<include>DialogID</include>
+			<label>VideoOSDBookmarks.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>390</posx>
+			<posy>680</posy>
+			<height>62</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<control type="button" id="2">
+				<description>Create</description>
+				<label>$LOCALIZE[294]</label>
+				<font>Font_ListTitleNF</font>
+				<textcolor>OSDPlayingAlbum</textcolor>
+				<selectedcolor>ListTitleNF</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<width>280</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id="3">
+				<description>Clear</description>
+				<label>$LOCALIZE[296]</label>
+				<font>Font_ListTitleNF</font>
+				<textcolor>OSDPlayingAlbum</textcolor>
+				<selectedcolor>ListTitleNF</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<width>280</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+		</control>
+		<control type="list" id="11">
+			<viewtype label="Wide">wrap</viewtype>
+			<posx>140</posx>
+			<posy>520</posy>
+			<height>166</height>
+			<width>1000</width>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<scrolltime>0</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<visible>!Window.IsVisible(129)</visible>
+			<itemlayout height="157" width="250">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>137</height>
+					<bordertexture border="8">common/thumb_border.png</bordertexture>
+					<bordersize>8</bordersize>
+					<texture>$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+					<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>143</posy>
+					<width>250</width>
+					<height>15</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_ListDetail</font>
+					<label>$INFO[ListItem.label]</label>
+					<textcolor>NowPlayingArtist</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="157" width="250">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>137</height>
+					<bordertexture border="8">common/thumb_border.png</bordertexture>
+					<bordersize>8</bordersize>
+					<texture>$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+					<visible>!control.HasFocus(11)</visible>
+					<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>137</height>
+					<bordertexture border="8">common/thumb_border.png</bordertexture>
+					<bordersize>8</bordersize>
+					<texture>$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+					<visible>control.HasFocus(11)</visible>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>143</posy>
+					<width>250</width>
+					<height>15</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_ListDetail</font>
+					<label>$INFO[ListItem.label]</label>
+					<textcolor>NowPlayingArtist</textcolor>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>1155</posx>
+			<posy>590</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture>wall/WallArrow_back.png</texture>
+			<colordiffuse>ButtonIconColor</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>1155</posx>
+			<posy>590</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture>wall/WallArrow.png</texture>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>95</posx>
+			<posy>590</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture>wall/WallArrow_back.png</texture>
+			<colordiffuse>ButtonIconColor</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>95</posx>
+			<posy>590</posy>
+			<width>27</width>
+			<height>27</height>
+			<texture flipx="true">wall/WallArrow.png</texture>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

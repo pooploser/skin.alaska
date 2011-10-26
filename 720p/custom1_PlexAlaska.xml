@@ -1,0 +1,104 @@
+<!--Alaska-->
+
+<window type="dialog" id="1111">
+	<defaultcontrol always="true">3110</defaultcontrol>
+
+	<include>Animation_ZoomInMenu</include>
+
+	<controls>
+		<control type="label">
+			<include>WindowID</include>
+			<label>custom1_PlexAlaska.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="grouplist" id="1">
+			<posy>240</posy>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<orientation>vertical</orientation>
+			<control type="button" id="3118">
+				<description>Now Playing</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[31004]</label>
+				<onclick>Dialog.Close(1111)</onclick>
+				<onclick>XBMC.ActivateWindow(50)</onclick>
+				<visible>Player.HasMedia</visible>
+			</control>
+
+			<control type="button" id="3110">
+				<description>Settings</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>5</label>
+				<onclick>Dialog.Close(1111)</onclick>
+				<onclick>XBMC.ActivateWindow(settings)</onclick>
+			</control>
+			<control type="button" id="3117">
+				<description>Favorites</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[1036]</label>
+				<onclick>Dialog.Close(1111)</onclick>
+				<onclick>XBMC.ActivateWindow(Favourites)</onclick>
+			</control>
+
+			<control type="button" id="3119">
+				<description>Shutdown OSX</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[31019]</label>
+				<onclick>Plex.ShutDownSystem</onclick>
+			</control>
+			
+			<control type="button" id="3114">
+				<description>Sleep</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[31035]</label>
+				<onclick>Dialog.Close(1111)</onclick>
+				<onclick>XBMC.SleepSystem()</onclick>
+			</control>
+			<control type="button" id="3113">
+				<description>Quit Plex</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[31036]</label>
+				<onclick>XBMC.ShutDown()</onclick>
+			</control>
+			<control type="button" id="3116">
+				<description>Reload Skin</description>
+				<height>40</height>
+				<width>1280</width>
+				<font>Font_MenuValue</font>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>RELOAD SKIN</label>
+				<onclick>XBMC.ReloadSkin()</onclick>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

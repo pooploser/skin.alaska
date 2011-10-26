@@ -1,0 +1,139 @@
+<!--Alaska-->
+
+<includes>
+
+	<include name="Viewtype_Banner">
+
+		<!-- Browser -->
+
+		<control type="fixedlist" id="59">
+			<viewtype label="Banner">list</viewtype>
+			<posx>285</posx>
+			<posy>80</posy>
+			<height>510</height>
+			<width>990</width>
+			<onup>59</onup>
+			<ondown>59</ondown>
+			<onleft>99123</onleft>
+			<onright>59</onright>
+			<orientation>vertical</orientation>
+			<focusposition>4</focusposition>
+			<movement>4</movement>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(noviewbanner)</visible>
+			<itemlayout width="885" height="49">	
+				<control type="label">
+					<posx>273</posx>
+					<posy>10</posy>
+					<width>750</width>
+					<height>49</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>PosterTitle</textcolor>
+					<selectedcolor>ListTitleNF</selectedcolor>					
+					<label>$INFO[ListItem.Label]</label>
+					<include>Animation_HiddenByInfo</include>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>26</posy>
+					<width>100</width>
+					<height>18</height>
+					<texture flipx="true">$INFO[ListItem.StarRating]</texture>
+					<colordiffuse>StarRatingDiffuse</colordiffuse>
+					<include>Animation_HiddenByInfo</include>
+				</control>			
+				<!--<control type="image">
+					<posx>247</posx>
+					<posy>26</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>BG$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="355,60" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_HiddenByInfo</include>
+				</control>
+				<control type="image">
+					<posx>251</posx>
+					<posy>30</posy>
+					<width>12</width>
+					<height>12</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="355,60" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_HiddenByInfo</include>
+				</control>-->
+			</itemlayout>
+			<focusedlayout width="828" height="100">
+				<control type="image">
+					<posx>72</posx>
+					<posy>-4</posy>
+					<width>566</width>
+					<height>128</height>
+					<texture>list/listbannerframe.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_BannerInfoSlide</include>
+				</control>
+				<control type="image">
+					<posx>84</posx>
+					<posy>10</posy>
+					<width>542</width>
+					<height>100</height>
+					<texture diffuse="list/listbannermatte.png">$INFO[ListItem.Banner]</texture>
+					<aspectratio scalediffuse="true">keep</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_BannerInfoSlide</include>
+				</control>
+				<control type="image">
+					<posx>86</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>BG$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="355,60" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_HiddenByInfo</include>
+					<visible>!Skin.HasSetting(notvshowoverlay)</visible>
+				</control>
+				<control type="image">
+					<posx>90</posx>
+					<posy>17</posy>
+					<width>12</width>
+					<height>12</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="355,60" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_HiddenByInfo</include>
+					<visible>!Skin.HasSetting(notvshowoverlay)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>PosterMediaFlags</include>
+		</control>
+
+	</include>
+
+</includes>

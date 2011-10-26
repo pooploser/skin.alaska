@@ -1,0 +1,120 @@
+<!--Alaska-->
+
+<window id="133">
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+		<effect type="fade" delay="200" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
+	<controls>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogVideoScan.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	
+		<control type="group">
+			<animation effect="slide" end="0,-200" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(2005) | Window.IsVisible(2006) | Window.IsVisible(2007)">Conditional</animation>
+			<animation effect="slide" end="0,-76" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(104) | Window.IsVisible(113)">Conditional</animation>
+			<animation effect="slide" end="0,-76" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(112)">Conditional</animation>
+			<animation effect="slide" end="0,-76" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(101)">Conditional</animation>
+			<posx>-290</posx>
+			<posy>35</posy>
+			<width>707</width>
+			<height>183</height>
+			<control type="image">
+				<posx>322</posx>
+				<posy>10</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>dialogs/scanprogress_back.png</texture>
+				<colordiffuse>ButtonIconColor</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="progress" id="404">
+				<description>Progressbar</description>
+				<info>System.Progressbar</info>
+				<posx>331</posx>
+				<posy>23</posy>
+				<width>32</width>
+				<height>28</height>
+				<texturebg>dialogs/clear.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>dialogs/grey.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" delay="400" start="0" end="100" time="100" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="10" />
+				</animation>
+			</control>
+			<control type="progress" id="403">
+				<description>Progressbar</description>
+				<posx>327</posx>
+				<posy>20</posy>
+				<width>38</width>
+				<height>28</height>
+				<texturebg>dialogs/clear.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>dialogs/grey.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" delay="400" start="0" end="100" time="100" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="10" />
+				</animation>
+			</control>
+			<control type="image">
+				<posx>322</posx>
+				<posy>10</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>dialogs/scanprogress.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+			</control>
+			<control type="label" id="401">
+				<description>Heading Label</description>
+				<posx>390</posx>
+				<posy>15</posy>
+				<width>627</width>
+				<height>51</height>
+				<textcolor>Time</textcolor>
+				<align>left</align>
+				<font>Font_ProgressDialog</font>
+			</control>
+			<control type="label" id="405">
+				<posx>390</posx>
+				<posy>35</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>left</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+			<!--control type="label" id="402">
+				<posx>280</posx>
+				<posy>70</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>right</align>
+				<font>Font_ProgressLabelBig</font>
+				<textcolor>d0ffffff</textcolor>
+			</control-->
+		</control>
+		
+		<include>Object_DebugGrid</include>
+		
+	</controls>
+</window>

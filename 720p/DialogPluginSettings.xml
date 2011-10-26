@@ -1,0 +1,129 @@
+<!--Alaska-->
+<window id="10140">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<include>Animation_ZoomOutZoomIn</include>
+			<control type="image" id="0">
+				<description>Back Panel</description>
+				<posx>222</posx>
+				<posy>94</posy>
+				<width>836</width>
+				<height>504</height>
+				<texture border="100">common/common_panel_1.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>264</posx>
+				<posy>168</posy>
+				<width>752</width>
+				<height>2</height>
+				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>264</posx>
+				<posy>526</posy>
+				<width>752</width>
+				<height>2</height>
+				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
+			</control>
+			<control type="label" id="20">
+				<description>Header Label</description>
+				<posx>290</posx>
+				<posy>128</posy>
+				<width>690</width>
+				<height>34</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<include>DialogHeader</include>
+				<label>-</label>
+			</control>
+			<control type="grouplist" id="2">
+				<description>Control Area</description>
+				<posx>298</posx>
+				<posy>178</posy>
+				<width>690</width>
+				<height>320</height>
+				<itemgap>2</itemgap>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="button" id="3">
+				<description>Default Button</description>
+				<align>left</align>
+				<width>690</width>
+				<include>DialogLabelNF</include>
+			</control>
+			<control type="radiobutton" id="4">
+				<description>Default RadioButton</description>
+				<align>left</align>
+				<width>690</width>
+				<include>DialogLabelNF</include>
+			</control>
+			<control type="spincontrolex" id="5">
+				<description>Default SpinControlex</description>
+				<align>left</align>
+				<width>690</width>
+				<include>DialogLabelNF</include>
+			</control>
+			<control type="image" id="6">
+				<description>separator image</description>
+				<height>30</height>
+				<width>500</width>
+				<aspectratio>stretch</aspectratio>
+				<texture>-</texture>
+			</control>
+			<control type="group" id="9000">
+				<control type="button" id="10">
+					<description>Ok</description>
+					<posx>290</posx>
+					<posy>536</posy>
+					<width>690</width>
+					<include>DialogLabelLargeNF</include>
+					<label>$LOCALIZE[186]</label>
+					<onleft>12</onleft>
+					<onright>11</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+				</control>
+				<control type="button" id="11">
+					<description>Cancel</description>
+					<posx>290</posx>
+					<posy>536</posy>
+					<width>690</width>
+					<align>center</align>
+					<include>DialogLabelLargeNF</include>
+					<label>$LOCALIZE[222]</label>
+					<onleft>10</onleft>
+					<onright>12</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+				</control>
+				<control type="button" id="12">
+					<description>Default</description>
+					<posx>290</posx>
+					<posy>536</posy>
+					<width>690</width>
+					<align>right</align>
+					<include>DialogLabelLargeNF</include>
+					<label>$LOCALIZE[409]</label>
+					<onleft>11</onleft>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+			<include>Global_ContextFilter</include>
+			<include>Object_DebugGrid</include>
+			<control type="group">
+				<include>Debug</include>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

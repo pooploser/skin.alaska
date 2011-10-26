@@ -1,0 +1,189 @@
+<!--Empty-->
+
+<window id="28">
+	<allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyVideoPlaylist.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<include>Global_Filter</include>
+		
+		<include>Object_MovieInfoLines</include>
+		
+		<include>Viewtype_Files</include>
+
+		<include>Global_ContextFilter</include>
+
+		<control type="grouplist" id="7000">
+			<width>1250</width>
+			<height>40</height>
+			<posx>200</posx>
+			<posy>330</posy>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<!--<control type="togglebutton" id="20">
+				<include>WindowMenuButton</include>
+				<description>shuffle</description>
+				<label>ON</label>
+				<altlabel>OFF</altlabel>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="togglebutton" id="28">
+				<include>WindowMenuButton</include>
+				<description>randomize</description>
+				<label>ON</label>
+				<altlabel>OFF</altlabel>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(28)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>-->
+			<control type="radiobutton" id="26">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>320</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<alttexturenofocus>-</alttexturenofocus>
+				<alttexturefocus>-</alttexturefocus>
+				<textureradiofocus>-</textureradiofocus>
+				<textureradionofocus>-</textureradionofocus>
+				<description>repeat</description>
+				<label>-</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(26)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="button" id="21">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>320</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<description>save</description>
+				<label>190</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(21)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="button" id="22">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>320</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<description>clear</description>
+				<label>$LOCALIZE[192]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(22)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<width>1250</width>
+			<height>40</height>
+			<posx>200</posx>
+			<posy>300</posy>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<!--<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[191]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[13319]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(28)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>-->
+			<control type="button" id="43">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>$LOCALIZE[487]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(26)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="button" id="44">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>$LOCALIZE[559]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(21)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="button" id="45">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>$LOCALIZE[559]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(22)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+
+		<include>Global_Time</include>
+		<include>Global_Heading</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+
+	</controls>
+
+</window>

@@ -1,0 +1,120 @@
+<!--Alaska-->
+
+<window id="24">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+ 	<views>50,55,555,558,49,51,52,552,53,54,56,57,59,556,559</views>
+	<controls>
+		<include>Global_Background</include>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>Animation_CommonFade</include>
+			<visible>[!Skin.HasSetting(nomoviebackdrops) + Container.Content(movies)] | [!Skin.HasSetting(notvshowbackdrops) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(49).OnNext | Container(49).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="[![Container(50).OnNext | Container(50).OnPrevious] | Window.IsActive(2003)] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(59).OnNext | Container(59).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(51).OnNext | Container(51).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(56).OnNext | Container(56).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(57).OnNext | Container(57).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(53).OnNext | Container(53).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(55).OnNext | Container(55).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(58).OnNext | Container(58).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(556).OnNext | Container(556).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(559).OnNext | Container(559).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(555).OnNext | Container(555).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="400" condition="![Container(558).OnNext | Container(558).OnPrevious] | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+		</control>
+		<include>Global_Filter</include>
+		
+		<include>Object_MovieInfoLines</include>
+		<include>menu_objects3</include>
+		<include>Viewtype_Poster</include>
+		<include>Viewtype_Poster2</include>
+		<include>Viewtype_Fanart</include>
+		<include>Viewtype_Fanart2</include>
+		<include>Viewtype_Landscape</include>
+		<include>Viewtype_Episode</include>
+		<include>Viewtype_Files</include>
+		<include>Viewtype_Panel</include>
+		<include>Viewtype_Banner</include>
+
+		<include>Global_ContextFilter</include>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyVideo.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="grouplist" id="7000">
+			<width>1250</width>
+			<height>80</height>
+			<posx>420</posx>
+			<posy>330</posy>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<itemgap>0</itemgap>
+			<onleft>99123</onleft>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<width>1250</width>
+			<height>40</height>
+			<posx>420</posx>
+			<posy>300</posy>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31501]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31502]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+		</control>
+		
+		<include>Global_Time</include>
+		<include>Global_Heading</include>		
+		<include>Global_RSS</include>
+		<include>ScrollOffsetLabel</include>
+		<include>Object_DebugGrid</include>
+
+	</controls>	
+</window>

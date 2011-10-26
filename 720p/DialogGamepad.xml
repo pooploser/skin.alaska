@@ -1,0 +1,63 @@
+<!--Alaska-->
+<window id="110">
+	<defaultcontrol>0</defaultcontrol>
+	<controls>
+		<control type="group">
+			<include>Animation_ZoomOutZoomIn</include>
+			<control type="image" id="0">
+				<description>Back Panel</description>
+				<posx>292</posx>
+				<posy>134</posy>
+				<width>696</width>
+				<height>304</height>
+				<texture border="100">common/common_panel_1.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
+			</control>
+			<control type="label" id="1">
+				<description>Heading</description>
+				<posx>340</posx>
+				<posy>200</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>600</width>
+				<align>center</align>
+			</control>
+			<control type="label" id="2">
+				<description>Line 1</description>
+				<posx>340</posx>
+				<posy>265</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>600</width>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="3">
+				<description>Line 2</description>
+				<posx>340</posx>
+				<posy>340</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>600</width>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="4">
+				<description>Line 3</description>
+				<posx>340</posx>
+				<posy>400</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>1280</width>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<include>Object_DebugGrid</include>
+			<control type="group">
+				<include>DialogID</include>
+                <label>DialogGamepad.xml</label>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,264 @@
+<!--Alaska-->
+
+<window id="4">
+	<defaultcontrol always="true">60</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+		</control>
+		<control type="panel" id="60">
+			<posx>200</posx>
+			<posy>200</posy>
+			<width>400</width>
+			<height>600</height>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<onup>60</onup>
+			<ondown>60</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_SettingsFloat</include>
+			<include>Animation_ZoomInZoomOut</include>
+			<itemlayout height="200" width="200">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>settings/button.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<animation effect="zoom" start="80" end="80" center="100,100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<colordiffuse>ButtonIconColor</colordiffuse>
+					<animation effect="zoom" start="80" end="80" center="100,100" time="0" condition="true">Conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="200" width="200">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>settings/button.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="80" end="100" center="100,100" time="300" tween="cubic" easing="in" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<colordiffuse>ButtonIconColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="80" end="100" center="100,100" time="300" tween="cubic" easing="in" />
+					</animation>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<label>Video</label>
+					<thumb>settings/settings_video.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideosSettings)</onclick>
+				</item>
+				<item id="2">
+					<label>Music</label>
+					<thumb>settings/settings_music.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyMusicSettings)</onclick>
+				</item>
+				<item id="3">
+					<label>Pictures</label>
+					<thumb>settings/settings_pictures.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyPicturesSettings)</onclick>
+				</item>
+				<!--<item id="4">
+					<label>Programs</label>
+					<thumb>settings/settings_programs.png</thumb>
+					<onclick>XBMC.ActivateWindow(MyProgramsSettings)</onclick>
+				</item>-->
+				<!--<item id="4">
+					<description>Profiles</description>
+					<label>13200</label>
+					<thumb>settings/settings_profiles.png</thumb>
+					<onclick>XBMC.ActivateWindow(Profiles)</onclick>
+				</item>-->
+				<item id="5">
+					<label>System</label>
+					<thumb>settings/settings_system.png</thumb>
+					<onclick>xbmc.activatewindow(SystemSettings)</onclick>
+				</item>
+				<item id="6">
+					<label>Appearance</label>
+					<thumb>settings/settings_appearance.png</thumb>
+					<onclick>XBMC.ActivateWindow(AppearanceSettings)</onclick>
+				</item>
+				<item id="7">
+					<label>PlexAlaska</label>
+					<thumb>settings/settings_alaska.png</thumb>
+					<onclick>XBMC.ActivateWindow(56)</onclick>
+				</item>
+			</content>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/home_mask.png">common/white.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		</control>
+		<control type="group">
+			<description>Video</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(1)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>3</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31900]</label>
+			</control>
+		</control>
+		<!--<control type="group">
+			<description>Programs</description>
+			<posx>110</posx>
+			<posy>180</posy>
+			<visible>Container(60).HasFocus(4)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>0</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Select browsing options for applications and games</label>
+			</control>
+		</control>-->
+		<control type="group">
+			<description>Profiles</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(4)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>13200</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31901]</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>System</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(5)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>13000</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31902]</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Music</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(2)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>2</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31903]</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Appearence</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(6)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>480</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31905]</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Pictures</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(3)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>1</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31906]</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>PlexAlaska</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(7)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>PlexAlaska</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31908]</label>
+			</control>
+		</control>
+		<include>Global_Time</include>
+		<include>Setting_Heading</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>Settings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	</controls>
+</window>

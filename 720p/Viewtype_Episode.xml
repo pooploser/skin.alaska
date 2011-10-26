@@ -1,0 +1,270 @@
+<!--Alaska-->
+
+<includes>
+	<include name="Viewtype_Episode">
+		<control type="fixedlist" id="51">
+			<viewtype label="Episodes">list</viewtype>
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<posx>267</posx>
+			<posy>110</posy>
+			<width>933</width>
+			<height>467</height>
+			<scrolltime>0</scrolltime>
+			<orientation>vertical</orientation>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<onleft>7000</onleft>
+			<onright>65</onright>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
+			<pagecontrol>65</pagecontrol>
+			<visible>Container.Content(episodes) + !Skin.HasSetting(noviewepisodes)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_EpisodeFloat</include>
+			<itemlayout width="633" height="60">
+				<control type="label">
+					<posx>125</posx>
+					<posy>0</posy>
+					<width>633</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>112</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>60</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Episode]</label>
+					<font>Font_EpisodeNumber</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>8</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<font>Font_EpisodeTitleNF</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>31</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$LOCALIZE[20416]: $INFO[ListItem.Property(originallyAvailableAt)]</label>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>20</posy>
+					<width>20</width>
+					<height>20</height>
+					<visible>Skin.HasSetting(overlaywatched) + !IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
+					<texture>BG$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>124</posx>
+					<posy>24</posy>
+					<width>12</width>
+					<height>12</height>
+					<visible>Skin.HasSetting(overlaywatched) + !IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
+					<texture>Icon$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>89FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>20</posy>
+					<width>20</width>
+					<height>20</height>
+					<visible>Skin.HasSetting(overlayunwatched) + !IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
+					<texture>BG_$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>20</posy>
+					<width>20</width>
+					<height>20</height>
+					<visible>Skin.HasSetting(overlaypartlywatched) + !IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
+					<texture>BG__$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
+				</control>
+			</itemlayout>
+			<focusedlayout width="633" height="164">
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>253</width>
+					<height>139</height>
+					<texture diffuse="episodematte.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>278</width>
+					<height>164</height>
+					<texture>episodeframe.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<posx>292</posx>
+					<posy>-13</posy>
+					<width>633</width>
+					<height>164</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>292</posx>
+					<posy>12</posy>
+					<width>633</width>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Title]</label>
+					<font>Font_EpisodeLabelF</font>
+					<textcolor>EpisodeLabelF</textcolor>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>19</posx>
+					<posy>19</posy>
+					<width>20</width>
+					<height>20</height>
+					<visible>Skin.HasSetting(overlaywatched) + !IsEmpty(ListItem.Overlay)</visible>
+					<texture>BG$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>23</posx>
+					<posy>23</posy>
+					<width>12</width>
+					<height>12</height>
+					<visible>Skin.HasSetting(overlaywatched) + !IsEmpty(ListItem.Overlay)</visible>
+					<texture>Icon$INFO[ListItem.Overlay]</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>19</posx>
+					<posy>19</posy>
+					<width>20</width>
+					<height>20</height>
+					<visible>Skin.HasSetting(overlayunwatched) + !IsEmpty(ListItem.Overlay)</visible>
+					<texture>BG_$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>19</posx>
+					<posy>19</posy>
+					<width>20</width>
+					<height>20</height>
+					<visible>Skin.HasSetting(overlaypartlywatched) + !IsEmpty(ListItem.Overlay)</visible>
+					<texture>BG__$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<!--Scrollbar -->
+		<control type="image">
+			<posx>1230</posx>
+			<posy>100</posy>
+			<width>25</width>
+			<height>460</height>
+			<visible>Control.IsVisible(51) + Control.HasFocus(65)</visible>
+			<texture border="0,14,0,14">ScrollBarV.png</texture>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="-50,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
+		</control>		
+		<control type="scrollbar" id="65">
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<posx>1230</posx>
+			<posy>100</posy>
+			<width>25</width>
+			<height>460</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(65)</visible>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
+			<colordiffuse>ButtonFilterColor</colordiffuse>
+			<onleft>51</onleft>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="-50,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
+		</control>
+
+		<control type="textbox">
+			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
+			<posx>559</posx>
+			<posy>157</posy>
+			<width>633</width>
+			<height>102</height>
+			<align>left</align>
+			<info>Container(51).ListItem.Plot</info>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+			<autoscroll time="3200" delay="6000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+			<font>Font_EpisodePlot</font>
+			<textcolor>EpisodePlot</textcolor>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_EpisodePlot</include>
+			<include>Animation_EpisodeFloat</include>
+			<include>Animation_HiddenByInfo</include>
+		</control>
+		
+		<control type="group">
+			<visible>Control.IsVisible(51)</visible>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>PosterMediaFlags</include>
+		</control>
+
+	</include>
+</includes>

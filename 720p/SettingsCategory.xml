@@ -1,0 +1,91 @@
+<!--Alaska-->
+
+<window id="12">
+	<defaultcontrol>9999</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>150</posx>
+			<posy>175</posy>
+			<width>300</width>
+			<height>480</height>
+			<itemgap>4</itemgap>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<orientation>vertical</orientation>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomOutZoomIn</include>
+		</control>
+
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_SettingsFloat</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<posx>360</posx>
+			<posy>175</posy>
+			<width>740</width>
+			<height>600</height>
+			<itemgap>6</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<orientation>vertical</orientation>
+		</control>
+
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<font>Font_Settings</font>
+			<textcolor>MenuValue</textcolor>
+			<align>left</align>
+			<textoffsetx>5</textoffsetx>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<texturefocus>ButtonFo.png</texturefocus>
+		</control>
+
+		<control type="radiobutton" id="8">
+			<description>Default Radio Button</description>
+			<font>Font_Settings</font>
+			<textcolor>MenuValue</textcolor>
+			<align>left</align>
+			<focusedcolor>MenuValueFO</focusedcolor>
+		</control>
+
+		<control type="spincontrolex" id="9">
+			<description>Default Spin Control</description>
+			<font>Font_Settings</font>
+			<textcolor>MenuValue</textcolor>
+			<align>left</align>
+			<focusedcolor>MenuValueFO</focusedcolor>
+			<texturefocus>ButtonFo.png</texturefocus>
+		</control>
+
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<width>150</width>
+			<font>Font_Settings</font>
+			<textcolor>MenuValue</textcolor>
+			<texturefocus border="1">ButtonFo.png</texturefocus>
+			<focusedcolor>MenuValueFO</focusedcolor>
+		</control>
+
+		<include>Global_ContextFilter</include>
+		<include>Global_Time</include>
+		<include>Setting_Heading</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>SettingsCategory.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	</controls>
+
+</window>

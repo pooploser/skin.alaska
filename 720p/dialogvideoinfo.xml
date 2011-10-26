@@ -1,0 +1,384 @@
+<!--Alaska-->
+
+<window type="dialog" id="2003">
+	<defaultcontrol>943</defaultcontrol>
+	<controls>
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogVideoInfo.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="group">
+			<posx>700</posx>
+			<posy>600</posy>
+
+				<include>Animation_CommonFade</include>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>40</posx>
+				<texture>mainmenu/submenu_left.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>380</width>
+				<height>60</height>
+				<posx>60</posx>
+				<texture>mainmenu/submenu_mid.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+			<control type="image">
+				<width>20</width>
+				<height>60</height>
+				<posx>440</posx>
+				<texture>mainmenu/submenu_right.png</texture>
+				<colordiffuse>HomeFrameColor</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="943">
+				<posx>62</posx>
+				<posy>13</posy>
+				<width>660</width>
+				<height>33</height>
+				<itemgap>0</itemgap>
+				<onup>50</onup>
+				<ondown>7001</ondown>
+				<orientation>horizontal</orientation>
+				<control type="button" id="11">
+					<include>submenubutton</include>
+					<label>20410</label>
+					<enable>!IsEmpty(ListItem.Trailer)</enable>
+				</control>
+				<control type="button" id="5">
+					<posx>3</posx>
+					<include>submenubutton</include>
+					<label>Cast/Plot</label>
+					<onup>50</onup>
+					<ondown>7001</ondown>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				<control type="button" id="333000">
+					<include>submenubutton</include>
+					<label>Edit</label>
+					<onup>50</onup>
+					<onclick>SetFocus(7001)</onclick>
+				</control>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>583</posx>
+			<posy>115</posy>
+			<control type="fadelabel">
+				<width>664</width>
+				<scrollout>false</scrollout>
+				<pauseatend>200</pauseatend>
+				<scrollspeed>50</scrollspeed>
+				<font>Font_PosterTitle</font>
+				<textcolor>InfoTitle</textcolor>
+				<info>ListItem.Title</info>
+			</control>			<control type="label">
+				<posx>271</posx>
+				<posy>45</posy>
+				<width>141</width>
+				<height>76</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_InfoYear</font>
+				<textcolor>InfoYear</textcolor>
+				<info>ListItem.Year</info>
+			</control>
+			<control type="label">
+				<posx>433</posx>
+				<posy>45</posy>
+				<width>215</width>
+				<height>76</height>
+				<aligny>center</aligny>
+				<font>Font_InfoYear</font>
+				<textcolor>InfoYear</textcolor>
+				<info>ListItem.Duration</info>
+			</control>
+			<control type="image">
+				<posy>66</posy>
+				<posx>-8</posx>
+				<width>182</width>
+				<height>33</height>
+				<info>ListItem.StarRating</info>
+				<colordiffuse>StarRatingDiffuse</colordiffuse>
+			</control>
+			<control type="image">
+				<posy>45</posy>
+				<posx>190</posx>
+				<width>75</width>
+				<height>75</height>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<colordiffuse>StarRatingDiffuse</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>140</posy>
+				<width>150</width>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoDetails</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31514]:</label>
+			</control>
+			<control type="label">
+				<posx>155</posx>
+				<posy>140</posy>
+				<width>550</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoPlot</textcolor>
+				<info>ListItem.Director</info>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>164</posy>
+				<width>150</width>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoDetails</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31515]:</label>
+			</control>
+			<control type="label">
+				<posx>155</posx>
+				<posy>164</posy>
+				<width>550</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoPlot</textcolor>
+				<info>ListItem.Writer</info>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>204</posy>
+				<width>150</width>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoDetails</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[515]:</label>
+			</control>
+			<control type="label">
+				<posx>155</posx>
+				<posy>191</posy>
+				<width>550</width>
+				<align>left</align>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoPlot</textcolor>
+				<info>ListItem.Genre</info>
+			</control>
+			<control type="label">
+				<visible>Control.IsVisible(50)</visible>
+				<posx>0</posx>
+				<posy>243</posy>
+				<width>150</width>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoDetails</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[206]:</label>
+			</control>
+
+			<control type="textbox">
+				<visible>!Control.IsVisible(50)</visible>
+				<visible>!Control.HasFocus(333000)</visible>
+				<posy>231</posy>
+				<width>600</width>
+				<height>240</height>
+				<font>Font_InfoPlot</font>
+				<textcolor>InfoPlot</textcolor>
+				<info>ListItem.Plot</info>
+				<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+			<control type="panel" id="50">
+				<posx>170</posx>
+				<posy>231</posy>
+				<width>580</width>
+				<height>240</height>
+				<onleft>943</onleft>
+				<onright>943</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout height="26" width="480">
+					<control type="label">
+						<posx>0</posx>
+						<posy>3</posy>
+						<width>580</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_InfoPlot</font>
+						<textcolor>InfoPlot</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="24" width="580">
+					<control type="label">
+						<posx>0</posx>
+						<posy>3</posy>
+						<width>480</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_ListDetail</font>
+						<textcolor>MenuValueFO</textcolor>
+						<info>ListItem.Label</info>
+						<scroll>true</scroll>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="image">
+				<description>Actor image</description>
+				<posx>0</posx>
+				<posy>311</posy>
+				<width>160</width>
+				<height>160</height>
+				<texture>$INFO[Container(50).Listitem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+		</control>
+		<!-- view options -->
+		<include>Global_ContextFilter</include>
+		<control type="grouplist" id="7001">
+			<width>1200</width>
+			<height>40</height>
+			<posx>140</posx>
+			<onup>943</onup>
+			<ondown>943</ondown>
+			<onleft>7001</onleft>
+			<onright>7001</onright>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu2</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<posy>330</posy>
+			<!-- refresh -->
+			<control type="button" id="6">
+				<description>Refresh</description>
+				<label>184</label>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>350</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- Fanart -->
+			<control type="button" id="12">
+				<description>Get Fanart</description>
+				<label>$LOCALIZE[31521]</label>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>350</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- Thumb -->
+			<control type="button" id="10">
+				<description>Thumb</description>
+				<label>$LOCALIZE[31520]</label>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>350</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_MenuValue</font>
+				<textcolor>MenuValue</textcolor>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+		<control type="grouplist">
+			<width>1200</width>
+			<height>40</height>
+			<posx>140</posx>
+			<onup>943</onup>
+			<ondown>943</ondown>
+			<itemgap>0</itemgap>
+			<include condition="!Skin.HasSetting(LockViews)">allowmenu2</include>
+			<include condition="Skin.HasSetting(LockViews)">nomenu</include>  
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<posy>300</posy>
+			<!-- refresh -->
+			<control type="button" id="7041">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>$LOCALIZE[31518]</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- Fanart -->
+			<control type="button" id="7042">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>$LOCALIZE[31519]</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<!-- Thumb -->
+			<control type="button" id="7043">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Font_MenuLabel</font>
+				<textcolor>MenuValue</textcolor>
+				<aligny>bottom</aligny>
+				<label>$LOCALIZE[31519]</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

@@ -1,0 +1,179 @@
+<!--Alaska-->
+
+<window id="142">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<include>OSD_Time</include>
+		<control type="group">
+			<posy>560</posy>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,300" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<include>OSD_Back</include>
+			<control type="label">
+				<posx>640</posx>
+				<posy>0</posy>
+				<include>DialogID</include>
+				<label>DialogFullScreenInfo.xml</label>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
+			<control type="label">
+				<posx>110</posx>
+				<posy>97</posy>
+				<width>150</width>
+				<height>50</height>
+				<font>Font_OSDTime</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>NowPlayingArtist</textcolor>
+				<label>$INFO[VideoPlayer.Time]</label>
+			</control>
+			<control type="progress" id="23">
+				<texturebg>osd/osd_progress_back.png</texturebg>
+				<lefttexture>osd/osd_progress_left.png</lefttexture>
+				<midtexture>osd/osd_progress_mid.png</midtexture>
+				<righttexture>osd/osd_progress_right.png</righttexture>
+				<colordiffuse>OSDProgress</colordiffuse>
+				<info>Player.Progress</info>
+				<posx>120</posx>
+				<posy>116</posy>
+				<width>1035</width>
+				<height>19</height>
+			</control>
+			<control type="label">
+				<posx>1166</posx>
+				<posy>97</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>Font_OSDTime</font>
+				<aligny>center</aligny>
+				<textcolor>NowPlayingArtist</textcolor>
+				<label>$INFO[VideoPlayer.Duration]</label>
+			</control>
+			<control type="group">
+				<posx>195</posx>
+				<posy>28</posy>
+				<animation effect="slide" start="130,0" end="130,0" time="0" tween="cubic" easing="out" condition="VideoPlayer.Content(episodes)">Conditional</animation>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>510</width>
+					<height>40</height>
+					<font>Font_PosterTitle</font>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<textcolor>NowPlayingTrack</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>510</width>
+					<font>Font_ListDetail</font>
+					<label>[B]$INFO[VideoPlayer.Director]</label>
+					<textcolor>NowPlayingArtist</textcolor>
+					<visible>!VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>510</width>
+					<textcolor>OSDPlayingTrack</textcolor>
+					<font>Font_NowPlayingTrack</font>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>
+			</control>
+		<!-- Movie Info Needs more work -->
+			<control type="group">
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<posx>1260</posx>
+				<posy>20</posy>
+				<control type="label">
+					<description>Year Info</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>600</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<textcolor>NowPlayingArtist</textcolor>
+					<font>Font_OSDDetail</font>
+					<label>Year: $INFO[VideoPlayer.Year]</label>
+				</control>
+				<control type="label">
+					<description>Director Info</description>
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>600</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<textcolor>NowPlayingArtist</textcolor>
+					<font>Font_OSDDetail</font>
+					<label>Director: $INFO[VideoPlayer.Director]</label>
+				</control>
+				<control type="label">
+					<description>Genre Info</description>
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>600</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<textcolor>NowPlayingArtist</textcolor>
+					<font>Font_OSDDetail</font>
+					<label>Genre: $INFO[VideoPlayer.Genre]</label>
+				</control>
+			</control>
+		</control>
+	<!--Cover / Now Playing-->
+		<control type="group">
+			<animation type="WindowOpen">
+				<effect type="slide" start="-300,0" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-300,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<posx>30</posx>
+			<posy>490</posy>
+			<control type="image">
+				<posx>-2</posx>
+				<posy>-74</posy>
+				<width>162</width>
+				<height>238</height>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>-3</posy>
+				<width>327</width>
+				<height>172</height>
+				<texture>common/thumb_border.png</texture>
+				<bordersize>8</bordersize>
+				<aspectratio>scale</aspectratio>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="image">
+				<posx>-2</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>166</height>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+				<bordersize>8</bordersize>
+				<aspectratio>scale</aspectratio>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+		</control> 
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

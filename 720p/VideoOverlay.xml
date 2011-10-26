@@ -1,0 +1,90 @@
+<!--Alaska-->
+
+<window id="2004">
+	<defaultcontrol>-</defaultcontrol>
+	<animation type="WindowOpen">
+		<effect type="slide" start="-600,0" end="0,0" time="600" tween="cubic" easing="out" delay="800" />
+		<effect type="fade" start="0" end="100" time="600" delay="800" />
+	</animation>
+	<animation type="WindowClose">
+		<effect type="slide" start="0,0" end="-200,0" time="600" tween="cubic" easing="out" />
+		<effect type="fade" start="100" end="0" time="600" />
+	</animation>
+	<controls>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>VideoOverlay.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,30" time="200" condition="!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home) + !Window.IsVisible(2006)">Conditional</animation>
+			<posx>560</posx>
+			<posy>510</posy>
+			<control type="image">
+				<posx>165</posx>
+				<posy>-10</posy>
+				<width>530</width>
+				<height>185</height>
+				<texture diffuse="osd/cdcover_mask.png">osd/cdcover_mask_copy.png</texture>
+				<colordiffuse>55E0FFFF</colordiffuse>
+				<bordersize>8</bordersize>
+				<aspectratio>scale</aspectratio>
+				<animation type="Conditional" condition="Window.IsActive(2006) | Window.IsActive(120)">
+					<effect type="zoom" center="35,180" start="100" end="155" time="400" tween="cubic" easing="out" />
+					<effect type="slide" start="0,0" end="12,5" time="400" tween="cubic" easing="out" />
+				</animation>
+			</control>
+			<control type="image">
+				<posx>390</posx>
+				<width>292</width>
+				<height>166</height>
+				<texture>common/black.png</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="videowindow" id="1">
+				<description>Video Preview</description>
+				<posx>399</posx>
+				<posy>8</posy>
+				<width>276</width>
+				<height>150</height>
+			</control>
+			<control type="label">
+				<posx>280</posx>
+				<posy>120</posy>
+				<width>1034</width>
+				<font>Font_ListDetail</font>
+				<label>[B]$LOCALIZE[31004][/B]</label>
+				<textcolor>NowPlayingArtist</textcolor>
+				<animation effect="slide" end="0,-20" condition="VideoPlayer.Content(episodes)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>386</posx>
+				<posy>140</posy>
+				<width>210</width>
+				<align>right</align>
+				<font>Font_ListDetail</font>
+				<label>[B]$INFO[VideoPlayer.Title][/B]</label>
+				<textcolor>NowPlayingTrack</textcolor>
+				<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+			</control> 
+			<control type="label">
+				<posx>300</posx>
+				<posy>120</posy>
+				<width>1034</width>
+				<font>Font_ListDetail</font>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<textcolor>NowPlayingTrack</textcolor>
+				<visible>VideoPlayer.Content(episodes)</visible>
+				<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+			</control>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+</window>
