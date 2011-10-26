@@ -627,7 +627,7 @@
 						<posy>290</posy>
 						<width>1000</width>
 						<height>400</height>
-						<animation effect="slide" end="130,0" time="200" condition="Control.HasFocus(11001) | Control.HasFocus(944)">Conditional</animation>
+						<animation effect="slide" end="1130,0" time="200" condition="Control.HasFocus(11001) | Control.HasFocus(944)">Conditional</animation>
 						<itemlayout width="140" height="230">
 							<!-- album -->
 							<control type="group">
