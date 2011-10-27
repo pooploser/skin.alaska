@@ -35,7 +35,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>300</width>
-					<font>Font_Settings</font>
+					<font>Font_Settings2</font>
 					<textcolor>MenuValueFO</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>

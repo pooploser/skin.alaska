@@ -881,16 +881,6 @@
 									<visible>ListItem.Type(movie) + !Control.IsVisible(11001)</visible>
 								</control>
 								<control type="image">
-									<posx>35</posx>
-									<posy>6</posy>
-									<width>120</width>
-									<height>180</height>
-									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-									<texture background="true">osd/cdcover_mask.png</texture>
-									<visible>ListItem.Type(movie) + !Skin.HasSetting(hideposterborders) + !Control.IsVisible(11001)</visible>
-									<colordiffuse>red</colordiffuse>
-								</control>
-								<control type="image">
 									<posx>37</posx>
 									<posy>8</posy>
 									<width>116</width>
