@@ -6,6 +6,15 @@
 	<controls>
 		<include>Global_Background</include>
 		<include>Global_Filter</include>
+		<control type="image" id="22222">
+			<include>Animation_ZoomOutZoomIn</include>
+			<posx>300</posx>
+			<posy>155</posy>
+			<width>5</width>
+			<height>480</height>
+			<orientation>vertical</orientation>
+			<texture>divider.png</texture>
+		</control>
 
 		<control type="grouplist" id="3">
 			<description>Button Area</description>

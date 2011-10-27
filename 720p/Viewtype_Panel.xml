@@ -25,28 +25,6 @@
 			<include condition="Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(1) | Window.IsActive(2)">SquarePanel</include>
 			<include condition="Window.IsActive(24)">TallPanel</include>
 		</control>
-		<control type="panel" id="559">
-			<animation effect="slide" start="0,0" end="0,5" time="200" condition="!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home) + !Window.IsVisible(2006)">Conditional</animation>
-			<viewtype label="PANEL[CR]WIDE">icon</viewtype>
-			<posx>490</posx>
-			<posy>105</posy>
-			<width>720</width>
-			<height>480</height>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<onup>559</onup>
-			<ondown>559</ondown>
-			<onleft>99123</onleft>
-			<!--<onright>622</onright>
-			<pagecontrol>622</pagecontrol>-->
-			<preloaditems>2</preloaditems>
-			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_HiddenByMusicInfo</include>
-			<include>Animation_HiddenByInfo</include>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(2) | Window.IsActive(24)] + !Skin.HasSetting(noviewpanelwide)</visible>
-			<include>WidePanel</include>
-		</control>
 
 		<!-- WATCHED/UNWATCHED INFO -->
 		<control type="group">
@@ -153,11 +131,12 @@
 				<font>Font_EpisodePlot</font>
 				<textcolor>EpisodePlot</textcolor>
 				<visible>Container.Content(movies)</visible>
+				<visible>!IsEmpty(ListItem.Director)</visible>
 			</control>
 			<control type="label">
 				<posx>105</posx>
 				<posy>114</posy>
-				<width>410</width>
+				<width>355</width>
 				<height>20</height>
 				<label>$INFO[ListItem.Director]</label>
 				<scroll>true</scroll>
@@ -174,6 +153,7 @@
 				<font>Font_EpisodePlot</font>
 				<textcolor>EpisodePlot</textcolor>
 				<visible>Container.Content(movies)</visible>
+				<visible>!IsEmpty(ListItem.Cast)</visible>
 			</control>
 			<control type="label">
 				<posx>107</posx>

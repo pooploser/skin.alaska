@@ -766,9 +766,9 @@
 		</control>
 
 		<control type="textbox">
-			<posx>492</posx>
-			<posy>267</posy>
-			<width>700</width>
+			<posx>40</posx>
+			<posy>467</posy>
+			<width>455</width>
 			<height>78</height>
 			<font>Font_EpisodePlot</font>
 			<textcolor>EpisodePlot</textcolor>
@@ -779,18 +779,5 @@
 			<include>Animation_ZoomedByMenu</include>
 		</control>
 
-		<control type="textbox">
-			<posx>492</posx>
-			<posy>267</posy>
-			<width>700</width>
-			<height>78</height>
-			<font>Font_EpisodePlot</font>
-			<textcolor>EpisodePlot</textcolor>
-			<info>ListItem.Plot</info>
-			<autoscroll time="1800" delay="1000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
-			<visible>!IsEmpty(Container(50).ListItem.Plot) + !Container(50).Content(movies) + !Container.Content(artists) +!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs) + !Container(50).Content(tvshows) + !Window.IsActive(2003)</visible>
-			<include>Animation_CommonFade</include>
-			<include>Animation_ZoomedByMenu</include>
-		</control>
 	</include>
 </includes>
