@@ -132,6 +132,7 @@
 			<label>Home.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
+
 		<include>Global_ContextFilter</include>
 		<include>Global_Time_Home</include>
 		<include>Global_RSS</include>

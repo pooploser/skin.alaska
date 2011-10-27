@@ -48,7 +48,7 @@
 		<!--<include>Global_Filter</include>-->
 
 		<include>Viewtype_Files</include>
-		<include>Viewtype_Panel</include>
+		<include>WidePanel</include>
 		<include>Viewtype_PictureGrid</include>
 		<include>menu_objects2</include>
 		<include>Global_ContextFilter</include>		

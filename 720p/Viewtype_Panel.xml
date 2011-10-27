@@ -22,7 +22,7 @@
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>[Container.Content(albums) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(1) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(noviewpanel)</visible>
-			<include condition="Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(1)">SquarePanel</include>
+			<include condition="Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(1) | Window.IsActive(2)">SquarePanel</include>
 			<include condition="Window.IsActive(24)">TallPanel</include>
 		</control>
 		<control type="panel" id="559">
@@ -827,7 +827,7 @@
 				<posy>6</posy>
 				<width>170</width>
 				<height>110</height>
-				<texture background="true" diffuse="landscape/landscapematteNF.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<texture background="true" diffuse="landscape/landscapematteNF.png">$INFO[ListItem.Icon]</texture>
 				<include condition="!Skin.HasSetting(noitemfading)">diffuseForUnfocusedItem</include>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<visible>!Container.Content(movies) + !Container.Content(tvshows)</visible>
