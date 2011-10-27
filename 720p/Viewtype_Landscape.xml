@@ -114,7 +114,6 @@
 					<posy>137</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlayunwatched)</visible>
 					<texture>BG_$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
 					<include>Animation_HiddenByInfo</include>
@@ -124,7 +123,6 @@
 					<posy>137</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlaypartlywatched)</visible>
 					<texture>BG__$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
 					<include>Animation_HiddenByInfo</include>
@@ -203,7 +201,6 @@
 					<posy>133</posy>
 					<width>25</width>
 					<height>25</height>
-					<visible>Skin.HasSetting(overlayunwatched)</visible>
 					<texture>BG_$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
 					<include>Animation_LandscapeSlide</include>
@@ -217,7 +214,6 @@
 					<posy>133</posy>
 					<width>25</width>
 					<height>25</height>
-					<visible>Skin.HasSetting(overlaypartlywatched)</visible>
 					<texture>BG__$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
 					<include>Animation_LandscapeSlide</include>					
@@ -337,7 +333,6 @@
 					<posy>137</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlayunwatched)</visible>
 					<texture>BG_$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
 					<include>Animation_HiddenByInfo</include>
@@ -347,7 +342,6 @@
 					<posy>137</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlaypartlywatched)</visible>
 					<texture>BG__$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
 					<include>Animation_HiddenByInfo</include>
@@ -426,7 +420,6 @@
 					<posy>133</posy>
 					<width>25</width>
 					<height>25</height>
-					<visible>Skin.HasSetting(overlayunwatched)</visible>
 					<texture>BG_$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
 					<include>Animation_LandscapeSlide</include>
@@ -440,7 +433,6 @@
 					<posy>133</posy>
 					<width>25</width>
 					<height>25</height>
-					<visible>Skin.HasSetting(overlaypartlywatched)</visible>
 					<texture>BG__$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
 					<include>Animation_LandscapeSlide</include>					

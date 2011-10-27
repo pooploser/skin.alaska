@@ -9,7 +9,7 @@
 		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>
 		<include>Global_RSS</include>
-		<include>menu_objects2</include>
+		<include>menu_objects3</include>
 		
 		<include>Object_DebugGrid</include>
 		<control type="group">

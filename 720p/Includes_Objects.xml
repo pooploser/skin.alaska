@@ -272,6 +272,120 @@
 		</control>
 	</control>
 	</include>
+	<include name="menu_objects3">
+	<control type="group">
+			<visible>!Container.Content(episodes) | !Container.Content(episodes) | !Container.Content(seasons) | !Container.Content(Movies) | !Container.Content(Artists) | !Container.Content(Albums) | !Container.Content(Songs) | !Container.Content(tvshows)</visible>
+			<posy>650</posy>
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>shutdown.png</texture>
+			<colordiffuse>88ADDFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>15</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99120)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>51</posx>
+			<posy>11</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>settings.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>56</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99121)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>93</posx>
+			<posy>11</posy>
+			<width>46</width>
+			<height>46</height>
+			<texture>search.png</texture>
+			<colordiffuse>88ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>97</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99122)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>136</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<texture>view.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>137</posx>
+			<posy>14</posy>
+			<width>41</width>
+			<height>41</height>
+			<visible>Control.HasFocus(99123)</visible>
+			<texture diffuse="setting_mask.png">black.png</texture>
+			<colordiffuse>44000000</colordiffuse>
+		</control>
+		<control type="button" id="99120">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>50</width>
+			<height>50</height>
+			<include condition="!Skin.HasSetting(sleepsystem)">type_quit</include>
+			<include condition="Skin.HasSetting(sleepsystem)">type_sleep</include>
+			<onup>50</onup>
+			<onright>99121</onright>
+		</control>
+		<control type="button" id="99121">
+			<posx>51</posx>
+			<posy>11</posy>
+			<width>50</width>
+			<height>50</height>
+			<onclick>ActivateWindow(4)</onclick>
+			<onup>50</onup>
+			<onright>99122</onright>
+			<onleft>99120</onleft>
+		</control>
+		<control type="button" id="99122">
+			<posx>93</posx>
+			<posy>11</posy>
+			<width>46</width>
+			<height>46</height>
+			<onclick>ActivateWindow(10051)</onclick>
+			<onup>50</onup>
+			<onright>99123</onright>
+			<onleft>99121</onleft>
+		</control>
+		<control type="button" id="99123">
+			<posx>137</posx>
+			<posy>14</posy>
+			<width>42</width>
+			<height>42</height>
+			<onclick>Container.NextViewMode</onclick>
+			<onup>50</onup>
+			<onright>56</onright>
+			<onleft>99122</onleft>
+		</control>
+	</control>
+	</include>
 
 	<!-- Keyboard -->
 	<include name="Objects_KeyOffVars">

@@ -298,6 +298,7 @@
 							<!-- tv show episode -->
 							<control type="group">
 								<visible>ListItem.Type(episode)</visible>
+								<posy>-44</posy>
 								<!-- drop shadow -->
 								<control type="image">
 									<posx>67</posx>
@@ -337,8 +338,8 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>240</posy>
-									<width>140</width>
+									<posy>255</posy>
+									<width>135</width>
 									<align>center</align>
 									<aligny>center</aligny>
 									<scroll>false</scroll>
@@ -350,7 +351,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>260</posy>
+									<posy>275</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -364,7 +365,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>280</posy>
+									<posy>295</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -426,9 +427,13 @@
 								<bordertexture>osd/cdcover_mask.png</bordertexture>
 								<bordersize>2</bordersize>
 								<visible>ListItem.Type(album)</visible>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+								</animation>
 							</control>
 							<!-- tv show episode -->
 							<control type="group">
+								<posy>-44</posy>
 								<visible>ListItem.Type(episode)</visible>
 								<!-- drop shadow -->
 								<control type="image">
@@ -447,7 +452,10 @@
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">osd/cdcover_mask.png</texture>
 									<visible>!Skin.HasSetting(hideposterborders)</visible>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -456,6 +464,9 @@
 									<height>176</height>
 									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Grandparentthumb]</texture>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>35</posx>
@@ -469,8 +480,8 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>240</posy>
-									<width>130</width>
+									<posy>255</posy>
+									<width>140</width>
 									<align>center</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -483,7 +494,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>260</posy>
+									<posy>275</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -497,7 +508,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>280</posy>
+									<posy>295</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -518,7 +529,10 @@
 								<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 								<texture background="true">osd/cdcover_mask.png</texture>
 								<visible>ListItem.Type(movie)</visible>
-								<colordiffuse>red</colordiffuse>
+								<colordiffuse>FFC11B17</colordiffuse>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+								</animation>
 							</control>
 							<control type="image">
 								<posx>37</posx>
@@ -526,16 +540,19 @@
 								<width>116</width>
 								<height>176</height>
 								<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-								<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>ListItem.Type(movie)</visible>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+								</animation>
 							</control>
 						</focusedlayout>
 						<height>200</height>
 					</control>
 					<!-- title bar Labels -->
 					<control type="grouplist">
-						<posx>1286</posx>
-						<posy>565</posy>
+						<posx>1280</posx>
+						<posy>558</posy>
 						<height>25</height>
 						<orientation>horizontal</orientation>
 						<visible>Control.IsVisible(11001)</visible>
@@ -561,7 +578,7 @@
 							<textcolor>FFFFFFFF</textcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7002).HasFocus + !IsEmpty(Container(11000).ListItem(0).Album)</visible>
+							<visible>ControlGroup(7002).HasFocus + !IsEmpty(Container(11001).ListItem(0).Album)</visible>
 						</control>
 						<!-- general -->
 						<control type="label">
@@ -592,7 +609,7 @@
 							<textcolor>black</textcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<width min="1" max="300">auto</width>
-							<visible>ControlGroup(7002).HasFocus + !IsEmpty(Container(11001).ListItem(0).Duration) + Container.Content(movies)</visible>
+							<visible>ControlGroup(7002).HasFocus + !IsEmpty(Container(11001).ListItem(0).Duration) + [Container(11000).ListItem(0).Type(movie)]</visible>
 						</control>
 					</control>
 				</control>
@@ -663,7 +680,7 @@
 							</control>
 							<!-- tv show episode when both lists are visible -->
 							<control type="group">
-								<posy>-80</posy>
+								<posy>-120</posy>
 								<visible>ListItem.Type(episode) + Control.IsVisible(11001)</visible>
 								<!-- drop shadow -->
 								<control type="image">
@@ -703,7 +720,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>345</posy>
+									<posy>355</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -716,7 +733,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>365</posy>
+									<posy>375</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -730,7 +747,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>385</posy>
+									<posy>395</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -745,7 +762,7 @@
 							</control>
 							<!-- tv show episode when only this list is visible -->
 							<control type="group">
-								<posy>-200</posy>
+								<posy>-120</posy>
 								<visible>ListItem.Type(episode) + !Control.IsVisible(11001)</visible>
 								<!-- drop shadow -->
 								<control type="image">
@@ -764,7 +781,11 @@
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">posterMaskSmall.png</texture>
 									<visible>!Skin.HasSetting(hideposterborders)</visible>
-									<colordiffuse>FF3d3d3d</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+									</animation>
+
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -773,6 +794,9 @@
 									<height>176</height>
 									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Grandparentthumb]</texture>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>35</posx>
@@ -897,27 +921,33 @@
 								<!-- drop shadow -->
 								<control type="image">
 									<posx>34</posx>
-									<posy>72</posy>
+									<posy>70</posy>
 									<width>122</width>
 									<height>122</height>
 									<texture background="true">osd/cdcover_mask.png</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
 									<visible>ListItem.Type(album)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="119" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
-									<posy>75</posy>
+									<posy>73</posy>
 									<width>116</width>
 									<height>116</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
 									<visible>ListItem.Type(album)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="119" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 							</control>
 							<!-- tv show episode when both lists are visible -->
 							<control type="group">
-								<posy>-80</posy>
+								<posy>-110</posy>
 								<visible>ListItem.Type(episode) + Control.IsVisible(11001)</visible>
 								<!-- drop shadow -->
 								<control type="image">
@@ -930,20 +960,26 @@
 								</control>
 								<control type="image">
 									<posx>34</posx>
-									<posy>149</posy>
+									<posy>140</posy>
 									<width>121</width>
 									<height>182</height>
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">osd/cdcover_mask.png</texture>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
-									<posy>152</posy>
+									<posy>144</posy>
 									<width>116</width>
 									<height>176</height>
 									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Grandparentthumb]</texture>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>35</posx>
@@ -957,15 +993,16 @@
 								<control type="label">
 									<posx>95</posx>
 									<posy>345</posy>
-									<width>130</width>
+									<width>140</width>
 									<align>center</align>
 									<aligny>center</aligny>
-									<scroll>true</scroll>
 									<label>$INFO[ListItem.TVShowTitle]</label>
+									<scroll>true</scroll>
 									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
+									<textcolor>black</textcolor>
 									<wrapmultiline>false</wrapmultiline>
 									<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+									<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
 								</control>
 								<control type="label">
 									<posx>95</posx>
@@ -1015,8 +1052,11 @@
 									<width>122</width>
 									<height>82</height>
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-									<texture background="true">posterMaskSmall.png</texture>
-									<colordiffuse>red</colordiffuse>
+									<texture background="true">osd/cdcovermask.png</texture>
+									<colordiffuse>FFC11B17</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -1025,6 +1065,9 @@
 									<height>76</height>
 									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
 									<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>35</posx>
@@ -1097,7 +1140,11 @@
 									<height>182</height>
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">osd/cdcover_mask.png</texture>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+										<effect type="fade" start="80" end="100" time="400" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -1106,6 +1153,9 @@
 									<height>176</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 							</control>
 							<!-- movie when only this list is visible-->
@@ -1120,7 +1170,10 @@
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">osd/cdcover_mask.png</texture>
 									<visible>ListItem.Type(movie)</visible>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -1130,6 +1183,9 @@
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
 									<visible>ListItem.Type(movie)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+									</animation>
 								</control>
 							</control>
 						</focusedlayout>
@@ -1137,8 +1193,8 @@
 					</control>
 					<!-- title bar Labels when both lists are visible -->
 					<control type="grouplist">
-						<posx>153</posx>
-						<posy>331</posy>
+						<posx>146</posx>
+						<posy>320</posy>
 						<height>400</height>
 						<orientation>horizontal</orientation>
 						<visible>Control.HasFocus(11000) + Control.IsVisible(11001)</visible>
@@ -1173,7 +1229,7 @@
 							<scroll>false</scroll>
 							<textcolor>black</textcolor>
 							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="350">auto</width>
+							<width min="1" max="450">auto</width>
 							<visible>ControlGroup(7004).HasFocus + [Container(11000).ListItem(0).Type(movie)]</visible>
 						</control>
 						<control type="label">
@@ -1194,7 +1250,7 @@
 							<textcolor>black</textcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7004).HasFocus + !IsEmpty(Container(11000).ListItem(0).Duration) + Container.Content(movies)</visible>
+							<visible>ControlGroup(7004).HasFocus + [Container(11000).ListItem(0).Type(movie)]</visible>
 						</control>
 
 					</control>
@@ -1275,9 +1331,9 @@
 			<!-- "Queue" -->
 			<control type="grouplist" id="5200">
 				<visible>true</visible>
-				<posx>0</posx>
+				<posx>60</posx>
 				<posy>0</posy>
-				<width>890</width>
+				<width>1000</width>
 				<height>720</height>
 				<ondown>-</ondown>
 				<onup>-</onup>
@@ -1289,7 +1345,7 @@
 					<height>230</height>
 					<control type="button" id="80011">
 						<visible>Control.IsVisible(11003)</visible>
-						<posx>358</posx>
+						<posx>298</posx>
 						<posy>330</posy>
 						<onup>300</onup>
 						<ondown>11003</ondown>
@@ -1457,6 +1513,9 @@
 								<bordertexture>bigSquareMask.png</bordertexture>
 								<bordersize>2</bordersize>
 								<visible>ListItem.Type(album)</visible>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+								</animation>
 							</control>
 							<!-- tv show episode -->
 							<control type="image">
@@ -1469,6 +1528,9 @@
 								<bordersize>3</bordersize>
 								<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>ListItem.Type(episode)</visible>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+								</animation>
 							</control>
 							<control type="label">
 								<posx>81</posx>
@@ -1517,7 +1579,10 @@
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">osd/cdcover_mask.png</texture>
 									<visible>ListItem.Type(clip) + Control.IsVisible(11003)</visible>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>88FF0000</colordiffuse>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -1527,6 +1592,9 @@
 									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
 									<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
 									<visible>ListItem.Type(clip)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>35</posx>
@@ -1969,8 +2037,11 @@
 									<height>122</height>
 									<texture background="true">osd/cdcover_mask.png</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
 									<visible>ListItem.Type(channel)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -1980,6 +2051,9 @@
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
 									<visible>ListItem.Type(channel)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<!-- drop shadow -->
 								<control type="image">
@@ -2000,6 +2074,9 @@
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
 									<visible>ListItem.Type(channel)</visible>
+									<animation type="Focus" reversible="false">
+										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
+									</animation>
 								</control>
 								<control type="image">
 									<posx>35</posx>
@@ -2121,7 +2198,7 @@
 									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 									<texture background="true">osd/cdcover_mask.png</texture>
 									<visible>ListItem.Type(clip) + Control.IsVisible(11002)</visible>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
 								</control>
 								<control type="image">
 									<posx>37</posx>
@@ -2148,7 +2225,7 @@
 									<width>120</width>
 									<height>27</height>
 									<texture border="10">osd/cdcover_mask.png</texture>
-									<colordiffuse>red</colordiffuse>
+									<colordiffuse>FFC11B17</colordiffuse>
 									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
 									<visible>ListItem.Type(clip)</visible>
 								</control>

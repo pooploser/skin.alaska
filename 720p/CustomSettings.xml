@@ -185,29 +185,6 @@
 					<onclick>Skin.ToggleSetting(overlaywatched)</onclick>
 					<selected>Skin.HasSetting(overlaywatched)</selected>
 				</control>
-				<control type="radiobutton" id="307">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>MenuValue</textcolor>
-					<focusedcolor>MenuValueFO</focusedcolor>
-					<label>$LOCALIZE[31959]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.Reset(overlaywatched)</onclick>
-					<onclick>Skin.ToggleSetting(overlayunwatched)</onclick>
-					<selected>Skin.HasSetting(overlayunwatched)</selected>
-				</control>
-				<control type="radiobutton" id="321">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>MenuValue</textcolor>
-					<focusedcolor>MenuValueFO</focusedcolor>
-					<label>$LOCALIZE[31956]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(overlaypartlywatched)</onclick>
-					<selected>Skin.HasSetting(overlaypartlywatched)</selected>
-				</control>
 				<control type="radiobutton" id="301">
 					<width>740</width>
 					<font>Font_Settings</font>

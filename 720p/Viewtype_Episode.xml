@@ -94,7 +94,7 @@
 					<posy>20</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlayunwatched) + !IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
+					<visible>!IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
 					<texture>BG_$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
 				</control>
@@ -103,7 +103,7 @@
 					<posy>20</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlaypartlywatched) + !IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
+					<visible>!IsEmpty(ListItem.Overlay) + !Window.IsActive(2003)</visible>
 					<texture>BG__$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayUnfocusedColor</colordiffuse>
 				</control>
@@ -186,7 +186,7 @@
 					<posy>19</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlayunwatched) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>!IsEmpty(ListItem.Overlay)</visible>
 					<texture>BG_$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
 					<animation type="Focus" reversible="false">
@@ -199,7 +199,7 @@
 					<posy>19</posy>
 					<width>20</width>
 					<height>20</height>
-					<visible>Skin.HasSetting(overlaypartlywatched) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>!IsEmpty(ListItem.Overlay)</visible>
 					<texture>BG__$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlayFocusedColor</colordiffuse>
 					<animation type="Focus" reversible="false">
