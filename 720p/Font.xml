@@ -87,14 +87,19 @@
 			<name>Font_Settings</name>
 			<filename>alaska_nocaps_cy.ttf</filename>
 			<aspect>0.9</aspect>
-		        <style>bold</style>
+			<style>bold</style>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Font_Settings2</name>
 			<filename>alaska_nocaps_cy.ttf</filename>
 			<aspect>0.9</aspect>
-		        <style>bold</style>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Font_Settings3</name>
+			<filename>alaska_black_cy.ttf</filename>
+			<aspect>0.9</aspect>
 			<size>20</size>
 		</font>
 

@@ -69,8 +69,8 @@
 
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<width>150</width>
-			<font>Font_Settings</font>
+			<width>180</width>
+			<font>Font_Settings3</font>
 			<textcolor>MenuValue</textcolor>
 			<texturefocus border="1">ButtonFo.png</texturefocus>
 			<focusedcolor>MenuValueFO</focusedcolor>
