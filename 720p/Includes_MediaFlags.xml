@@ -31,6 +31,7 @@
 			<animation effect="slide" start="0,0" end="-837,-190" condition="Control.IsVisible(556) | Control.IsVisible(559)">Conditional</animation>
 			<visible>Skin.HasSetting(mediaflagson)</visible>
 
+
 			<control type="group">
 				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 				<posx>995</posx>
@@ -56,7 +57,7 @@
 				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::audioCodec)) + IsEmpty(Listitem.Property(mediaTag::audioChannels))">Conditional</animation>
 				<animation effect="slide" start="0,0" end="105,0" condition="IsEmpty(Listitem.Property(mediaTag::videoResolution))">Conditional</animation>
 				<control type="image">
-					<posy>585</posy>
+					<posy>545</posy>
 					<width>90</width>
 					<height>60</height>
 					<colordiffuse>FlagDiffuse</colordiffuse>
@@ -64,6 +65,7 @@
 					<info>Listitem.Property(mediaTag::studio)</info>
 					<visible>!IsEmpty(ListItem.Property(mediaTag::studio))</visible>
 					<visible>!Control.IsVisible(49)</visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 				</control>
 			</control>
 
