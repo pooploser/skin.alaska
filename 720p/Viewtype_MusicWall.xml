@@ -267,17 +267,6 @@
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>Animation_HiddenByDialog</include>
 		</control>
-		<control type="label">
-			<posx>30</posx>
-			<posy>600</posy>
-			<width>700</width>
-			<height>70</height>
-			<aligny>center</aligny>
-			<label>$INFO[ListItem.Album]</label>
-			<textcolor>ffffffff</textcolor>
-			<font>Font_Time</font>
-			<visible>Container.Content(albums) + Control.IsVisible(55)</visible>
-		</control>
 
 	</include>
 </includes>

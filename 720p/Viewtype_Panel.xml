@@ -203,8 +203,7 @@
 				<posx>10</posx>
 				<posy>120</posy>
 				<width>410</width>
-				<height>256</height>
-				<align>justify</align>
+				<height>230</height>
 				<label>$INFO[ListItem.Property(description)]</label>
 				<autoscroll time="3400" delay="6000" repeat="8000">Skin.HasSetting(autoscroll)</autoscroll>
 				<font>Font_EpisodePlot</font>
