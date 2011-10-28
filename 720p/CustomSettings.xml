@@ -101,7 +101,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
-					<selected>Skin.HasSetting(autoscroll)</selected>
+					<selected>!Skin.HasSetting(autoscroll)</selected>
 				</control>
 				<control type="radiobutton" id="101">
 					<width>740</width>
@@ -112,29 +112,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(mediaflagson)</onclick>
-					<selected>Skin.HasSetting(mediaflagson)</selected>
-				</control>
-				<!--<control type="radiobutton" id="102">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>MenuValue</textcolor>
-					<focusedcolor>MenuValueFO</focusedcolor>
-					<label>$LOCALIZE[31922]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(showstudioflags)</onclick>
-					<selected>Skin.HasSetting(showstudioflags)</selected>
-				</control>-->
-				<control type="radiobutton" id="106">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>MenuValue</textcolor>
-					<focusedcolor>MenuValueFO</focusedcolor>
-					<label>$LOCALIZE[31926]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(OSD_Time)</onclick>
-					<selected>Skin.HasSetting(OSD_Time)</selected>
+					<selected>!Skin.HasSetting(mediaflagson)</selected>
 				</control>
 				<control type="radiobutton" id="107">
 					<width>740</width>
@@ -147,7 +125,6 @@
 					<textoffsetx>25</textoffsetx>
 					<onclick>Skin.ToggleSetting(OSD_Time_switch_position)</onclick>
 					<selected>Skin.HasSetting(OSD_Time_switch_position)</selected>
-					<visible>Skin.HasSetting(OSD_Time)</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="9003">
@@ -181,18 +158,6 @@
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(nopicturepath)</onclick>
 					<selected>Skin.HasSetting(nopicturepath)</selected>
-				</control>
-				<control type="radiobutton" id="306">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>MenuValue</textcolor>
-					<focusedcolor>MenuValueFO</focusedcolor>
-					<label>$LOCALIZE[31958]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.Reset(overlayunwatched)</onclick>
-					<onclick>Skin.ToggleSetting(overlaywatched)</onclick>
-					<selected>Skin.HasSetting(overlaywatched)</selected>
 				</control>
 				<control type="radiobutton" id="301">
 					<width>740</width>
@@ -274,7 +239,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(nomoviebackdrops)</onclick>
-					<selected>Skin.HasSetting(nomoviebackdrops)</selected>
+					<selected>!Skin.HasSetting(nomoviebackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="403">
 					<width>740</width>
@@ -296,7 +261,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(nopicturebackdrops)</onclick>
-					<selected>Skin.HasSetting(nopicturebackdrops)</selected>
+					<selected>!Skin.HasSetting(nopicturebackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="405">
 					<width>740</width>
@@ -307,7 +272,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(nomusicbackdrops)</onclick>
-					<selected>Skin.HasSetting(nomusicbackdrops)</selected>
+					<selected>!Skin.HasSetting(nomusicbackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="406">
 					<width>740</width>
@@ -318,7 +283,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(novideobackdrops)</onclick>
-					<selected>Skin.HasSetting(novideobackdrops)</selected>
+					<selected>!Skin.HasSetting(novideobackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="407">
 					<width>740</width>
@@ -329,7 +294,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(noprogrambackdrops)</onclick>
-					<selected>Skin.HasSetting(noprogrambackdrops)</selected>
+					<selected>!Skin.HasSetting(noprogrambackdrops)</selected>
 				</control>
 
 			</control>

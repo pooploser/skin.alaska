@@ -1354,7 +1354,6 @@
 	<!-- date/time for video OSD -->
 	<include name="OSD_Time">
 		<control type="group">
-			<visible>Skin.HasSetting(OSD_Time)</visible>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0,-100" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
@@ -1371,7 +1370,7 @@
 				<height>105</height>
 				<colordiffuse>50000000</colordiffuse>
 				<texture background="true" flipx="true" diffuse="timematte.png">common/black.png</texture>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position) | !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) | !IsEmpty(VideoPlayer.TimeRemaining)</visible>
 			</control>
 			<control type="label">
 				<posx>30</posx>
@@ -1381,7 +1380,7 @@
 				<font>Font_Time</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<info>System.Time</info>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
 				<align>left</align>
 			</control>
 			<control type="label">
@@ -1392,7 +1391,7 @@
 				<font>Font_Time</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<info>VideoPlayer.TimeRemaining</info>
-				<visible>Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
 				<align>left</align>
 			</control>
 			<control type="label">
@@ -1402,7 +1401,7 @@
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
 				<info>System.Date</info>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
 				<align>left</align>
 			</control>
 			<control type="label">
@@ -1412,13 +1411,12 @@
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
 				<label>$LOCALIZE[31526]</label>
-				<visible>Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
 				<align>left</align>
 			</control>
 		</control>
 		
 		<control type="group">
-			<visible>Skin.HasSetting(OSD_Time)</visible>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0,-100" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
@@ -1429,9 +1427,9 @@
 			</animation>
 			<control type="image">
 				<description>Panel</description>
-				<posx>1050</posx>
+				<posx>1000</posx>
 				<posy>-20</posy>
-				<width>230</width>
+				<width>280</width>
 				<height>105</height>
 				<colordiffuse>50000000</colordiffuse>
 				<texture background="true" diffuse="timematte.png">common/black.png</texture>
@@ -1444,7 +1442,7 @@
 				<font>Font_Time</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<info>System.Time</info>
-				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
 				<align>right</align>
 			</control>
 			<control type="label">
@@ -1455,16 +1453,6 @@
 				<font>Font_Time</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<info>Player.FinishTime</info>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
-				<align>right</align>
-			</control>
-			<control type="label">
-				<posx>1250</posx>
-				<posy>50</posy>
-				<width>300</width>
-				<font>Font_Date</font>
-				<textcolor>80ffffff</textcolor>
-				<info>System.Date</info>
 				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
 				<align>right</align>
 			</control>
@@ -1474,8 +1462,18 @@
 				<width>300</width>
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
+				<info>System.Date</info>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>1250</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<font>Font_Date</font>
+				<textcolor>80ffffff</textcolor>
 				<label>$LOCALIZE[31524]</label>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !VideoPlayer.Content(episodes)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + !VideoPlayer.Content(episodes)</visible>
 				<align>right</align>
 			</control>
 			<control type="label">
@@ -1485,13 +1483,12 @@
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
 				<label>$LOCALIZE[31525]</label>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position) + VideoPlayer.Content(episodes)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + VideoPlayer.Content(episodes)</visible>
 				<align>right</align>
 			</control>
 		</control>
 
 		<control type="group">
-			<visible>Skin.HasSetting(OSD_Time)</visible>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0,-100" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
@@ -1519,7 +1516,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<info>Player.FinishTime</info>
 				<align>center</align>
-				<visible>Skin.HasSetting(OSD_Time_switch_position)</visible>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position)</visible>
 			</control>
 			<control type="label">
 				<posx>515</posx>
@@ -1530,7 +1527,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<info>VideoPlayer.TimeRemaining</info>
 				<align>center</align>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
 			</control>
 			<control type="label">
 				<posx>515</posx>
@@ -1539,7 +1536,7 @@
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
 				<label>$LOCALIZE[31524]</label>
-				<visible>Skin.HasSetting(OSD_Time_switch_position) + !VideoPlayer.Content(episodes)</visible>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !VideoPlayer.Content(episodes)</visible>
 				<align>center</align>
 			</control>
 			<control type="label">
@@ -1549,7 +1546,7 @@
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
 				<label>$LOCALIZE[31525]</label>
-				<visible>Skin.HasSetting(OSD_Time_switch_position) + VideoPlayer.Content(episodes)</visible>
+				<visible>!Skin.HasSetting(OSD_Time_switch_position) + VideoPlayer.Content(episodes)</visible>
 				<align>center</align>
 			</control>
 			<control type="label">
@@ -1559,7 +1556,7 @@
 				<font>Font_Date</font>
 				<textcolor>80ffffff</textcolor>
 				<label>$LOCALIZE[31526]</label>
-				<visible>!Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
+				<visible>Skin.HasSetting(OSD_Time_switch_position) + !IsEmpty(VideoPlayer.TimeRemaining)</visible>
 				<align>center</align>
 			</control>
 		</control>
