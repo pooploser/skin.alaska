@@ -593,7 +593,7 @@
 								<width>116</width>
 								<height>176</height>
 								<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-								<texture>$INFO[ListItem.Thumb]</texture>
+								<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>ListItem.Type(movie)</visible>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
