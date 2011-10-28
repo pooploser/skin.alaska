@@ -5,6 +5,83 @@
 	<!-- Home 1 -->
 
 	<include name="Home_MenuImage">
+		<control type="group">
+			<!-- generic autopopulated fanart slideshow -->
+			<control type="multiimage" id="10101">
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<aligny>top</aligny>
+				<timeperimage>4000</timeperimage>
+				<fadetime>300</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<visible>!Skin.HasSetting(nohomebackdrops) + ((![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]) | Control.HasFocus(944) | Control.HasFocus(80011)</visible>
+				<include>Dimensions_Fullscreen</include>
+				<colordiffuse>33FFFFFF</colordiffuse>
+			</control>
+			<!-- "new list" focused item fanart while using inside the list -->
+			<!-- on deck -->
+			<control type="multiimage">
+				<visible>Control.HasFocus(11001)</visible>
+				<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
+				<aspectratio>scale</aspectratio>
+				<fadetime>300</fadetime>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+				<colordiffuse>22FFFFFF</colordiffuse>
+				<include>Dimensions_Fullscreen</include>
+				<visible>!Skin.HasSetting(nohomebackdrops)</visible>
+				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+			</control>
+			<!-- recently added -->
+			<control type="multiimage">
+				<include>Global_Filter</include>
+				<visible>Control.HasFocus(11000)</visible>
+				<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<include>Animation_CommonFade</include>
+				<fadetime>300</fadetime>
+				<colordiffuse>22FFFFFF</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+			</control>
+			<!-- recently used -->
+			<control type="multiimage">
+				<visible>Control.HasFocus(11002)</visible>
+				<visible>!Skin.HasSetting(nohomebackdrops)</visible>
+				<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>300</fadetime>
+				<include>Global_Filter</include>
+				<colordiffuse>33FFFFFF</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+			</control>
+			<!-- queue (placeholder, to see if something funny could be done) -->
+			<!--<control type="multiimage">
+			<visible>ControlGroup(7003).HasFocus</visible>
+				<visible>!Skin.HasSetting(nohomebackdrops)</visible>
+			<info background="true">Container(11003).ListItem.Property(fanart_image)</info>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<colordiffuse>33FFFFFF</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+		</control>-->
+			<!-- Fanart Dimming overlay -->
+			<!-- second dimmer when new lists are visible -->
+		</control>
+
 		<control type="wraplist" id="300">
 			<posx>-260</posx>
 			<posy>40</posy>
@@ -408,7 +485,7 @@
 								<posy>27</posy>
 								<width>140</width>
 								<height>140</height>
-								<info background="true">ListItem.Thumb</info>
+								<info>ListItem.Thumb</info>
 								<aspectratio aligny="top">keep</aspectratio>
 								<texture diffuse="osd/cdcover_mask.png"/>
 								<bordertexture>osd/cdcover_mask.png</bordertexture>
@@ -500,7 +577,7 @@
 								<width>122</width>
 								<height>182</height>
 								<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-								<texture background="true">osd/cdcover_mask.png</texture>
+								<texture>osd/cdcover_mask.png</texture>
 								<visible>ListItem.Type(movie)</visible>
 								<colordiffuse>FFC11B17</colordiffuse>
 								<animation type="Focus" reversible="false">
@@ -513,7 +590,7 @@
 								<width>116</width>
 								<height>176</height>
 								<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-								<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<texture>$INFO[ListItem.Thumb]</texture>
 								<visible>ListItem.Type(movie)</visible>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
@@ -884,7 +961,7 @@
 									<width>116</width>
 									<height>116</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="osd/cdcover_mask.png">$INFO[ListItem.Thumb]</texture>
 									<visible>ListItem.Type(album)</visible>
 									<animation type="Focus" reversible="false">
 										<effect type="zoom" center="auto" start="80" end="119" time="400" tween="back" easing="out" />
@@ -1071,7 +1148,7 @@
 									<width>116</width>
 									<height>176</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="osd/cdcover_mask.png">$INFO[ListItem.Thumb]</texture>
 									<animation type="Focus" reversible="false">
 										<effect type="zoom" center="auto" start="80" end="109" time="400" tween="back" easing="out" />
 									</animation>

@@ -68,7 +68,7 @@
 	<include name="Global_Filter">
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>common/white.png</texture>
+			<texture background="true">common/white.png</texture>
 			<colordiffuse>backgroundColor</colordiffuse>
  			<animation effect="fade" start="100" end="90" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + !Skin.HasSetting(increaseFanartVisibility)]">Conditional</animation>
 			<animation effect="fade" start="100" end="80" time="400" condition="[[!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image) | Window.IsVisible(50)] + !Window.Next(Home) + Skin.HasSetting(increaseFanartVisibility) + Skin.HasSetting(increaseFanartVisibility20)]">Conditional</animation>

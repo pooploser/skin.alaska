@@ -1,13 +1,9 @@
 <!--Alaska-->
 
 <window id="0">
-	<include condition="[Skin.HasSetting(home1) + Skin.HasSetting(stackmedia)] | Skin.HasSetting(home4) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4) + Skin.HasSetting(stackmedia)]">home4defaultcontrol</include>
-	<include condition="Skin.HasSetting(home2) | Skin.HasSetting(home3) | [Skin.HasSetting(home1) + !Skin.HasSetting(stackmedia)] | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4) + !Skin.HasSetting(stackmedia)]">homedefaultcontrol</include>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-
 		<include>Global_Filter</include>
-		<include>New_lists</include>
 		<control type="image">
 			<posx>0</posx>
 			<posy>250</posy>
@@ -132,10 +128,13 @@
 			<label>Home.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
-
 		<include>Global_ContextFilter</include>
+		<include>New_lists</include>
 		<include>Global_Time_Home</include>
 		<include>Global_RSS</include>
 		<include>Object_DebugGrid</include>
 	</controls>
+	<include condition="[Skin.HasSetting(home1) + Skin.HasSetting(stackmedia)] | Skin.HasSetting(home4) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4) + Skin.HasSetting(stackmedia)]">home4defaultcontrol</include>
+	<include condition="Skin.HasSetting(home2) | Skin.HasSetting(home3) | [Skin.HasSetting(home1) + !Skin.HasSetting(stackmedia)] | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4) + !Skin.HasSetting(stackmedia)]">homedefaultcontrol</include>
+
 </window>
