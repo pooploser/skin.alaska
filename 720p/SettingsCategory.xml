@@ -15,7 +15,6 @@
 			<orientation>vertical</orientation>
 			<texture>divider.png</texture>
 		</control>
-
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
 			<posx>150</posx>
@@ -31,7 +30,6 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_ZoomOutZoomIn</include>
 		</control>
-
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
 			<include>Animation_ZoomedByMenu</include>

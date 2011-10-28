@@ -254,7 +254,17 @@
 					<onclick>Skin.ToggleSetting(increaseFanartVisibility50)</onclick>
 					<selected>Skin.HasSetting(increaseFanartVisibility50)</selected>
 				</control>
-
+				<control type="radiobutton" id="408">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>MenuValue</textcolor>
+					<focusedcolor>MenuValueFO</focusedcolor>
+					<label>$LOCALIZE[31994]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(nohomebackdrops)</onclick>
+					<selected>Skin.HasSetting(nohomebackdrops)</selected>
+				</control>
 				<control type="radiobutton" id="402">
 					<width>740</width>
 					<font>Font_Settings</font>
