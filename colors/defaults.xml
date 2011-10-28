@@ -9,7 +9,6 @@
 	<color name="WatchedOverlayFocusedColor">FFc30000</color>
 	<color name="WatchedOverlayUnfocusedColor">40c30000</color>
 	<color name="FocusLinesBackground">11000000</color>
-	<color name="FocusLinesBackground2">22000000</color>
 
 	<!-- Home 1 Colours -->
 	 
@@ -63,7 +62,7 @@
 	<!-- Window menu colours -->
 
 	<color name="MenuValue">FF686868</color>
-	<color name="MenuValueFO">FF15317E</color>
+	<color name="MenuValueFO">ffca3e3d</color>
 
 	<!-- Poster view colours -->
 
