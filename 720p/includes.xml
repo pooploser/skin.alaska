@@ -110,6 +110,7 @@
 			<posx>1250</posx>
 			<posy>25</posy>
 			<control type="label">
+				<posx>3</posx>
 				<width>300</width>
 				<font>Font_Time</font>
 				<textcolor>Time</textcolor>
@@ -135,6 +136,7 @@
 			<posx>1250</posx>
 			<posy>25</posy>
 			<control type="label">
+				<posx>3</posx>
 				<width>300</width>
 				<font>Font_Time</font>
 				<textcolor>Time</textcolor>

@@ -338,20 +338,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>255</posy>
-									<width>135</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.TVShowTitle]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF41383C</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>!IsEmpty(ListItem.TVShowTitle) + ListItem.Type(episode)</visible>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>275</posy>
+									<posy>260</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -365,7 +352,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>295</posy>
+									<posy>280</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -480,21 +467,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>255</posy>
-									<width>140</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>true</scroll>
-									<label>$INFO[ListItem.TVShowTitle]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>!IsEmpty(ListItem.TVShowTitle) + ListItem.Type(episode)</visible>
-									<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>275</posy>
+									<posy>260</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -508,7 +481,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>295</posy>
+									<posy>280</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -720,20 +693,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>355</posy>
-									<width>130</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.TVShowTitle]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF41383C</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>375</posy>
+									<posy>360</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -747,7 +707,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>395</posy>
+									<posy>380</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -828,21 +788,7 @@
 								</control>-->
 								<control type="label">
 									<posx>95</posx>
-									<posy>345</posy>
-									<width>130</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.TVShowTitle]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FFdddddd</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
-									<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>365</posy>
+									<posy>360</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -856,7 +802,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>385</posy>
+									<posy>380</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -992,21 +938,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>345</posy>
-									<width>140</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<label>$INFO[ListItem.TVShowTitle]</label>
-									<scroll>true</scroll>
-									<font>SearchResultSmaller</font>
-									<textcolor>black</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
-									<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>365</posy>
+									<posy>350</posy>
 									<width>100</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -1020,7 +952,7 @@
 								</control>
 								<control type="label">
 									<posx>95</posx>
-									<posy>385</posy>
+									<posy>370</posy>
 									<width>130</width>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -1086,19 +1018,6 @@
 									<texture border="10">whitewiderounded.png</texture>
 									<colordiffuse>FF000000</colordiffuse>
 									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>365</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.TVShowTitle]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 								</control>
 								<control type="label">
 									<posx>95</posx>
@@ -1395,19 +1314,6 @@
 							</control>
 							<control type="label">
 								<posx>81</posx>
-								<posy>142</posy>
-								<width>122</width>
-								<align>center</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<label>$INFO[ListItem.TVShowTitle]</label>
-								<font>SearchResult</font>
-								<textcolor>FFdddddd</textcolor>
-								<wrapmultiline>false</wrapmultiline>
-								<visible>!IsEmpty(ListItem.TVShowTitle) + ListItem.Type(episode)</visible>
-							</control>
-							<control type="label">
-								<posx>81</posx>
 								<posy>172</posy>
 								<width>122</width>
 								<align>center</align>
@@ -1531,19 +1437,6 @@
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" start="100" end="107" center="100,100" time="150" tween="cubic" easing="in" />
 								</animation>
-							</control>
-							<control type="label">
-								<posx>81</posx>
-								<posy>152</posy>
-								<width>145</width>
-								<align>center</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<label>$INFO[ListItem.TVShowTitle]</label>
-								<font>SearchResult</font>
-								<textcolor>FFdddddd</textcolor>
-								<wrapmultiline>false</wrapmultiline>
-								<visible>!IsEmpty(ListItem.TVShowTitle) + ListItem.Type(episode)</visible>
 							</control>
 							<control type="label">
 								<posx>81</posx>
@@ -1912,19 +1805,6 @@
 							</control>
 							<control type="label">
 								<posx>81</posx>
-								<posy>142</posy>
-								<width>122</width>
-								<align>center</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<label>$INFO[ListItem.TVShowTitle]</label>
-								<font>SearchResult</font>
-								<textcolor>FFdddddd</textcolor>
-								<wrapmultiline>false</wrapmultiline>
-								<visible>!IsEmpty(ListItem.TVShowTitle) + ListItem.Type(episode)</visible>
-							</control>
-							<control type="label">
-								<posx>81</posx>
 								<posy>172</posy>
 								<width>122</width>
 								<align>center</align>
@@ -2150,19 +2030,6 @@
 								<bordersize>3</bordersize>
 								<texture diffuse="osd/cdcover_mask.png" background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>ListItem.Type(episode)</visible>
-							</control>
-							<control type="label">
-								<posx>81</posx>
-								<posy>152</posy>
-								<width>145</width>
-								<align>center</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<label>$INFO[ListItem.TVShowTitle]</label>
-								<font>SearchResult</font>
-								<textcolor>FFdddddd</textcolor>
-								<wrapmultiline>false</wrapmultiline>
-								<visible>!IsEmpty(ListItem.TVShowTitle) + ListItem.Type(episode)</visible>
 							</control>
 							<control type="label">
 								<posx>81</posx>
