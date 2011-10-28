@@ -11,6 +11,16 @@
 			<height>120</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>FocusLinesBackground</colordiffuse>
+			<visible>Skin.HasSetting(nohomebackdrops)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>250</posy>
+			<width>1280</width>
+			<height>120</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>FocusLinesBackground2</colordiffuse>
+			<visible>!Skin.HasSetting(nohomebackdrops)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>

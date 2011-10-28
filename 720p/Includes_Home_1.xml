@@ -16,6 +16,7 @@
 				<loop>yes</loop>
 				<visible>!Skin.HasSetting(nohomebackdrops) + ((![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]) | Control.HasFocus(944) | Control.HasFocus(80011)</visible>
 				<include>Dimensions_Fullscreen</include>
+				<visible>!Skin.HasSetting(nohomebackdrops)</visible>
 				<colordiffuse>33FFFFFF</colordiffuse>
 			</control>
 			<!-- "new list" focused item fanart while using inside the list -->
@@ -48,6 +49,7 @@
 				<include>Animation_CommonFade</include>
 				<fadetime>300</fadetime>
 				<colordiffuse>22FFFFFF</colordiffuse>
+				<visible>!Skin.HasSetting(nohomebackdrops)</visible>
 				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 			</control>
 			<!-- recently used -->
@@ -63,6 +65,7 @@
 				<fadetime>300</fadetime>
 				<include>Global_Filter</include>
 				<colordiffuse>33FFFFFF</colordiffuse>
+				<visible>!Skin.HasSetting(nohomebackdrops)</visible>
 				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 			</control>
 			<!-- queue (placeholder, to see if something funny could be done) -->
