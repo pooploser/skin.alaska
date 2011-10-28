@@ -239,7 +239,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(nomoviebackdrops)</onclick>
-					<selected>!Skin.HasSetting(nomoviebackdrops)</selected>
+					<selected>Skin.HasSetting(nomoviebackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="403">
 					<width>740</width>
