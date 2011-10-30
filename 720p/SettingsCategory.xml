@@ -81,9 +81,6 @@
 			<textcolor>MenuValue</textcolor>
 			<texturefocus border="1">ButtonFo.png</texturefocus>
 			<focusedcolor>Black</focusedcolor>
-			<animation type="Focus" reversible="false">
-				<effect type="zoom" start="100" end="110" time="200"/>
-			</animation>
 		</control>
 
 		<include>Global_ContextFilter</include>

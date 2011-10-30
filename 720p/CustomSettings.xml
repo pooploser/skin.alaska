@@ -48,9 +48,6 @@
 					<textcolor>Black</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" start="100" end="110" time="200"/>
-					</animation>
 				</control>
 			</focusedlayout>
 			<content>
