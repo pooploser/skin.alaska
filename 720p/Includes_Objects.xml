@@ -381,7 +381,7 @@
 			<height>42</height>
 			<onclick>Container.NextViewMode</onclick>
 			<onup>50</onup>
-			<onright>56</onright>
+			<onright>50</onright>
 			<onleft>99122</onleft>
 		</control>
 	</control>

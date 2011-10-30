@@ -45,9 +45,12 @@
 					<posy>0</posy>
 					<width>300</width>
 					<font>Font_Settings3</font>
-					<textcolor>MenuValueFO</textcolor>
+					<textcolor>Black</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="100" end="110" time="200"/>
+					</animation>
 				</control>
 			</focusedlayout>
 			<content>
@@ -92,17 +95,6 @@
 				<onright>9000</onright>
 				<onup>9001</onup>
 				<ondown>9001</ondown>
-				<control type="radiobutton" id="100">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>MenuValue</textcolor>
-					<focusedcolor>MenuValueFO</focusedcolor>
-					<label>$LOCALIZE[31920]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
-					<selected>!Skin.HasSetting(autoscroll)</selected>
-				</control>
 				<control type="radiobutton" id="101">
 					<width>740</width>
 					<font>Font_Settings</font>
@@ -111,8 +103,8 @@
 					<label>$LOCALIZE[31921]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(mediaflagson)</onclick>
-					<selected>!Skin.HasSetting(mediaflagson)</selected>
+					<onclick>Skin.ToggleSetting(mediaflagsoff)</onclick>
+					<selected>Skin.HasSetting(mediaflagsoff)</selected>
 				</control>
 				<control type="radiobutton" id="107">
 					<width>740</width>
@@ -260,8 +252,8 @@
 					<label>$LOCALIZE[31967]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(nopicturebackdrops)</onclick>
-					<selected>!Skin.HasSetting(nopicturebackdrops)</selected>
+					<onclick>Skin.ToggleSetting(picturebackdrops)</onclick>
+					<selected>!Skin.HasSetting(picturebackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="405">
 					<width>740</width>
@@ -272,7 +264,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<onclick>Skin.ToggleSetting(nomusicbackdrops)</onclick>
-					<selected>!Skin.HasSetting(nomusicbackdrops)</selected>
+					<selected>Skin.HasSetting(nomusicbackdrops)</selected>
 				</control>
 				<control type="radiobutton" id="406">
 					<width>740</width>
@@ -293,8 +285,8 @@
 					<label>$LOCALIZE[31970]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(noprogrambackdrops)</onclick>
-					<selected>!Skin.HasSetting(noprogrambackdrops)</selected>
+					<onclick>Skin.ToggleSetting(programbackdrops)</onclick>
+					<selected>Skin.HasSetting(programbackdrops)</selected>
 				</control>
 
 			</control>

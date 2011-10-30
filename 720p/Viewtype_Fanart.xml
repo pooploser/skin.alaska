@@ -266,7 +266,7 @@
 				<height>140</height>
 				<align>left</align>
 				<info>ListItem.Plot</info>
-				<autoscroll time="2800" delay="4000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+				<autoscroll time="2800" delay="4000" repeat="6000">true</autoscroll>
 				<font>Font_InfoPlot</font>
 				<textcolor>InfoPlot</textcolor>
 				<visible>Container.Content(movies)</visible>

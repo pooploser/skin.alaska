@@ -13,7 +13,7 @@
 			<width>1690</width>
 			<onleft>300</onleft>
 			<onright>300</onright>
-			<onup>65</onup>
+			<onup>644</onup>
 			<ondown>99123</ondown>
 			<viewtype label="Landscape[CR]Wrap">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -346,7 +346,7 @@
 				<height>113</height>
 				<align>left</align>
 				<info>ListItem.Plot</info>
-				<autoscroll time="3200" delay="6000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+				<autoscroll time="3200" delay="6000" repeat="6000">true</autoscroll>
 				<font>Font_ListDetail</font>
 				<textcolor>FanartText</textcolor>
 				<visible>Container.Content(episodes)</visible>

@@ -190,7 +190,7 @@
 			<font>Font_ListDetailNF</font>
 			<textcolor>EpisodePlot</textcolor>
 			<label>Runtime: $INFO[ListItem.Duration]</label>
-			<autoscroll time="1800" delay="1000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+			<autoscroll time="1800" delay="1000" repeat="6000">true</autoscroll>
 			<visible>Window.IsActive(24) + Container.Content(episodes)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_ZoomedByMenu</include>
@@ -203,7 +203,7 @@
 			<font>Font_ListDetailNF</font>
 			<textcolor>EpisodePlot</textcolor>
 			<label>$LOCALIZE[20416]: $INFO[ListItem.Property(originallyAvailableAt)]</label>
-			<autoscroll time="1800" delay="1000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+			<autoscroll time="1800" delay="1000" repeat="6000">true</autoscroll>
 			<visible>!IsEmpty(ListItem.Property(originallyAvailableAt)) + Window.IsActive(24) + Container.Content(episodes)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_ZoomedByMenu</include>
@@ -323,11 +323,11 @@
 				</control>
 				<control type="label">
 					<posx>470</posx>
-					<posy>12</posy>
+					<posy>37</posy>
 					<width>760</width>
 					<height>25</height>
 					<aligny>center</aligny>
-					<font>Font_ListTitleBig</font>
+					<font>Font_ListTitleBigger</font>
 					<textcolor>ListTitleF</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>true</scroll>
@@ -424,7 +424,7 @@
 					<font>Font_EpisodePlot</font>
 					<textcolor>EpisodePlot</textcolor>
 					<info>ListItem.Plot</info>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>-->
 				<control type="image">
@@ -767,13 +767,13 @@
 
 		<control type="textbox">
 			<posx>40</posx>
-			<posy>467</posy>
+			<posy>497</posy>
 			<width>455</width>
 			<height>78</height>
 			<font>Font_EpisodePlot</font>
 			<textcolor>EpisodePlot</textcolor>
 			<info>ListItem.Plot</info>
-			<autoscroll time="1800" delay="1000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+			<autoscroll time="1800" delay="1000" repeat="6000">true</autoscroll>
 			<visible>!IsEmpty(Container(50).ListItem.Plot) + !Container(50).Content(movies) + !Container.Content(artists) +!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs) + !Container(50).Content(tvshows) + !Window.IsActive(2003)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_ZoomedByMenu</include>

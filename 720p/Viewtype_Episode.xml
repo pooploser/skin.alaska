@@ -249,7 +249,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
-			<autoscroll time="3200" delay="6000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+			<autoscroll time="3200" delay="6000" repeat="6000">true</autoscroll>
 			<font>Font_EpisodePlot</font>
 			<textcolor>EpisodePlot</textcolor>
 			<include>Animation_ZoomInZoomOut</include>

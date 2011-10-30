@@ -29,7 +29,7 @@
 				<width>360</width>
 				<height>320</height>
 				<label>$INFO[ListItem.Property(description)]</label>
-				<autoscroll time="3400" delay="6000" repeat="8000">Skin.HasSetting(autoscroll)</autoscroll>
+				<autoscroll time="3400" delay="6000" repeat="8000">true</autoscroll>
 				<font>Font_EpisodePlot</font>
 				<textcolor>EpisodePlot</textcolor>
 			</control>

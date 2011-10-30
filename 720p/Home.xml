@@ -4,6 +4,8 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Global_Filter</include>
+		<include>Global_ContextFilter</include>
+		<include condition="[Skin.HasSetting(home1) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4)]] + !Skin.HasSetting(stackmedia)">Home_MenuImage</include>
 		<control type="image">
 			<posx>0</posx>
 			<posy>250</posy>
@@ -11,7 +13,6 @@
 			<height>120</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>FocusLinesBackground</colordiffuse>
-			<visible>!Skin.HasSetting(nohomebackdrops)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -20,7 +21,6 @@
 			<height>120</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>FocusLinesBackground2</colordiffuse>
-			<visible>!Skin.HasSetting(nohomebackdrops)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -127,24 +127,17 @@
 			<onright>300</onright>
 			<onleft>99121</onleft>
 		</control>
-		<include condition="[Skin.HasSetting(home1) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4)]] + !Skin.HasSetting(stackmedia)">Home_MenuImage</include>
-		<include condition="[Skin.HasSetting(home1) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4)]] + Skin.HasSetting(stackmedia)">Home_MenuImage_stacked</include>
-		<include condition="Skin.HasSetting(home2)">Home_MenuIcon</include>
-		<include condition="Skin.HasSetting(home3)">Home_MenuList</include>
-		<include condition="Skin.HasSetting(home4)">Home_MenuBlur</include>
 
 		<control type="label">
 			<include>WindowID</include>
 			<label>Home.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
-		<include>Global_ContextFilter</include>
 		<include>New_lists</include>
 		<include>Global_Time_Home</include>
 		<include>Global_RSS</include>
 		<include>Object_DebugGrid</include>
 	</controls>
-	<include condition="[Skin.HasSetting(home1) + Skin.HasSetting(stackmedia)] | Skin.HasSetting(home4) | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4) + Skin.HasSetting(stackmedia)]">home4defaultcontrol</include>
 	<include condition="Skin.HasSetting(home2) | Skin.HasSetting(home3) | [Skin.HasSetting(home1) + !Skin.HasSetting(stackmedia)] | [!Skin.HasSetting(home1) + !Skin.HasSetting(home2) + !Skin.HasSetting(home3) + !Skin.HasSetting(home4) + !Skin.HasSetting(stackmedia)]">homedefaultcontrol</include>
 
 </window>
