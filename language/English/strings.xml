@@ -87,8 +87,8 @@
 	<string id="31904">Set up region information for Plex' optional Weather displays</string>
 	<string id="31905">Adjust the look and feel of Plex. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings</string>
 	<string id="31906">Adjust how Plex displays personal image collections. Includes screenshot grabbing, special effects and advanced display options</string>
-	<string id="31907">Set up Plex' network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration</string>
-	<string id="31908">Choose from a variety of advanced settings and customisation options to make the PlexAlaska UI your own</string>
+	<string id="31907">Advanced network settings, e.g. manual Media Server connections.</string>
+	<string id="31908">Choose from a variety of advanced settings and customisation options to make the Alaska UI your own</string>
 	<string id="31910">General</string>
 	<string id="31911">Home</string>
 	<string id="31912">Views</string>
@@ -157,6 +157,7 @@
 	<string id="31975">Disable filter image in "Now Playing"</string>
 	<string id="31976">Disable progressbar</string>
 	<string id="31977">Use alternative "Now Playing"-screen</string>
+	<string id="32978">Enable Fanart backdrops</string>
 	<string id="31980">Enable automatic theme change</string>
 	<string id="31984">Enable kiosk mode</string>
 	<string id="31985">Debug mode</string>

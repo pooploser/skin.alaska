@@ -10,9 +10,9 @@
 			<colordiffuse>backgroundColor</colordiffuse>
 		</control>
 		<control type="panel" id="60">
-			<posx>200</posx>
+			<posx>150</posx>
 			<posy>200</posy>
-			<width>400</width>
+			<width>650</width>
 			<height>600</height>
 			<onleft>60</onleft>
 			<onright>60</onright>
@@ -95,16 +95,21 @@
 					<onclick>XBMC.ActivateWindow(Profiles)</onclick>
 				</item>-->
 				<item id="5">
+					<label>Network</label>
+					<thumb>settings/settings_network.png</thumb>
+					<onclick>XBMC.ActivateWindow(18)</onclick>
+				</item>
+				<item id="6">
 					<label>System</label>
 					<thumb>settings/settings_system.png</thumb>
 					<onclick>xbmc.activatewindow(SystemSettings)</onclick>
 				</item>
-				<item id="6">
+				<item id="7">
 					<label>Appearance</label>
 					<thumb>settings/settings_appearance.png</thumb>
 					<onclick>XBMC.ActivateWindow(AppearanceSettings)</onclick>
 				</item>
-				<item id="7">
+				<item id="8">
 					<label>PlexAlaska</label>
 					<thumb>settings/settings_alaska.png</thumb>
 					<onclick>XBMC.ActivateWindow(56)</onclick>
@@ -175,7 +180,7 @@
 			<description>System</description>
 			<posx>110</posx>
 			<posy>210</posy>
-			<visible>Container(60).HasFocus(5)</visible>
+			<visible>Container(60).HasFocus(6)</visible>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
@@ -207,7 +212,7 @@
 			<description>Appearence</description>
 			<posx>110</posx>
 			<posy>210</posy>
-			<visible>Container(60).HasFocus(6)</visible>
+			<visible>Container(60).HasFocus(7)</visible>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
@@ -236,19 +241,35 @@
 			</control>
 		</control>
 		<control type="group">
-			<description>PlexAlaska</description>
+			<description>Alaska</description>
 			<posx>110</posx>
 			<posy>210</posy>
-			<visible>Container(60).HasFocus(7)</visible>
+			<visible>Container(60).HasFocus(8)</visible>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>PlexAlaska</label>
+				<label>Alaska</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
 				<label>$LOCALIZE[31908]</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Network</description>
+			<posx>110</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(5)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>Network</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>$LOCALIZE[31907]</label>
 			</control>
 		</control>
 		<include>Global_Time</include>
